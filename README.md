@@ -7,6 +7,8 @@ Repositório centralizado de skills compartilhadas entre diferentes ambientes e 
 - **`analista-sistemas-senior`**: Condução de chats de análise de sistemas em conjunto com especialista de domínio, com verificação de goals e sem suposição prematura de implementação.
 - **`walkthrough-changelog-sync`**: Inclusão obrigatória do objetivo da sessão e plano de implementação no `walkthrough.md`, espelhando e sincronizando automaticamente as entregas no `CHANGELOG.md` do workspace (Keep a Changelog).
 
+- **`xstate-eda-plug-and-play`**: Statecharts de motores e fontes substituíveis com XState v5 e EDA, contratos canônicos, emissão por `emit`/`actor.on()` e testes de integração.
+
 ## Diretrizes e Regras de Governança
 
 - **`guidelines/walkthrough-e-changelog.md`**: Template em Markdown puro pronto para inclusão em `GEMINI.md`, `CLAUDE.md` ou `AGENTS.md`.
@@ -40,3 +42,9 @@ O script criará junções de diretório apontando as pastas `~/.agents/skills`,
   ```powershell
   .\sync.ps1 -Action push -Message "feat: melhoria na regra X"
   ```
+
+## Skill XState v5 e EDA
+
+Arquivo: `skills/xstate-eda-plug-and-play/SKILL.md`. No Codex, invoque `$xstate-eda-plug-and-play`; nas demais ferramentas, solicite o uso da skill pelo nome.
+
+No outro computador, use `sync.ps1 -Action pull`. Quando a atualização adicionar uma skill nova, execute também `install.ps1` para criar sua junção. Alterações de conteúdo em skills já vinculadas ficam disponíveis pelo vínculo existente.
