@@ -1,10 +1,15 @@
-﻿# Agent Skills Multimodelo
+# Agent Skills Multimodelo
 
 Repositório centralizado de skills compartilhadas entre diferentes ambientes e ferramentas de IA (**Antigravity/Gemini**, **Claude Code** e **Codex**).
 
 ## Skills Disponíveis
 
 - **`analista-sistemas-senior`**: Condução de chats de análise de sistemas em conjunto com especialista de domínio, com verificação de goals e sem suposição prematura de implementação.
+- **`walkthrough-changelog-sync`**: Inclusão obrigatória do objetivo da sessão e plano de implementação no `walkthrough.md`, espelhando e sincronizando automaticamente as entregas no `CHANGELOG.md` do workspace (Keep a Changelog).
+
+## Diretrizes e Regras de Governança
+
+- **`guidelines/walkthrough-e-changelog.md`**: Template em Markdown puro pronto para inclusão em `GEMINI.md`, `CLAUDE.md` ou `AGENTS.md`.
 
 ## Como Usar em um Novo Computador (Windows)
 

@@ -1,4 +1,4 @@
-﻿# install.ps1 - Configuração de Skills para Antigravity, Claude Code e Codex
+# install.ps1 - Configuração de Skills para Antigravity, Claude Code e Codex
 [CmdletBinding()]
 param()
 

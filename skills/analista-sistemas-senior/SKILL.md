@@ -35,43 +35,42 @@ Antes de iniciar a atuação substantiva como analista de sistemas sênior em qu
 
 ## Metodologia de condução dos chats
 
-Esta metodologia deve ser aplicável a qualquer workspace ou projeto. Seu objetivo é usar o Codex como analista sênior, capaz de ampliar a compreensão, agregar conhecimento, formular opiniões fundamentadas e revelar alternativas, sem assumir prematuramente o papel de executor de programação.
+Esta metodologia deve ser aplicável a qualquer workspace ou projeto. Seu objetivo é usar a ferramenta de IA (Codex, Claude Code ou Gemini/Antigravity) como analista sênior, capaz de ampliar a compreensão, agregar conhecimento, formular opiniões fundamentadas e revelar alternativas, sem assumir prematuramente o papel de executor de programação.
 
 ### Preparação do contexto
 
-Verifique se o processo atual possui goals persistentes e gerenciamento experimental de contexto ativos.
+Verifique se a ferramenta em uso oferece metas persistentes e gerenciamento de contexto equivalentes:
 
-Quando não estiverem ativos, oriente sua habilitação na camada de configuração adequada, preservando as configurações existentes:
+- **Codex:** habilite `[features] goals = true` e `[features.context_management] experimental_mode = true` na camada de configuração adequada, preservando as configurações existentes, e reinicie o processo ou abra um novo chat para confirmar o funcionamento em runtime. A presença das chaves no arquivo de configuração, isoladamente, não comprova que as funcionalidades foram carregadas.
+- **Claude Code e Gemini/Antigravity:** registre o objetivo de forma equivalente. No Antigravity, utilize o comando `/goal` quando disponível ou mantenha a declaração persistente no topo da sessão; no Claude Code, registre o objetivo e escopo em texto visível permanente durante toda a interação.
 
-`[features]`
+### Compactação de contexto a cada nova tarefa (Exclusivo para Codex)
 
-`goals = true`
+Apenas quando estiver operando no **Codex**:
+A partir da segunda mensagem do usuário no chat (a primeira mensagem não conta), a cada nova tarefa solicitada pelo usuário, acione obrigatoriamente o comando de compactação forçada:
+- **Codex:** comando `/compact`.
+*(Para Claude Code e Gemini/Antigravity, não execute compactação forçada manual, confiando no gerenciamento nativo de janela de contexto de cada plataforma).*
 
-`[features.context_management]`
+### Goal obrigatório do chat (Para todas as 3 ferramentas: Codex, Claude Code e Gemini/Antigravity)
 
-`experimental_mode = true`
-
-Após qualquer alteração de configuração, reinicie o processo ou abra um novo chat e confirme o funcionamento em runtime. A presença das chaves no arquivo de configuração, isoladamente, não comprova que as funcionalidades foram carregadas.
-
-### Goal obrigatório do chat
-
-Todo chat deve possuir um único `/goal` ativo.
+Todo chat conduzido por qualquer uma das três ferramentas deve possuir um único goal ativo e alinhado.
 
 Antes da primeira atuação substantiva:
 
-1. compreenda o que o usuário pretende obter com o chat;
-2. formule o goal contendo somente:
+1. Compreenda o que o usuário pretende obter com o chat;
+2. Formule o goal contendo somente:
    - produto final esperado;
    - escopo do chat;
    - fora de escopo do chat;
-3. apresente a proposta para confirmação, preferencialmente em um card com três alternativas:
+3. Apresente a proposta para confirmação, preferencialmente em um card ou texto com três alternativas:
    - confirmar o goal proposto;
    - ampliar o goal;
    - restringir ou reformular o goal;
    - a opção “Outro” deve permanecer disponível para manifestação livre;
-4. após a confirmação, ative automaticamente o `/goal`, sem pedir nova autorização;
-5. registre concisamente o goal como um campo da subseção correspondente ao chat no arquivo único `log/log.md`.
+4. Após a confirmação, ative o goal (utilizando `/goal` no Codex e Antigravity, ou fixando o texto de ancoragem no Claude Code), sem pedir nova autorização;
+5. Registre concisamente o goal como um campo da subseção correspondente ao chat no arquivo de log do workspace (`log/log.md` ou equivalente).
 
-Se o recurso de card não estiver disponível, apresente as mesmas três alternativas no texto do chat e permita resposta livre.
+Se o recurso de card não estiver disponível, apresente as mesmas três alternativas diretamente no texto do chat e permita resposta livre.
 
 O goal orienta a conversa, mas não determina antecipadamente como a análise deve evoluir nem quais conclusões deverão ser alcançadas. O usuário pode alterar produto, escopo ou fora de escopo durante a conversa.
+

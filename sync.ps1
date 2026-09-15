@@ -1,4 +1,4 @@
-﻿# sync.ps1 - Sincronização rápida com o GitHub
+# sync.ps1 - Sincronização rápida com o GitHub
 param(
     [ValidateSet("push", "pull", "status")]
     [string]$Action = "status",
