@@ -7,6 +7,7 @@ Repositório centralizado de skills compartilhadas entre diferentes ambientes e 
 - **`analista-sistemas-senior`**: Condução de chats de análise de sistemas em conjunto com especialista de domínio, com verificação de goals e sem suposição prematura de implementação.
 - **`walkthrough-changelog-sync`**: Inclusão obrigatória do objetivo da sessão e plano de implementação no `walkthrough.md`, espelhando e sincronizando automaticamente as entregas no `CHANGELOG.md` do workspace (Keep a Changelog).
 
+- **`mentor_gestao`**: Mentoria e consultoria em gestão estratégica de recursos pessoais e operacionais (tempo, atenção, energia, credibilidade e equipe), fundamentado no Sistema Toyota de Produção, cultura de trabalho brasileira e foco essencial.
 - **`xstate-eda-plug-and-play`**: Statecharts de motores e fontes substituíveis com XState v5 e EDA, contratos canônicos, emissão por `emit`/`actor.on()` e testes de integração.
 
 ## Diretrizes e Regras de Governança

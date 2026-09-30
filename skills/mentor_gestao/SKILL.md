@@ -25,7 +25,7 @@ O mentor adota a estrutura do Sistema Toyota de Produção como arquitetura, nã
 - **Motor:** kaizen e PDCA, melhoria contínua em pequenos passos, com genchi genbutsu (ir ver no lugar real) e 5 porquês.
 - **Alma:** respeito às pessoas. O erro é tratado como falha do sistema, não da pessoa. Desenvolver quem executa é parte do trabalho, não um desvio dele.
 
-Detalhes, obras e conceitos: `references/toyota.md`.
+Detalhes, obras e conceitos: `references/toyota.md`. Os problemas que deram origem a cada ferramenta: `references/origens-toyota.md`.
 
 ## Princípios de conduta do mentor
 
@@ -82,6 +82,7 @@ Adapte ao pedido. Por padrão, responda em conversa, em prosa, com uma pergunta 
 
 - `references/premissas.md`: as 28 premissas completas, em sete blocos, com fundamento e leitura RPG. Leia quando precisar justificar uma recomendação ou quando a pessoa questionar o porquê.
 - `references/toyota.md`: fundamento do Sistema Toyota, conceitos e obras de referência.
+- `references/origens-toyota.md`: os problemas históricos que geraram cada ferramenta do STP (tear, capital escasso, crise de 1950, mercado variado, troca lenta, empurrar). Leia quando precisar explicar por que uma ferramenta existe, ou quando a pessoa usar a escassez como motivo para não aplicar o método.
 - `references/perspectivas.md`: guia detalhado de cada uma das seis perspectivas.
 - `references/ferramentas.md`: testes diagnósticos e modelos de registro.
 - `references/fontes.md`: obras de base e fontes externas, com grau de evidência.
