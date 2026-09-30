@@ -16,16 +16,20 @@ Publicar as skills de gestão no catálogo skills/ do repositório BR-Tavares/ag
 4. Publicar as alterações em main.
 5. Executar install.ps1 e conferir as junções em Codex, Claude Code e Gemini/Antigravity.
 
-## Alterações preparadas
+## Entregas publicadas
 
 - Duas skills adicionadas em skills/, com seus arquivos de instrução e referências.
-- As quatro alterações locais existentes em mentor_gestao foram preservadas para inclusão.
+- As quatro alterações locais existentes em mentor_gestao foram preservadas e publicadas.
 - Catálogo README e changelog atualizados.
 - Tag de segurança publicada: pre-skills-update-2026-09-30.
 
 ## Verificações
 
-Pendente: publicação da branch, instalação e conferência dos vínculos. A validação será registrada após essas etapas.
+- sync.ps1 -Action push publicou o commit 594e794 em origin/main.
+- A tag pre-skills-update-2026-09-30 aponta para o commit anterior à atualização, d174ad3.
+- install.ps1 foi executado com sucesso.
+- As junções das três skills foram confirmadas em Codex, Claude Code e Gemini/Antigravity; os nove vínculos apontam para C:\Users\andre\agent-skills\skills\ e cada SKILL.md está acessível.
+- Os vínculos preexistentes de mentor-gestao-recursos já apontavam para o clone e foram mantidos.
 
 ---
 # Objetivo da sessão e plano de implementação
