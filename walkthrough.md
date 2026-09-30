@@ -14,7 +14,7 @@ Plano:
 
 - Estrutura completa da skill em `skills/mentor_gestao/`:
   - `SKILL.md` (metadados e diretrizes do mentor de gestão estratégica de recursos, atualizado para referenciar as origens históricas do STP).
-  - Pasta `references/` com 8 documentos de referência metodológica: `casos.md`, `contexto-brasileiro.md`, `ferramentas.md`, `fontes.md`, `origens-toyota.md`, `perspectivas.md`, `premissas.md`, `toyota.md`.
+  - Pasta `references/` com 8 documentos de referência metodológica: `casos.md`, `contexto-brasileiro.md`, `ferramentas.md`, `fontes.md`, `origens-toyota.md`, `perspectivas.md`, `premissas.md`, `toyota.md` (incluindo nova seção sobre o pensamento prático de Taiichi Ohno e referências a *Gestão do posto de trabalho* e *O nascimento do lean*).
   - `Readme.txt` descritivo.
 - Instalações locais sincronizadas:
   - Codex / GPT: `~/.agents/skills/mentor_gestao` e `~/.agents/skills/mentor-gestao-recursos` apontando para o repositório.

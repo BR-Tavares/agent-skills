@@ -76,6 +76,8 @@ Nota: o princípio 13 combina com a premissa 21. Decisões irreversíveis são t
 ## 6. Obras de referência
 
 - Ohno, Taiichi. *O Sistema Toyota de Produção: além da produção em larga escala* (original 1978; ed. brasileira Bookman). Fundador; origem dos sete desperdícios e dos 5 porquês.
+- Ohno, Taiichi. *Gestão do posto de trabalho* (ed. brasileira Bookman, 2015; original *Gemba Keiei*). Reflexões curtas sobre kaizen, custo e gemba.
+- Shimokawa, Koichi e Fujimoto, Takahiro. *O nascimento do lean* (Bookman, 2010). Depoimentos de quem trabalhou com Ohno.
 - Shingo, Shigeo. *O Sistema Toyota de Produção do ponto de vista da engenharia de produção* (1981; ed. brasileira Bookman). E *Zero Quality Control: Source Inspection and the Poka-yoke System* (1986). Poka-yoke e inspeção na fonte.
 - Liker, Jeffrey. *O Modelo Toyota: 14 princípios de gestão do maior fabricante do mundo* (2004; ed. brasileira Bookman).
 - Womack, Jones e Roos. *A Máquina que Mudou o Mundo* (1990). Estudo do MIT que cunhou "produção enxuta".
@@ -93,3 +95,19 @@ Nota: o princípio 13 combina com a premissa 21. Decisões irreversíveis são t
 - Respeito às pessoas não é enfeite: sem ele, jidoka vira caça ao culpado e ninguém aciona o andon.
 - O STP nasceu em manufatura repetitiva. Em trabalho criativo e de conhecimento, aplique os princípios (visibilidade, fluxo, parar no defeito, pequenos experimentos) e não copie os artefatos.
 - A própria Toyota enfrentou crises de qualidade (recalls de 2009 e 2010) quando cresceu mais rápido do que conseguia desenvolver pessoas. Serve de alerta alinhado à premissa 23: escalar antes de embutir o critério quebra o sistema.
+
+## 8. O pensamento de Ohno: frases com uso na mentoria
+
+Paráfrases de Ohno (1997, 2015), selecionadas pelo que ajudam a enxergar no plano pessoal.
+
+| Ideia de Ohno | Uso na mentoria |
+|---|---|
+| A empresa precisa de um sistema nervoso autonômico: reflexos que respondam a pequenas mudanças no nível mais baixo possível, sem subir ao "cérebro" (1997, p. 41). | Comportamentos automáticos já são reflexos; o problema costuma ser um reflexo mal instalado (ex.: o "sim" imediato). A contramedida não é pensar mais em cada caso, e sim substituir o reflexo por outro padronizado e explícito ("isso sai de onde?", "te retorno até [horário]"). Reflexo explícito é mais acessível que julgamento caso a caso, sobretudo em situações ambíguas. |
+| Preparar-se antes da economia fraca é o verdadeiro kaizen; quem não se preparou pode descobrir tarde demais (2015). | Folga e estabilidade vêm antes do desafio. Organizar em época de calma é o momento certo, não um adiamento. |
+| Muitos aumentam a produtividade aumentando o volume; poucos a aumentam quando o volume cai (1997). | Crescer aceitando mais é o caminho comum e frágil. Melhorar com a mesma carga, ou com menos, é o teste real do sistema. |
+| Custo não é para ser calculado, mas reduzido; quem condiciona o kaizen à compra de uma máquina nova não fará kaizen com máquina nenhuma (2015). | Alerta contra usar a ferramenta nova (inclusive IA) como pré-condição para se organizar. |
+| Se a ideia falhar, vá ver com os próprios olhos o que falhou; devemos ser "dúvidas ambulantes" (2015). | Sustenta o genchi genbutsu pessoal: verificar se a cobrança temida acontece de fato, em vez de debater a hipótese. |
+| O kanban levou cerca de 10 anos para se estabelecer, e sobreviveu porque um superior confiou em Ohno apesar das reclamações (1997). | Mudança de sistema é lenta e precisa de um aliado que a proteja. Identificar quem cumpre esse papel. |
+| "Decidir o que fazer é seu trabalho" (resposta de Ohno a um gerente, em Shimokawa e Fujimoto, 2010). | A especificação e a decisão são de quem assume a entrega. Vale para quem já tem padrão e preparo; com executor não treinado, a falha volta a ser do sistema. |
+
+**Cuidado com o estilo de Ohno.** Relatos de colegas descrevem reprimendas duras, desprezo pela experiência dos veteranos, pressão "praticamente à força" sobre supervisores e redução de mão de obra facilitada pela alta rotatividade. Isso contradiz a alma do método (respeito às pessoas) e o princípio de não liderar como capataz. Extraia de Ohno a clareza, não a aspereza. Para quem tende a ceder demais, o risco é oscilar para o extremo oposto; a moeda proposta é o prazo real, dito e cumprido: firme sem ser duro.
