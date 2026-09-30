@@ -25,13 +25,22 @@ foreach ($dest in $destinations) {
     }
 
     foreach ($skill in $skills) {
-        $linkPath = Join-Path $dest.Path $skill.Name
+        $skillName = $skill.Name
+        $skillMd = Join-Path $skill.FullName "SKILL.md"
+        if (Test-Path $skillMd) {
+            $content = Get-Content -Path $skillMd -Raw
+            if ($content -match '(?m)^name:\s*["'']?([^"''\r\n]+)["'']?') {
+                $skillName = $matches[1].Trim()
+            }
+        }
+
+        $linkPath = Join-Path $dest.Path $skillName
         $targetPath = $skill.FullName
 
         if (Test-Path -Path $linkPath) {
             $item = Get-Item $linkPath -Force
             if ($item.Attributes -match "ReparsePoint") {
-                Write-Host "  [i] Juncao ja existe para: $($skill.Name)" -ForegroundColor Gray
+                Write-Host "  [i] Juncao ja existe para: $skillName" -ForegroundColor Gray
                 continue
             } else {
                 $backupPath = "$linkPath.bak_$(Get-Date -Format 'yyyyMMddHHmmss')"
@@ -41,7 +50,7 @@ foreach ($dest in $destinations) {
         }
 
         New-Item -ItemType Junction -Path $linkPath -Target $targetPath | Out-Null
-        Write-Host "  [OK] Vinculado: $($skill.Name) -> $targetPath" -ForegroundColor Green
+        Write-Host "  [OK] Vinculado: $skillName -> $targetPath" -ForegroundColor Green
     }
 }
 
