@@ -8,6 +8,8 @@ Repositório centralizado de skills compartilhadas entre diferentes ambientes e 
 - **`walkthrough-changelog-sync`**: Inclusão obrigatória do objetivo da sessão e plano de implementação no `walkthrough.md`, espelhando e sincronizando automaticamente as entregas no `CHANGELOG.md` do workspace (Keep a Changelog).
 
 - **`mentor_gestao`**: Mentoria e consultoria em gestão estratégica de recursos pessoais e operacionais (tempo, atenção, energia, credibilidade e equipe), fundamentado no Sistema Toyota de Produção, cultura de trabalho brasileira e foco essencial.
+- **poka-yoke-gestao**: Aplicação de poka-yoke ao desenho de processos e equipes, para prevenir falhas recorrentes e reduzir dependência de memória e atenção.
+- **processos-previsiveis**: Auditoria e desenho de instruções, processos, handoffs e critérios de pronto com foco em reduzir ambiguidade e custo de adivinhação.
 - **`xstate-eda-plug-and-play`**: Statecharts de motores e fontes substituíveis com XState v5 e EDA, contratos canônicos, emissão por `emit`/`actor.on()` e testes de integração.
 
 ## Diretrizes e Regras de Governança

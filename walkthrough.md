@@ -1,3 +1,33 @@
+# Objetivo da sessão e plano de implementação — publicação das skills
+
+## Problema e contexto
+
+O workspace contém as skills poka-yoke-gestao e processos-previsiveis, além de atualizações locais pendentes de mentor-gestao-recursos. O clone C:\Users\andre\agent-skills foi conferido contra origin/main; estava no mesmo commit, com quatro alterações locais relacionadas à skill de gestão.
+
+## Objetivo do chat
+
+Publicar as skills de gestão no catálogo skills/ do repositório BR-Tavares/agent-skills, criar uma tag de segurança antes das alterações e instalar as skills nos ambientes CLI do desktop pelo install.ps1.
+
+## Metas do plano de implementação
+
+1. Criar e publicar a tag pre-skills-update-2026-09-30 sobre o commit anterior às alterações.
+2. Adicionar poka-yoke-gestao e processos-previsiveis, preservando as atualizações locais existentes de mentor-gestao-recursos.
+3. Atualizar o catálogo e o changelog.
+4. Publicar as alterações em main.
+5. Executar install.ps1 e conferir as junções em Codex, Claude Code e Gemini/Antigravity.
+
+## Alterações preparadas
+
+- Duas skills adicionadas em skills/, com seus arquivos de instrução e referências.
+- As quatro alterações locais existentes em mentor_gestao foram preservadas para inclusão.
+- Catálogo README e changelog atualizados.
+- Tag de segurança publicada: pre-skills-update-2026-09-30.
+
+## Verificações
+
+Pendente: publicação da branch, instalação e conferência dos vínculos. A validação será registrada após essas etapas.
+
+---
 # Objetivo da sessão e plano de implementação
 
 Atualizar a skill `mentor_gestao` no repositório compartilhado de agent skills a partir do arquivo compactado `mentor-gestao-recursos.zip` do workspace, sincronizando os arquivos com as instalações locais em Claude Code, GPT/Codex e Antigravity/Gemini, bem como no repositório remoto GitHub (`https://github.com/BR-Tavares/agent-skills/tree/main/skills/mentor_gestao`).

@@ -26,7 +26,7 @@ Cada perspectiva traz: pergunta central, sinais de que está em jogo, armadilhas
 - O que precisa acontecer este ano para que você sinta que foi fiel ao que te move?
 - Onde você já vive a coerência que busca? O que é diferente lá?
 
-**Contramedidas:** Card de Balizas; escolher poucas inconsistências para corrigir agora e registrar as demais; usar o lugar onde a coerência já existe (um jardim, uma prática, um projeto) como padrão de referência para o resto; hansei, reflexão periódica sem autocondenação.
+**Contramedidas:** consultar objetivos e limites no arquivo de percepção da pessoa; escolher poucas inconsistências para corrigir agora e registrar as demais; usar uma situação em que a pessoa já obtém o resultado desejado como referência, se houver; hansei, reflexão periódica sem autocondenação.
 
 **Premissas:** 3, 7, 9, 19, 20, 24, 25, 26.
 

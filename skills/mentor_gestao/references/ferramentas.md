@@ -2,8 +2,8 @@
 
 ## Sumário
 1. Testes diagnósticos
-2. Card de Balizas
-3. Mapa de Desperdício Pessoal
+2. Mapa de Desperdício Pessoal
+3. Mapa de Processo do Comportamento
 4. A3 Pessoal
 5. Protocolo de Delegação
 6. Ficha de Poka-yoke
@@ -27,7 +27,7 @@
 
 **Decisão**
 1. Reversibilidade: porta de ida e volta ou só de ida? (premissa 21)
-2. Balizas: a opção viola algo que não pode acontecer?
+2. Limites da pessoa: a opção contraria algum limite registrado na percepção atual?
 
 **Classificação de desperdício**
 - Muda: consome sem agregar.
@@ -36,31 +36,7 @@
 
 ---
 
-## 2. Card de Balizas
-
-```
-PROPÓSITO (por que continuo):
-_____________________________________________
-
-O QUE NÃO PODE ACONTECER (limites invioláveis):
-1.
-2.
-3.
-
-O QUE PRECISA ACONTECER (este ciclo):
-1.
-2.
-3.
-
-SINAIS DE ALERTA (andon pessoal):
-- se ______ , então paro e ______
-
-REVISÃO: data ____
-```
-
----
-
-## 3. Mapa de Desperdício Pessoal
+## 2. Mapa de Desperdício Pessoal
 
 | Atividade | Horas/semana | Essencial / Urgente / Circunstancial | Tipo (muda, mura, muri, nenhum) | Atua no gargalo? | Decisão (manter, padronizar, delegar, eliminar) |
 |---|---|---|---|---|---|
@@ -69,11 +45,21 @@ Ao final: gargalo atual; proporção por esfera; uma atividade a eliminar nesta 
 
 ---
 
+## 3. Mapa de Processo do Comportamento
+
+Use quando houver padrões recorrentes e for preciso descobrir onde uma intervenção pode agir. Numere os padrões observados como P1, P2... e descreva, conforme as evidências disponíveis, origem da demanda, condição que a mantém, decisão ou resposta, acúmulo e efeito. Essas posições são perguntas para investigar, não etapas obrigatórias nem causas já demonstradas. Uma crença só entra como relato ou hipótese a confirmar.
+
+Mantenha as contramedidas numa lista separada, como C1, C2...; uma ação proposta nunca é um padrão. Para cada C, registre a ligação `C → P`, o mecanismo pelo qual deve alterar P e o sinal observável que permitirá verificar o efeito. Se a ligação não puder ser explicada com clareza, investigue o processo antes de recomendar a ação.
+
+Quando um diagrama ajudar, represente o processo atual em SVG. Distinga visualmente relatos, observações e inferências e confirme as relações com a pessoa.
+
+---
+
 ## 4. A3 Pessoal
 
 ```
 TÍTULO:
-1. CONTEXTO: por que isso importa (ligação com o propósito e as balizas)
+1. CONTEXTO: por que isso importa para os objetivos e limites registrados na percepção da pessoa
 2. SITUAÇÃO ATUAL: fatos observados (genchi genbutsu), números se houver
 3. META / CONDIÇÃO-ALVO: como deve estar, até quando
 4. ANÁLISE DE CAUSA: 5 porquês
