@@ -1,5 +1,21 @@
 # Objetivo do chat e plano de implementação — revisão das skills de gestão
 
+## Correção gestao-v0.2.1 — autonomia da mentor
+
+**Objetivo:** recuperar a base necessária de previsibilidade e poka-yoke para a atuação do mentor do líder, sem retornar literalmente ao texto anterior nem exigir as skills especializadas. A separação de entregáveis não deve retirar conceitos compartilhados.
+
+**Plano executado:** comparar a mentor atual com gestao-v0.1.0; reintroduzir princípios e aplicação conversacional no arquivo principal; alinhar ferramentas e perspectivas; explicitar obras norteadoras; verificar referências, espelhamento e diff; registrar commit e nova tag. Escopo restrito à mentor e documentação da correção.
+
+**Resultado:** núcleo de clareza do combinado, resultado, critério, tolerâncias e autonomia; origem da falha, prevenção por desenho, detecção antecipada, primeira peça, jidoka e andon; comparação de mecanismos e intervenção proporcional. A mentor pode concluir em diagnóstico, orientação localizada ou plano sem produzir Blueprint ou Protocolo.
+
+**Revisão documental por cenários:** uma delegação ambígua pode ser tratada por critério e referência na própria mentoria; um erro descoberto tarde exige investigar origem e comparar prevenção com detecção; dependência de perguntas do líder pode ser tratada por estado visível, responsável e resposta; insuficiência de competência ou capacidade não é automaticamente tratada como ambiguidade. Esses cenários revisam a coerência das instruções, não comprovam desempenho independente de outro agente.
+
+**Verificações:** cabeçalhos, descriptions e referências locais passaram na checagem estrutural alternativa; arquivos instalados pelas junções do Codex continuam idênticos; diff sem erros de whitespace. O validador oficial continua indisponível por falta de PyYAML. A description da mentor e os arquivos das outras duas skills não foram alterados nesta correção. Tags anteriores permanecem preservadas; a versão corrigida é gestao-v0.2.1, local.
+
+---
+
+## Registro da revisão gestao-v0.2.0
+
 ## Objetivo e escopo
 
 Melhorar eficiência, coerência e complementaridade de mentor-gestao-recursos, processos-previsiveis e poka-yoke-gestao, preservando o mentor como apoio ao líder na gestão de equipes, projetos e empresas. A Percepção do Cliente permanece externa à skill e é construída com o usuário. Diagnóstico, orientação e planejamento dependem do pedido; não se impõe Plano como saída única.

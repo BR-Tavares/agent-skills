@@ -48,6 +48,22 @@ A escolha depende do pedido. Não imponha um plano a quem solicitou diagnóstico
 
 Um mapa de comportamento ou fluxo pode ajudar. Use SVG quando útil à compreensão, distinguindo fatos, relatos e hipóteses; não obrigue diagrama em toda consulta.
 
+## Previsibilidade e qualidade como recursos do líder
+
+Use estas duas lentes dentro da própria mentoria quando o caso envolver delegação, retrabalho, interrupções, dependência do líder ou falhas descobertas tarde. Elas integram o repertório desta skill; não exigem outra skill nem produção de Blueprint ou Protocolo.
+
+**Previsibilidade: tornar o combinado compreensível.** Investigue quanto do trabalho depende de adivinhar o que o líder espera. Antes de recomendar mais esforço ou supervisão, examine se quem executa conhece a finalidade, o resultado, o critério de aceite, sua autonomia e o que pode variar. Uma orientação útil comunica tanto o que importa quanto as tolerâncias; o padrão deve permitir agir, não exigir consulta para cada detalhe.
+
+Na conversa, examine a instrução real e localize a dúvida relevante: onde parar, o que significa “pronto”, quem decide ou como a tarefa passa adiante. Ajude o líder a fechar essa lacuna com um critério, exemplo ou acordo curto. O estado do trabalho e a responsabilidade precisam estar acessíveis, em vez de depender da memória do líder. Mudanças devem explicitar seus efeitos nos compromissos; em exploração, estabilize o objetivo e a próxima revisão sem impor uma solução antecipada.
+
+**Poka-yoke: incorporar o critério ao desenho.** Investigue o que permite o erro e onde ele nasce, além de onde é descoberto. Procure oportunidades de eliminar a condição que o produz, restringir escolhas inadequadas ou revelar a divergência perto da origem. Distinga prevenção, detecção e simples lembrete: escrever uma regra ajuda a compreender, mas não garante cumprimento; conferir no fim pode detectar quando o dano já se propagou.
+
+Na orientação ao líder, compare uma contramedida concreta com a dependência atual de lembrar, perguntar, interpretar ou fiscalizar. Um exemplo de referência pode reduzir ambiguidade; um gabarito pode impedir uma montagem incorreta; verificar a primeira peça pode conter a repetição de um defeito. Escolha pelo mecanismo, risco e custo, não pela ferramenta disponível. Examine falsos bloqueios, contornos e sobrecarga de aprovadores antes de recomendar uma barreira.
+
+**Jidoka e andon: perceber, interromper e aprender.** Quando pertinente, ajude o líder a combinar qual desvio deve ficar visível, quem responde e quando se interrompe a etapa afetada para não passar o erro adiante. Dê ao executor condição de reconhecer e comunicar dúvidas sem punição por revelar o problema. A resposta precisa permitir correção e retomada; não transforme toda variação em alarme ou toda dúvida em aprovação do líder.
+
+**Aplicação proporcional na mentoria.** Primeiro verifique clareza, competência, acesso e capacidade; nem todo atraso ou erro decorre de ambiguidade. Escolha uma mudança pequena que atue na condição identificada e combine como observar seu efeito. Um diagnóstico pode apenas localizar a dependência e suas consequências; uma orientação pode resolver um ponto específico; um plano pode incorporar a contramedida. O detalhamento completo fica condicionado ao pedido.
+
 ## Critérios de atuação
 
 - Objetivos e limites vêm do cliente. Não presuma vocação, motivação não econômica ou definição universal de sucesso.
@@ -70,11 +86,22 @@ As conversas podem ser independentes. Não acione as três skills automaticament
 
 Um diagnóstico pode encerrar a consulta. Para desenhar um processo, as decisões que afetam o desenho precisam estar disponíveis; recomendações ainda não escolhidas não são requisitos aprovados. Uma demanda bem delimitada também pode entrar diretamente na segunda skill.
 
-Esta skill mantém a visão de gestão sobre fluxo, delegação e qualidade. Para especificação operacional detalhada, use processos-previsiveis; para mecanismos contra falhas, use poka-yoke-gestao quando necessário e disponível. Se não estiver, explicite o limite e entregue a parte solicitada que puder realizar.
+Esta skill aplica por si os conceitos de previsibilidade e poka-yoke no diagnóstico, na orientação e no planejamento do líder. Use processos-previsiveis quando o pedido exigir um Blueprint ou especificação operacional aprofundada; use poka-yoke-gestao quando exigir análise especializada de falhas e Protocolo de execução. A distinção é de profundidade e produto, não de exclusividade dos conceitos. Se outra skill não estiver disponível, mantenha a atuação da mentor e explicite apenas os limites reais da entrega.
 
 ## Fundamentos e leitura seletiva
 
 O Sistema Toyota oferece estrutura para fluxo e qualidade: estabilidade, trabalho padronizado, just-in-time, jidoka, melhoria contínua e respeito às pessoas. As seis obras de foco e prioridade oferecem ferramentas distintas, selecionadas conforme o contexto. A aplicação empresarial considera o sistema produtivo, não apenas a agenda do líder.
+
+### Obras e conceitos norteadores
+
+- Keller e Papasan, *A Única Coisa*: ligação entre objetivo, prioridade e próxima ação; McKeown, *Essencialismo*: escolhas, renúncias e capacidade.
+- Newport, *Trabalho Focado*, e Knapp e Zeratsky, *Faça Tempo*: condições de atenção, foco e experimentação da rotina.
+- Clear, *Hábitos Atômicos*: pistas e desenho do ambiente; Barbosa, *A Tríade do Tempo*: leitura do uso do tempo e das demandas.
+- Ohno, *O Sistema Toyota de Produção* e *Gestão do posto de trabalho*: observar o trabalho real, fluxo, desperdício e qualidade; Shingo, *Zero Quality Control: Source Inspection and the Poka-yoke System*: prevenção e inspeção na fonte.
+- Liker, *O Modelo Toyota*, e Rother, *Toyota Kata*: desenvolvimento das pessoas, melhoria e aprendizagem por experimentos.
+- Clark e Chalmers, *The Extended Mind*, Clark, *Surfing Uncertainty*, e Vermeulen, *Autism and the Predictive Brain*: lentes sobre artefatos, expectativas e contexto. Processamento preditivo e HIPPEA são hipóteses explicativas, não diagnóstico do cliente nem prova de causa.
+
+Estes vínculos orientam seleção e evolução do método. Preserve autor → conceito → uso e limite ao revisar a skill; diferencie ferramenta da obra, adaptação da mentoria e hipótese do caso. A bibliografia detalhada e as ressalvas estão nas referências abaixo.
 
 - [references/mapa-ferramentas.md](references/mapa-ferramentas.md): comparação e seleção de ferramentas.
 - [references/ferramentas.md](references/ferramentas.md): percepção, diagnóstico, plano e registros de apoio.

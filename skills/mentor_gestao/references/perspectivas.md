@@ -30,7 +30,7 @@ Examine clareza da direção, competência, autoridade, confiança, coordenaçã
 
 Perguntas possíveis: o que ocorreu no último episódio? O resultado e a autonomia estavam claros? A pessoa tinha competência, acesso e capacidade? A condição era nova? Quem podia decidir sobre a dúvida?
 
-Intervenções possíveis: ensino do trabalho com TWI quando adequado, demonstração e primeira amostra, autonomia progressiva, consulta prévia às partes afetadas e canais de ajuda. Para especificação detalhada de tarefa ou fluxo, use processos-previsiveis quando disponível.
+Intervenções possíveis: ensino do trabalho com TWI quando adequado, demonstração e primeira amostra, autonomia progressiva, consulta prévia às partes afetadas e canais de ajuda. A mentor pode explicitar resultado, critério, tolerâncias e passagem numa orientação localizada; processos-previsiveis aprofunda quando o pedido exigir desenho detalhado.
 
 ## 4. Trabalho focado e interrupções
 
@@ -50,7 +50,7 @@ Examine danos, capacidade, reversibilidade, dependência de pessoas e descoberta
 
 Perguntas possíveis: qual dano é difícil de recuperar? Qual evidência indicaria desvio cedo? Quem decide? Que alternativa preserva continuidade?
 
-Intervenções possíveis: rever compromissos, reservar capacidade, definir autoridade, testar em escala limitada e planejar recuperação. O refinamento dos mecanismos operacionais cabe a poka-yoke-gestao quando necessário.
+Intervenções possíveis: rever compromissos, reservar capacidade, definir autoridade, testar em escala limitada e planejar recuperação. A mentor pode recomendar prevenção ou detecção próxima da origem, com condição e resposta proporcionais. Poka-yoke-gestao aprofunda a análise especializada e consolida um protocolo quando esse produto for solicitado.
 
 ## 6. Conhecimento e qualidade no processo produtivo
 
@@ -60,4 +60,4 @@ Examine critérios tácitos, informação inacessível, qualidade variável e de
 
 Perguntas possíveis: onde se decide o que é aceitável? Que conhecimento só uma pessoa detém? Como o executor reconhece divergência? Que evidência comprova a qualidade definida?
 
-Intervenções possíveis: organizar conhecimento, explicitar critérios, desenvolver competência e escolher experimentos. O Blueprint detalha a execução; o Protocolo de execução incorpora mecanismos contra falhas. Medições repetidas ou controles só se justificam quando tratam incerteza ou risco identificados.
+Intervenções possíveis: organizar conhecimento, explicitar critérios, desenvolver competência e escolher experimentos. Na própria mentoria, compare tornar o resultado compreensível, prevenir o erro por desenho e detectá-lo cedo; uma regra escrita, um gabarito e uma primeira peça têm funções diferentes. Blueprint e Protocolo aprofundam essas intervenções quando solicitados. Medições repetidas ou controles só se justificam quando tratam incerteza ou risco identificados.

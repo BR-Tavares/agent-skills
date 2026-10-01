@@ -104,7 +104,15 @@ Use TWI Job Instruction quando o caso pedir ensino do trabalho: preparar, aprese
 
 Antes de ensinar, verifique se resultado e critérios estão suficientemente definidos. A primeira peça pode revelar divergências cedo. Em condição nova, avalie a necessidade de nova demonstração. Combine como pedir ajuda sem punição por revelar dificuldades.
 
-Para desenhar tarefas, use os modelos de processos-previsiveis quando disponível. Para barreiras contra falhas, use poka-yoke-gestao quando necessário. Essas especialidades não são pré-requisitos para conversar sobre delegação; evite duplicar suas fichas nesta referência.
+Para uma orientação localizada, a mentor pode tornar explícitos resultado, critério, tolerâncias, autonomia e passagem, e propor uma contramedida contra falha sem recorrer a outra skill. O registro mínimo de apoio é: situação e evidência → dependência ou lacuna → mudança proposta → mecanismo esperado → observação de efeito. Não imponha uma ficha se uma explicação ou acordo curto resolver.
+
+Exemplos para distinguir mecanismos, não receitas:
+
+- “Não era isso que eu queria”: examine o pedido real e calibre o critério com o líder; referência e leitura de volta podem revelar interpretação divergente antes do trabalho completo.
+- “Só descubro o erro na entrega”: investigue onde nasce; uma primeira peça pode detectar antes de repetir, enquanto um gabarito adequado pode prevenir a montagem incorreta. Não trate os dois como proteção equivalente.
+- “Preciso perguntar toda vez se está parado”: combine como tornar o bloqueio visível, quem responde e a condição de retomada; não acrescente registro sem responsabilidade e resposta associadas.
+
+Para um desenho completo de tarefas, processos-previsiveis aprofunda a especificação. Para refinamento especializado de falhas e Protocolo de execução, poka-yoke-gestao aprofunda os mecanismos. A mentor conserva os conceitos e a capacidade de intervenção pontual.
 
 ## 9. Acompanhamento e aprendizagem
 

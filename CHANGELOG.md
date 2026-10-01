@@ -19,6 +19,18 @@ As alterações relevantes seguem o padrão Keep a Changelog.
 - Script `sync.ps1` reconfigurado para atuar exclusivamente como utilitário de cofre/backup remoto para o repositório GitHub.
 - Documentação do `README.md` reestruturada com foco exclusivo nos 3 CLIs locais e backup seguro no GitHub.
 
+## [gestao-v0.2.1] - 2026-09-30
+
+### Fixed
+
+- Restabelecida a aplicação autônoma de previsibilidade, poka-yoke, jidoka e andon na mentor, sem exigir outras skills, Blueprint ou Protocolo de execução.
+- Encaminhamento às especialidades definido por profundidade e entregável, preservando os conceitos compartilhados na mentoria.
+
+### Added
+
+- Obras e conceitos norteadores explícitos no SKILL.md da mentor, com autores, vínculos de aplicação e limites.
+- Exemplos de intervenção localizada e distinção entre clareza, prevenção, detecção e lembrete nas referências de delegação e perspectivas.
+
 ## [gestao-v0.2.0] - 2026-09-30
 
 ### Added
