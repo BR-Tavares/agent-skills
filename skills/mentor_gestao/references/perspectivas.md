@@ -56,9 +56,9 @@ Cada perspectiva traz: pergunta central, sinais de que está em jogo, armadilhas
 
 **Pergunta central:** como o trabalho passa por outras pessoas sem se perder?
 
-**Sinais:** o resultado trava quando escala; erros que se repetem quando outros executam; necessidade de estar presente em tudo; reuniões que não decidem; ideias corretas rejeitadas por conformismo.
+**Sinais:** o resultado trava quando escala; erros que se repetem quando outros executam; "não era isso que eu queria"; retrabalho descoberto só no fim; necessidade de estar presente em tudo; reuniões de alinhamento que não decidem; ideias corretas rejeitadas por conformismo.
 
-**Armadilhas:** ensinar uma vez e confiar; culpar a pessoa pelo erro que o processo permitiu; delegar em condição nova sem verificação da primeira peça; tentar convencer pela autoridade técnica em vez de mostrar pelo resultado; aumentar o número de envolvidos sem medir o custo de coordenação.
+**Armadilhas:** ensinar uma vez e confiar; culpar a pessoa pelo erro que o processo permitiu; delegar em condição nova sem verificação da primeira peça; tentar convencer pela autoridade técnica em vez de mostrar pelo resultado; aumentar o número de envolvidos sem medir o custo de coordenação; dar instruções com termos subjetivos ("capricha", "bem feito", "o quanto antes") e cobrar como se o critério tivesse sido dito.
 
 **Perguntas do mentor:**
 - Da última vez que deu errado com outra pessoa, o que exatamente aconteceu? Quando o erro foi descoberto?
@@ -66,10 +66,13 @@ Cada perspectiva traz: pergunta central, sinais de que está em jogo, armadilhas
 - Havia como ela perceber sozinha que estava errando?
 - Ela sabia que podia, e devia, parar e chamar?
 - A resistência que você encontra é por não entender, por não concordar, ou por não executar?
+- Qual foi o texto exato da instrução? Ele permitia a interpretação que a pessoa fez? O que ela precisou adivinhar?
 
 **Contramedidas:** Protocolo de Delegação (TWI + primeira peça + andon); padrão visual em vez de explicação verbal; autonomia progressiva (fazer junto, observar, verificar por amostra, liberar); nemawashi antes de reuniões decisivas; diante do conformismo, mostrar o resultado medido em vez de argumentar (a evidência embutida convence onde o título não convence).
 
-**Premissas:** 11, 14, 15, 23, 25, 27.
+Antes de ensinar, verifique a própria instrução, porque o método de ensino não corrige um pedido ambíguo. Três lacunas se repetem, e cada uma obriga quem executa a adivinhar algo diferente: o escopo sem borda (diz o que fazer, mas não o que fica de fora nem onde parar), o termo subjetivo (exige adivinhar um gosto) e o término sem critério observável (o "pronto" depende de alguém achar que está pronto). Fechadas as lacunas, declare também as tolerâncias, isto é, o que pode variar sem problema, já que sem elas a pessoa trata cada detalhe como decisivo. Por fim, faça a passagem de trabalho depender de uma prova combinada (foto, arquivo, teste registrado), e não da impressão de quem entrega; assim ela não depende de ler intenções. Quando o pedido for a auditoria completa de um texto ou o desenho do fluxo de uma equipe, use a skill processos-previsiveis.
+
+**Premissas:** 11, 14, 15, 23, 25, 27, 29.
 
 ---
 
@@ -88,7 +91,9 @@ Cada perspectiva traz: pergunta central, sinais de que está em jogo, armadilhas
 
 **Contramedidas:** blocos protegidos no horário de maior energia; fluxo unitário (uma coisa até o fim, não várias em paralelo); barreiras de ambiente (aparelhos fora de alcance, notificações desligadas); acordo explícito de disponibilidade com a equipe, para romper a armadilha coletiva; ritual de início e fim.
 
-**Premissas:** 2, 6, 17, 18, 26.
+Como cada interrupção destrói o que a pessoa mantinha na memória de trabalho, os ajustes com a equipe rendem mais quando agrupados em momentos previstos (fim de bloco, fim de etapa) do que espalhados pelo dia.
+
+**Premissas:** 2, 6, 17, 18, 26, 29.
 
 ---
 
@@ -120,7 +125,7 @@ Cada perspectiva traz: pergunta central, sinais de que está em jogo, armadilhas
 
 **Sinais:** qualidade depende da presença do especialista; clientes ou parceiros desconfiam; o conhecimento está na cabeça de alguém; o mesmo erro aparece em lugares diferentes.
 
-**Armadilhas:** confiar no treinamento como única barreira; inspecionar só no fim; criar documentação que ninguém lê em vez de desenho que impede o erro; buscar a solução perfeita antes da solução garantida.
+**Armadilhas:** confiar no treinamento como única barreira; inspecionar só no fim; criar documentação que ninguém lê em vez de desenho que impede o erro; buscar a solução perfeita antes da solução garantida; esquecer que a instrução também é parte do produto e que o erro de interpretação nasce nela; especificar só obrigações, sem dizer o que pode variar.
 
 **Perguntas do mentor:**
 - Que erro, se acontecer, é mais caro? Onde ele nasce?
@@ -130,4 +135,4 @@ Cada perspectiva traz: pergunta central, sinais de que está em jogo, armadilhas
 
 **Contramedidas:** Ficha de Poka-yoke; inspeção na fonte; redundância que gera credibilidade (medições repetidas, triplicatas); gabaritos, encaixes que só aceitam a forma certa, testes por trecho; padrão visual no próprio objeto. Começar pela solução mais garantida, não pela mais elegante; otimizar depois, por kaizen.
 
-**Premissas:** 1, 13, 22, 27.
+**Premissas:** 1, 13, 22, 27, 29.

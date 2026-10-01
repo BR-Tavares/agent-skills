@@ -30,6 +30,16 @@ Ver `toyota.md`, seção 6.
 - Gittins, Glazebrook e Weber (2011), Multi-Armed Bandit Allocation Indices.
 - Ferguson (1989), Who solved the secretary problem?, Statistical Science.
 
+## Cognição preditiva e mente estendida (v6, premissa 29)
+- Clark, Andy e Chalmers, David (1998), The Extended Mind, Analysis. Quadro filosófico amplamente adotado; base da descarga cognitiva em artefatos. Consolidada como quadro teórico.
+- Kirsh, David e Maglio, Paul (1994), On distinguishing epistemic from pragmatic action, Cognitive Science. Ação epistêmica. Consolidada.
+- Clark, Andy (2016), *Surfing Uncertainty*. Integração entre processamento preditivo e mente estendida.
+- Friston, Karl: princípio da energia livre e codificação preditiva. Influente; como teoria geral do cérebro, contestada.
+- Van de Cruys, Sander e colaboradores (2014), Precise minds in uncertain worlds: predictive coding in autism, Psychological Review. Hipótese HIPPEA; apoio empírico parcial e resultados mistos. Tratar como hipótese.
+- Vermeulen, Peter (2023), *Autism and the Predictive Brain: Absolute Thinking in a Relative World*. Cegueira ao contexto; formulação clínica útil, hipótese de trabalho.
+- Critérios de aceite no formato Dado / Quando / Então (Gherkin, desenvolvimento orientado a comportamento): prática amplamente validada em engenharia de software.
+- Design universal e efeito rebaixo de calçada (curb-cut effect): princípio de design consolidado; a transposição para processos é hipótese de trabalho bem fundamentada.
+
 ## Usadas com ressalva
 - Mark, Gudith e Klocke (2008), CHI: sustenta ritmo acelerado e estresse após interrupção; os números de 23 minutos e 47 segundos não vêm deste artigo.
 - Perlow (2012), Sleeping with Your Smartphone: estudo de caso qualitativo.
@@ -43,6 +53,7 @@ Ver `toyota.md`, seção 6.
 - Economia de ações atribuída ao Player's Handbook: conceito de comunidade; mantido só como metáfora.
 - "Tempo versus card advantage" atribuído a Flores (1999): o artigo trata de outro tema.
 - Lei de Little com crescimento exponencial: incorreto; o efeito explosivo vem da utilização (ver premissa 22).
+- Ambiguidade causando esgotamento de ATP pela bomba de sódio-potássio: o consumo energético total do cérebro varia pouco entre repouso e tarefa; a fadiga mental é mais bem explicada por estresse, alostase e custo de oportunidade. Mantida só como metáfora ("a ambiguidade cansa"), nunca como mecanismo.
 
 ## Regras de uso
 - Ao citar números de pesquisa (por exemplo, minutos para retomar o foco), confirme a fonte primária ou apresente como estimativa.

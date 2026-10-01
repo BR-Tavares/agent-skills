@@ -1,6 +1,6 @@
-# Premissas do Mentor (v5)
+# Premissas do Mentor (v6)
 
-28 premissas em sete blocos. Blocos A a E vêm das seis obras de base e da pesquisa complementar verificada. O bloco F, acrescentado na v4, contém as premissas de fundamento que reorientam as demais: o objetivo é a continuidade guiada pela vocação, não o valor econômico.
+29 premissas em oito blocos. Blocos A a E vêm das seis obras de base e da pesquisa complementar verificada. O bloco F, acrescentado na v4, contém as premissas de fundamento que reorientam as demais: o objetivo é a continuidade guiada pela vocação, não o valor econômico. O bloco H, acrescentado na v6, explica pela cognição preditiva por que o padrão, o poka-yoke e a delegação funcionam.
 
 Formato: enunciado · fundamento · leitura RPG. Ao final, tabela de premissas por perspectiva.
 
@@ -12,6 +12,7 @@ Formato: enunciado · fundamento · leitura RPG. Ao final, tabela de premissas p
 - Bloco E — Estrutura do sistema (21 a 23)
 - Bloco F — Propósito, balizas e qualidade embutida (24 a 27)
 - Bloco G — Contexto cultural (28)
+- Bloco H — Previsibilidade (29)
 - Premissas por perspectiva
 
 **Nota de leitura:** onde as premissas antigas dizem "valor", leia "resultado que sustenta a continuidade da vocação" (ver premissa 24).
@@ -172,10 +173,10 @@ Quando o trabalho passa para outras pessoas, ensinar e confiar não basta, sobre
 |---|---|
 | 1. Postura pessoal | 3, 7, 9, 19, 20, 24, 25, 26 |
 | 2. Uso do tempo | 1, 2, 4, 5, 10, 11, 12, 13, 16 |
-| 3. Relação com outros | 11, 14, 15, 23, 25, 27 |
-| 4. Trabalho focado | 2, 6, 17, 18, 26 |
+| 3. Relação com outros | 11, 14, 15, 23, 25, 27, 29 |
+| 4. Trabalho focado | 2, 6, 17, 18, 26, 29 |
 | 5. Redução de risco | 8, 16, 20, 21, 22, 25, 27 |
-| 6. Conhecimento embutido no produto | 1, 13, 22, 27 |
+| 6. Conhecimento embutido no produto | 1, 13, 22, 27, 29 |
 
 ---
 
@@ -193,3 +194,19 @@ A escravidão no Brasil durou mais de três séculos e foi abolida sem integraç
 | 3. Relação com outros | Liderar por ensino e respeito, nunca pelo modelo do capataz; entender o conformismo como defesa |
 | 5. Redução de risco | Antecipar resistência institucional a ideias que ameaçam hierarquias |
 | 6. Conhecimento embutido | Evidência embutida no produto contorna a desconfiança pessoal e a hierarquia de títulos |
+
+---
+
+## Bloco H — Previsibilidade (v6)
+
+**29. O custo de um trabalho depende mais de quanto ele obriga a adivinhar do que do seu volume.**
+Quem executa está sempre prevendo o que vem a seguir e o que será considerado certo. Quando a instrução, o critério de pronto e o estado do trabalho estão explícitos, o ambiente confirma a previsão e o esforço vai para o trabalho. Quando estão implícitos, cada pessoa simula por dentro a intenção de quem pediu, e essa simulação consome atenção, gera ansiedade de avaliação e produz retrabalho descoberto tarde. Por isso uma tarefa longa e previsível pode custar menos que uma curta e ambígua. Daí decorrem três consequências para o mentor. Primeiro, a instrução também é fonte de defeito: escopo sem borda, termo subjetivo e término sem critério observável são as lacunas mais comuns. Segundo, o padrão precisa declarar o que pode variar, e não só o que é obrigatório, porque sem tolerâncias quem executa trata cada detalhe como decisivo. Terceiro, o custo é o mesmo mecanismo para todos, mas muito maior para quem processa pouco contexto implícito, como pessoas autistas; logo, desenhar o processo para o perfil mais sensível beneficia a equipe inteira.
+*Fundamento:* processamento preditivo (Friston; Clark); mente estendida (Clark e Chalmers) e ação epistêmica (Kirsh e Maglio); hipótese HIPPEA (Van de Cruys e colaboradores) e cegueira ao contexto (Vermeulen); regra 1 de Spear e Bowen (todo trabalho é especificado em conteúdo, sequência, tempo e resultado); design universal. Aprofundamento e modelos na skill processos-previsiveis.
+*Grau de evidência:* o custo de interrupções, os limites da memória de trabalho, a descarga em artefatos e a redução de retrabalho por critério explícito são consolidados; o processamento preditivo como teoria geral e o HIPPEA são hipóteses sérias em debate; a ligação direta entre ambiguidade e esgotamento energético do cérebro é metáfora, não mecanismo.
+*RPG:* missão com objetivo "traga algo bom" obriga o personagem a carregar no inventário todas as respostas possíveis; missão com "traga três peles de lobo até o anoitecer" deixa o inventário livre para a luta.
+
+| Perspectiva | Uso da premissa 29 |
+|---|---|
+| 3. Relação com outros | Antes de culpar quem executou, verificar se a instrução permitia a interpretação; delegar com critério de aceite e tolerâncias |
+| 4. Trabalho focado | Interrupção destrói o estado mantido na memória; agrupar ajustes em momentos previstos |
+| 6. Conhecimento embutido | O erro de interpretação também se previne por desenho: critério escrito, primeira peça, leitura de volta |

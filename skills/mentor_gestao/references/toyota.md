@@ -10,6 +10,8 @@ O Sistema Toyota de Produção (STP) costuma ser reduzido a ferramentas visívei
 5. Os 14 princípios de Liker, resumidos
 6. Obras de referência
 7. Cuidados de aplicação
+8. O pensamento de Ohno: frases com uso na mentoria
+9. Leitura cognitiva do trabalho padronizado
 
 ## 1. A casa do STP
 
@@ -111,3 +113,15 @@ Paráfrases de Ohno (1997, 2015), selecionadas pelo que ajudam a enxergar no pla
 | "Decidir o que fazer é seu trabalho" (resposta de Ohno a um gerente, em Shimokawa e Fujimoto, 2010). | A especificação e a decisão são de quem assume a entrega. Vale para quem já tem padrão e preparo; com executor não treinado, a falha volta a ser do sistema. |
 
 **Cuidado com o estilo de Ohno.** Relatos de colegas descrevem reprimendas duras, desprezo pela experiência dos veteranos, pressão "praticamente à força" sobre supervisores e redução de mão de obra facilitada pela alta rotatividade. Isso contradiz a alma do método (respeito às pessoas) e o princípio de não liderar como capataz. Extraia de Ohno a clareza, não a aspereza. Para quem tende a ceder demais, o risco é oscilar para o extremo oposto; a moeda proposta é o prazo real, dito e cumprido: firme sem ser duro.
+
+## 9. Leitura cognitiva do trabalho padronizado
+
+A primeira regra de Spear e Bowen (todo trabalho especificado em conteúdo, sequência, tempo e resultado) tem uma explicação que vai além da manufatura, e ela ajuda a aplicar o STP ao trabalho de conhecimento e à gestão de pessoas.
+
+Pela teoria do processamento preditivo, o cérebro não recebe o mundo passivamente: antecipa o que vai perceber e processa sobretudo a diferença entre o previsto e o ocorrido. Daí decorre que o custo de uma tarefa depende da surpresa que ela gera, e não só do seu volume. Quando o trabalho não está especificado, a pessoa não consegue saber qual ação confirmaria o esperado e passa a simular por dentro a intenção de quem pediu, que é a via mais cara. O padrão, o quadro visual e o critério escrito funcionam, então, como extensão da mente (Clark e Chalmers): guardam o estado que a memória de trabalho teria de sustentar, e consultá-los é uma ação epistêmica (Kirsh e Maglio), que não produz nada diretamente, mas reduz o que a pessoa precisa manter na cabeça.
+
+Essa leitura acrescenta duas coisas à prática Toyota. Primeiro, o padrão tem duas funções: dizer o que é obrigatório e dizer o que pode variar. A segunda costuma ser esquecida, e sem ela quem executa trata todo detalhe como decisivo, o que cansa e trava. Segundo, a gestão visual e o trabalho padronizado não são só eficiência: para pessoas que processam pouco contexto implícito, como pessoas autistas, eles são condição de funcionamento, e o que é condição para elas é ganho para todos (design universal, o mesmo princípio do rebaixo de calçada).
+
+Essa leitura também explica a ideia de Ohno sobre o sistema nervoso autonômico (seção 8): um reflexo padronizado e explícito é uma previsão que não precisa ser recalculada a cada caso, e por isso custa menos do que o julgamento caso a caso, sobretudo em situações ambíguas.
+
+Graus de evidência e aprofundamento: `fontes.md` e a skill processos-previsiveis.

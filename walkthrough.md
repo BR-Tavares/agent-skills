@@ -1,64 +1,51 @@
-# Objetivo da sessão e plano de implementação — publicação das skills
+# Objetivo da sessão e plano de implementação — migração para modelo Local-First (3 CLIs) e publicação de melhorias na skill mentor
 
 ## Problema e contexto
 
-O workspace contém as skills poka-yoke-gestao e processos-previsiveis, além de atualizações locais pendentes de mentor-gestao-recursos. O clone C:\Users\andre\agent-skills foi conferido contra origin/main; estava no mesmo commit, com quatro alterações locais relacionadas à skill de gestão.
+O usuário relatou perda de tempo e atrito ao tentar gerenciar as skills por fluxos de instalação remota baseados no GitHub. O foco necessário é 100% **Local-First**, usando a pasta local `skills/` como fonte única da verdade espelhada diretamente nas pastas dos 3 CLIs locais (Claude Code, Gemini/Antigravity e OpenAI Codex CLI), mantendo o GitHub estritamente como repositório de backup/cofre.
 
-## Objetivo do chat
+Adicionalmente, foram aplicadas atualizações e melhorias na skill `mentor_gestao` (`SKILL.md`, `ferramentas.md`, `fontes.md`, `mapa-ferramentas.md`, `perspectivas.md`, `premissas.md` e `toyota.md`), necessitando de verificação e publicação (push) no repositório remoto GitHub.
 
-Publicar as skills de gestão no catálogo skills/ do repositório BR-Tavares/agent-skills, criar uma tag de segurança antes das alterações e instalar as skills nos ambientes CLI do desktop pelo install.ps1.
+---
 
 ## Metas do plano de implementação
 
-1. Criar e publicar a tag pre-skills-update-2026-09-30 sobre o commit anterior às alterações.
-2. Adicionar poka-yoke-gestao e processos-previsiveis, preservando as atualizações locais existentes de mentor-gestao-recursos.
-3. Atualizar o catálogo e o changelog.
-4. Publicar as alterações em main.
-5. Executar install.ps1 e conferir as junções em Codex, Claude Code e Gemini/Antigravity.
-
-## Entregas publicadas
-
-- Duas skills adicionadas em skills/, com seus arquivos de instrução e referências.
-- As quatro alterações locais existentes em mentor_gestao foram preservadas e publicadas.
-- Catálogo README e changelog atualizados.
-- Tag de segurança publicada: pre-skills-update-2026-09-30.
-
-## Verificações
-
-- sync.ps1 -Action push publicou o commit 594e794 em origin/main.
-- A tag pre-skills-update-2026-09-30 aponta para o commit anterior à atualização, d174ad3.
-- install.ps1 foi executado com sucesso.
-- As junções das três skills foram confirmadas em Codex, Claude Code e Gemini/Antigravity; os nove vínculos apontam para C:\Users\andre\agent-skills\skills\ e cada SKILL.md está acessível.
-- Os vínculos preexistentes de mentor-gestao-recursos já apontavam para o clone e foram mantidos.
+1. **Adequação do Instalador Local (`install.ps1`)**:
+   - Integrar o diretório de runtime nativo do **OpenAI Codex CLI** (`~/.codex/skills`), além de Claude Code (`~/.claude/skills`), Gemini/Antigravity (`~/.gemini/antigravity/skills`) e fallback universal (`~/.agents/skills`).
+   - Suportar múltiplos aliases automaticamente (nome da pasta física e atributo `name:` do YAML frontmatter de cada `SKILL.md`), garantindo que aliases como `mentor_gestao` e `mentor-gestao-recursos` funcionem simultaneamente sem ambiguidade.
+   - Tornar o espelhamento 100% local via NTFS Junctions com zero dependência de rede ou Git.
+2. **Refatoração do script de sincronização (`sync.ps1`)**:
+   - Remover mensagens hardcoded e direcionar o script para sua real finalidade: cofre/backup remoto no GitHub (`push`, `pull`, `status`).
+3. **Limpeza e Padronização Documental**:
+   - Manter o repositório enxuto e operacional, sem scripts desnecessários de exportação para chat web.
+   - Atualizar `README.md` documentando a arquitetura Local-First e o uso direto pelos 3 CLIs locais.
+   - Atualizar `CHANGELOG.md` no padrão Keep a Changelog.
+4. **Validação e Envio das Alterações da Skill Mentor ao GitHub**:
+   - Verificar status do Git, registrar as entregas e realizar o push para `origin/main`.
 
 ---
-# Objetivo da sessão e plano de implementação
 
-Atualizar a skill `mentor_gestao` no repositório compartilhado de agent skills a partir do arquivo compactado `mentor-gestao-recursos.zip` do workspace, sincronizando os arquivos com as instalações locais em Claude Code, GPT/Codex e Antigravity/Gemini, bem como no repositório remoto GitHub (`https://github.com/BR-Tavares/agent-skills/tree/main/skills/mentor_gestao`).
+## Entregas realizadas
 
-Plano:
-1. Extrair os arquivos atualizados do zip `mentor-gestao-recursos.zip`.
-2. Sincronizar o repositório `agent-skills` com o remote `origin/main`.
-3. Atualizar a pasta `skills/mentor_gestao/` com o `SKILL.md` atualizado e a nova referência `origens-toyota.md`.
-4. Executar `install.ps1` e configurar as junções de diretório em `~/.agents/skills/`, `~/.claude/skills/` e `~/.gemini/antigravity/skills/` para suportar tanto `mentor_gestao` quanto `mentor-gestao-recursos`.
-5. Atualizar catálogo no `README.md`, o `CHANGELOG.md` e o `walkthrough.md`.
-6. Enviar as alterações para o repositório remoto via `git push origin main`.
+1. **Atualizações na Skill `mentor_gestao`**:
+   - `SKILL.md` e 6 referências metodológicas atualizadas (`ferramentas.md`, `fontes.md`, `mapa-ferramentas.md`, `perspectivas.md`, `premissas.md` e `toyota.md`).
+2. **`install.ps1` Atualizado**:
+   - Adicionada detecção e configuração do diretório `~/.codex/skills/`.
+   - Implementado suporte resiliente a aliases duplos (`mentor_gestao` e `mentor-gestao-recursos`).
+   - Execução validada: junções NTFS ativas e verificadas nos diretórios locais dos 3 CLIs.
+3. **`sync.ps1` Otimizado**:
+   - Simplificado para atuar estritamente como ferramenta de backup do repositório no GitHub.
+4. **`README.md` e `CHANGELOG.md` Atualizados**:
+   - Documentação alinhada exclusivamente aos 3 CLIs locais e ao modelo Local-First.
 
-## Entregas
+---
 
-- Estrutura completa da skill em `skills/mentor_gestao/`:
-  - `SKILL.md` (metadados e diretrizes do mentor de gestão estratégica de recursos, atualizado para referenciar as origens históricas do STP).
-  - Pasta `references/` com 8 documentos de referência metodológica: `casos.md`, `contexto-brasileiro.md`, `ferramentas.md`, `fontes.md`, `origens-toyota.md`, `perspectivas.md`, `premissas.md`, `toyota.md` (incluindo nova seção sobre o pensamento prático de Taiichi Ohno e referências a *Gestão do posto de trabalho* e *O nascimento do lean*).
-  - `Readme.txt` descritivo.
-- Instalações locais sincronizadas:
-  - Codex / GPT: `~/.agents/skills/mentor_gestao` e `~/.agents/skills/mentor-gestao-recursos` apontando para o repositório.
-  - Claude Code: `~/.claude/skills/mentor_gestao` e `~/.claude/skills/mentor-gestao-recursos` apontando para o repositório.
-  - Antigravity: `~/.gemini/antigravity/skills/mentor_gestao` e `~/.gemini/antigravity/skills/mentor-gestao-recursos` apontando para o repositório.
-- Atualização do catálogo no `README.md` e histórico no `CHANGELOG.md`.
+## Verificações e Testes
 
-## Verificação
-
-- Conferida a existência e integridade de todos os 8 arquivos em `references/` e do `SKILL.md` atualizado.
-- Verificadas as junções NTFS em todas as 3 plataformas de IA (Codex, Claude, Antigravity) confirmando o acesso imediato ao novo arquivo `origens-toyota.md`.
-- Execução com sucesso de `install.ps1`.
-- Publicação das alterações no branch `main` do GitHub via `git push origin main`.
+- **Execução do `install.ps1`**:
+  - `~/.codex/skills` configurado com junções para todas as skills locais.
+  - `~/.claude/skills`, `~/.gemini/antigravity/skills` e `~/.agents/skills` validados com junções ativas e íntegras.
+- **Integridade dos links NTFS**:
+  - Confirmado acesso imediato aos arquivos `SKILL.md` e referências a partir de qualquer uma das pastas dos CLIs locais.
+- **Publicação no GitHub**:
+  - `git push origin main` executado com sucesso sincronizando as alterações com o repositório remoto.

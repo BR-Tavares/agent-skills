@@ -25,6 +25,13 @@
 2. Dependência: o pedido chegou completo ou estou pagando a falta de planejamento alheia? (Newport, Perlow)
 3. Trinta dias: qual o impacto disso na meta principal daqui a um mês?
 
+**Instrução clara ou ambígua** (premissa 29)
+1. Borda: diz o que fica de fora e onde parar?
+2. Termos subjetivos: há palavras que exigem adivinhar um gosto ("bom", "rápido", "caprichado", "enxuto")?
+3. Término: dá para verificar que acabou sem depender da opinião de alguém?
+4. Tolerâncias: diz o que pode variar sem problema?
+Se alguma resposta for não, a lacuna é da instrução, e não de quem vai executar.
+
 **Decisão**
 1. Reversibilidade: porta de ida e volta ou só de ida? (premissa 21)
 2. Limites da pessoa: a opção contraria algum limite registrado na percepção atual?
@@ -73,14 +80,26 @@ TÍTULO:
 
 ## 5. Protocolo de Delegação
 
-Baseado em TWI Job Instruction, jidoka e inspeção na fonte.
+Baseado em TWI Job Instruction, jidoka, inspeção na fonte e na premissa 29.
 
+0. **Especificar:** antes de ensinar, escreva o que será entregue, porque o ensino transmite o método, mas não corrige um pedido ambíguo. Dimensione pelo risco: tarefa única e de baixo risco pede só o critério; tarefa repetida, com segurança ou material caro pede todos os campos.
+   ```
+   TAREFA E PARA QUE SERVE: [verbo + objeto; uma frase de propósito, que permite à pessoa resolver casos não previstos]
+   CRITÉRIO DE ACEITE
+     Dado que: [insumos e condições prontos antes]
+     Quando:   [a ação, com o escopo delimitado]
+     Então:    [propriedades observáveis do resultado]
+   FORA DO ESCOPO: [o que não fazer, inclusive o que o executor não pode fazer]
+   TOLERÂNCIAS: [o que pode variar sem problema]
+   PRAZO REAL: [data verdadeira, não a desejada]
+   PROVA DE ENTREGA: [o que comprova o estado: foto, arquivo, teste registrado]
+   ```
 1. **Preparar:** decompor a tarefa em passos, pontos-chave (o que garante qualidade e segurança) e razões de cada ponto-chave.
 2. **Apresentar:** mostrar, explicar os pontos-chave e o porquê.
 3. **Testar:** a pessoa faz na sua frente, explicando os pontos-chave; corrigir na hora.
 4. **Primeira peça:** a pessoa executa a primeira unidade real; verificar antes de liberar a série (primeira rosca, primeiro trecho, primeiro relatório).
 5. **Amostragem crescente:** verificar a cada N unidades, espaçando conforme a confiança cresce.
-6. **Andon:** combinar explicitamente quando parar e chamar (condição nova, dúvida, resultado diferente do padrão), e acolher a parada sem punição.
+6. **Andon:** combinar explicitamente quando parar e chamar (condição nova, dúvida, resultado diferente do padrão), por qual canal avisar, e acolher a parada sem punição.
 7. **Poka-yoke:** onde o erro é caro, embutir o critério (gabarito, teste por trecho, marca visual).
 8. **Condição nova:** se a pessoa nunca enfrentou aquela condição, volte ao passo 3 nela, mesmo que já domine a tarefa em outro contexto.
 
@@ -92,6 +111,7 @@ Princípio: se o aprendiz não aprendeu, o instrutor não ensinou.
 
 ```
 ERRO A PREVENIR:
+NATUREZA: [ ] de execução  [ ] de interpretação (a instrução permitia outra leitura)
 ONDE NASCE (fonte):
 CUSTO SE PASSAR ADIANTE:
 TIPO: [ ] impede o erro (controle)  [ ] revela o erro na hora (alerta)
@@ -101,6 +121,8 @@ TESTE DO MECANISMO:
 ```
 
 Tipos clássicos de Shingo: por contato (forma, encaixe), por número fixo (contagem de passos ou peças), por sequência (ordem obrigatória).
+
+O erro de interpretação também se previne por desenho, e não por mais atenção: critério de aceite escrito, exemplo de referência (a peça certa ao lado da bancada), primeira peça verificada e leitura de volta, em que a pessoa explica com as próprias palavras o que é "pronto" antes de começar.
 
 ---
 
