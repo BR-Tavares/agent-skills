@@ -1,3 +1,50 @@
+# Objetivo do chat e plano de implementação — revisão das skills de gestão
+
+## Objetivo e escopo
+
+Melhorar eficiência, coerência e complementaridade de mentor-gestao-recursos, processos-previsiveis e poka-yoke-gestao, preservando o mentor como apoio ao líder na gestão de equipes, projetos e empresas. A Percepção do Cliente permanece externa à skill e é construída com o usuário. Diagnóstico, orientação e planejamento dependem do pedido; não se impõe Plano como saída única.
+
+Plano executado: preservar base em tag; revisar descriptions e contratos; reduzir repetição nos métodos e referências; explicitar passagem entre conversas por artefatos; validar estrutura e espelhamento; registrar em Git e criar nova tag. Fora do escopo: outras skills, instalador, dados pessoais do cliente, execução de processos de empresa e publicação remota.
+
+## Entregas
+
+- Mentor com contexto externo de Percepção do Cliente, distinção entre líder e unidade analisada, mentoria e consultoria, diagnóstico de gestão e planejamento estratégico ou de processos.
+- Processos previsíveis com Blueprint operacional ou especificação localizada, sem exigir skill anterior nem prometer uma PoC validada pelo desenho.
+- Poka-yoke com Protocolo de execução integrado, rastreabilidade de falhas e tratamento proporcional de gates, desvios, exceções e recuperação.
+- Referências operacionais consolidadas: modelos autossuficientes, catálogo compacto de prevenção e redução de afirmações absolutas.
+- Fundamentos históricos preservados; premissas marcadas para leitura crítica, sem definir características do cliente atual.
+- Complementaridade incorporada a cada SKILL.md e descriptions. Não foi criado AGENTS.md de seleção nem configuração global.
+
+## Revisão de cenários — análise documental
+
+| Pedido de referência | Entrada e atuação previstas | Critério revisto |
+|---|---|---|
+| Entender minha atuação como líder | Mentor consulta a Percepção externa e constrói compreensão | Não presume crença nem diagnóstico clínico |
+| Diagnosticar a situação da empresa | Mentor examina contexto, relatos e evidências organizacionais | Não reduz a empresa aos hábitos do líder nem força plano |
+| Planejar a estratégia da empresa | Mentor compara alternativas, explicita escolhas e hipóteses | Não inventa dados de mercado nem decide pelo usuário |
+| Desenhar produção a partir de plano escolhido | Processos previsíveis detalha o Blueprint | Não implementa ou declara PoC validada sem execução |
+| Revisar instrução de fornecedor | Processos previsíveis entrega especificação localizada | Não exige diagnóstico empresarial ou todas as skills |
+| Refinar processo sem incidente prévio | Poka-yoke trata falhas potenciais e entrega protocolo | Não inventa frequência observada |
+| Execução bloqueada por informação ausente | Protocolo indica condição, resposta e decisão pendente | Não completa responsável ou limiar crítico fictício |
+| Percepção ausente ou vários arquivos candidatos | Mentor usa contexto disponível e esclarece o necessário | Não bloqueia entrega independente nem escolhe cliente silenciosamente |
+
+Esta tabela é revisão de contratos por cenários, não execução independente com outro agente. A eficácia conversacional precisa ser observada no uso real.
+
+## Verificações
+
+- Git inicial limpo e HEAD sincronizado com origin/main após fetch: e63ea55.
+- Tag de base: gestao-v0.1.0. Branch: codex/revisao-skills-gestao. Nova versão: gestao-v0.2.0.
+- Verificação estrutural com biblioteca padrão Python: nomes canônicos, formato escalar do cabeçalho utilizado, descriptions abaixo de 1024 caracteres, ausência de BOM e placeholders TODO, blocos de código fechados e referências locais existentes.
+- Descriptions: 519, 505 e 515 caracteres. Entrypoints: 46.984 → 21.291 caracteres, redução de 54,7% (não é medição de tokens ou eficácia).
+- Leitura pelas junções instaladas em .codex/skills: conteúdo idêntico ao repositório para as três skills. Nenhuma reinstalação necessária para essas junções.
+- git diff --check sem erros de whitespace.
+- O quick_validate.py oficial não executou: PyYAML ausente tanto no Python do sistema quanto no runtime consultado. A checagem alternativa valida o formato de cabeçalho usado, não é parser YAML geral nem validação comportamental.
+- Não foram alterados arquivos de Percepção do cliente, scripts de instalação ou outras skills. Tags e commit desta revisão são locais.
+
+---
+
+# Histórico anterior
+
 # Objetivo da sessão e plano de implementação — migração para modelo Local-First (3 CLIs) e publicação de melhorias na skill mentor
 
 ## Problema e contexto

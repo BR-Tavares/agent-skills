@@ -18,3 +18,29 @@ As alterações relevantes seguem o padrão Keep a Changelog.
 - Script `install.ps1` atualizado para mapear nativamente o runtime do OpenAI Codex CLI (`~/.codex/skills`), além de Claude Code (`~/.claude/skills`), Gemini/Antigravity (`~/.gemini/antigravity/skills`) e fallback universal (`~/.agents/skills`), com suporte automático a múltiplos aliases (nome de pasta e nome canônico no YAML).
 - Script `sync.ps1` reconfigurado para atuar exclusivamente como utilitário de cofre/backup remoto para o repositório GitHub.
 - Documentação do `README.md` reestruturada com foco exclusivo nos 3 CLIs locais e backup seguro no GitHub.
+
+## [gestao-v0.2.0] - 2026-09-30
+
+### Added
+
+- Contratos de Percepção do Cliente externa, diagnóstico de gestão e planejamento para o mentor do líder e consultor empresarial.
+- Blueprint operacional autossuficiente e modelo de Protocolo de execução integrado com mecanismos contra falhas, exceções e validação.
+- Registro de revisão por cenários, verificações estruturais e limites no walkthrough.
+
+### Changed
+
+- Descriptions e métodos das três skills de gestão para seleção por responsabilidade e entregável, com passagem entre conversas sem sequência obrigatória.
+- Referências consolidadas para reduzir redundância; arquivos principais 54,7% menores em caracteres.
+- Mentor preservado como apoio ao líder na gestão da empresa, com saída adequada ao pedido: diagnóstico, orientação ou plano.
+
+### Fixed
+
+- Dependência de modelos de outra skill para especificar tarefas e referências a nomes de skills inexistentes no README de poka-yoke.
+- Regras absolutas sobre ênfase, estados de espera, causalidade e custo cognitivo, substituídas por análise contextual e evidências.
+- Distinção entre Blueprint desenhado e prova de conceito executada, e entre protocolo proposto e funcionamento validado.
+
+### Removed
+
+- Catálogos e especificações operacionais duplicados nos entrypoints e referências.
+
+Tag gestao-v0.1.0 preserva a base anterior (e63ea55); gestao-v0.2.0 identifica esta revisão das skills de gestão, sem versionar as demais skills.

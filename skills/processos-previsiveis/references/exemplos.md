@@ -18,7 +18,7 @@ Os exemplos mostram o raciocínio, não fórmulas. Em cada um, observe primeiro 
 
 **Resultado:** uma Ficha de Tarefa curta, com uma primeira peça: "faça um metro de acabamento e me mostre antes de seguir". Como a tarefa envolve material caro e segurança, o rigor se justifica; se fosse só varrer o quintal, uma linha bastaria.
 
-**Conexão com a mentor:** trata-se de uma delegação a fornecedor, e o Protocolo de Delegação da mentor pode ser usado como base, acrescido de tolerâncias e do campo "fora do escopo".
+**Conexão com a mentor:** ela pode apoiar o líder na escolha de delegar e no desenvolvimento da autonomia. A Ficha de Tarefa desta skill é autossuficiente para especificar a execução; não exige leitura da mentor.
 
 ---
 
@@ -42,7 +42,7 @@ Os exemplos mostram o raciocínio, não fórmulas. Em cada um, observe primeiro 
 
 **Operador:** Mapa de Estados do Fluxo, com guardas verificáveis ("em verificação" só com o teste de bancada registrado) e limite de itens em execução por pessoa. A reunião não é proibida, mas passa a tratar só dos itens bloqueados, porque o resto já está visível no quadro.
 
-**Sinal de sucesso:** a reunião encurta sem que ninguém tenha sido mandado encurtá-la. Se não encurtar, o quadro provavelmente tem estados ambíguos, e o passo seguinte é revisar as guardas.
+**Verificação proposta:** observar se o quadro permite reconhecer andamento e bloqueios sem reconstruir tudo de memória. A duração da reunião pode ser um sinal complementar; se não diminuir, isso não prova ambiguidade, pois a reunião pode ter outras funções.
 
 ---
 

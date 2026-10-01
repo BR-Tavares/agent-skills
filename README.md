@@ -19,15 +19,29 @@ O repositório funciona com o modelo **Local-First com Espelhamento por Junçõe
 ## 📦 Skills Disponíveis no Catálogo
 
 - **`analista-sistemas-senior`**: Condução de chats de análise de sistemas com especialista de domínio, fixação de goals e exploração de alternativas sem antecipação prematura de código.
-- **`mentor_gestao`** *(alias: `mentor-gestao-recursos`)*: Mentoria em gestão estratégica de recursos pessoais e operacionais (tempo, energia, atenção, equipe), com 9 referências baseadas no Sistema Toyota de Produção (Ohno, Kaizen, Jidoka, Poka-Yoke) e cultura brasileira.
-- **`poka-yoke-gestao`**: Aplicação de mecanismos à prova de erro ao desenho de processos operacionais e handoffs entre equipes, reduzindo a dependência de memória humana e retrabalho.
-- **`processos-previsiveis`**: Desenho e auditoria de processos fundamentados em cognição preditiva e design universal para eliminar ambiguidade em delegações e passagens de bastão.
+- **`mentor_gestao`** *(nome canônico: `mentor-gestao-recursos`)*: Mentoria do líder e consultoria em gestão de equipes, projetos e empresas, com Percepção do Cliente externa e entrega de diagnóstico, orientação ou plano conforme o pedido.
+- **`poka-yoke-gestao`**: Refinamento de processos contra falhas relevantes, consolidado em Protocolo de execução com prevenção, detecção, resposta e recuperação proporcionais.
+- **`processos-previsiveis`**: Desenho de processos e tarefas compreensíveis, com Blueprint operacional ou especificação localizada, critérios de aceite, tolerâncias e passagens explícitas.
 - **`walkthrough-changelog-sync`**: Governança obrigatória de encerramento de tarefas com registro em `walkthrough.md` e sincronização no padrão *Keep a Changelog* em `CHANGELOG.md`.
 - **`xstate-eda-plug-and-play`**: Arquitetura de motores e conectores substituíveis com XState v5 e Event-Driven Architecture (EDA).
 
 ---
 
 ## ⚡ Como Configurar o Espelhamento Local
+
+### Complementaridade das skills de gestão
+
+O encadeamento possível é **diagnóstico/orientação/plano → Blueprint operacional → Protocolo de execução**. Não é uma sequência obrigatória: um diagnóstico pode encerrar a consultoria, e um processo existente pode entrar diretamente no desenho ou refinamento.
+
+Cada `SKILL.md` contém sua própria `description` de seleção e seu contrato de atuação. A complementaridade acompanha as skills instaladas; não depende do `AGENTS.md` deste repositório no workspace do cliente. Conversas separadas usam os artefatos fornecidos, sem presumir acesso ao histórico de outro chat.
+
+A Percepção do Cliente é um arquivo externo no diretório de trabalho do usuário. Não se versionam dados pessoais do cliente neste repositório. Blueprint e Protocolo são desenhos; validação de funcionamento exige evidências de teste ou execução.
+
+As versões desta revisão usam tags com escopo `gestao-v`: `gestao-v0.1.0` preserva a base anterior e `gestao-v0.2.0` identifica os contratos revisados. As demais skills e o instalador não fazem parte dessa revisão.
+
+---
+
+## Instalação das junções
 
 Abra o PowerShell neste diretório e execute uma única vez (ou sempre que adicionar uma nova pasta de skill):
 
