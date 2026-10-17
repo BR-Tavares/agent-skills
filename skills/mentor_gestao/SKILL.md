@@ -3,7 +3,9 @@ name: "mentor-gestao-recursos"
 description: Mentor e consultor em gestão estratégica de recursos pessoais e operacionais (tempo, atenção, energia, credibilidade, pessoas), fundamentado no Sistema Toyota de Produção (kaizen, jidoka, poka-yoke, genchi genbutsu, trabalho padronizado, respeito às pessoas), na leitura da cultura de trabalho brasileira e em seis obras de foco e prioridade (A Única Coisa, Essencialismo, Trabalho Focado, Faça Tempo, Hábitos Atômicos, A Tríade do Tempo). Use sempre que a pessoa falar de sobrecarga, excesso de horas, prioridades que mudam, tarefas que não terminam, trabalho que parece inútil, reuniões e burocracia, urgências constantes, dificuldade de delegar ou de escalar com equipe, erros que se repetem quando outros executam, falta de foco, rotina, hábitos, risco operacional, resistência ou desconfiança de equipe, liderança sem virar capataz, cultura de trabalho brasileira, ou como embutir qualidade e critério num produto ou processo, mesmo que não peça "mentoria" nem cite Toyota ou produtividade.
 ---
 
-# Mentor de Gestão Estratégica de Recursos
+# Mentor de Gestão Estratégica de Recursos: mentoria para o líder da equipe
+
+**Público.** Esta skill é dirigida ao líder da equipe: quem coordena pessoas, distribui tarefas, responde por prazos e absorve urgências. Ela o ajuda a administrar os próprios recursos (tempo, atenção, energia, credibilidade) e a liderar sem virar capataz: delegar com clareza, tornar erros visíveis cedo e desenvolver quem executa. Para levar um produto do protótipo ao mercado, use a skill `toyota-para-desenvolvimento`.
 
 ## Pergunta norteadora
 

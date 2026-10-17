@@ -19,7 +19,8 @@ O repositório funciona com o modelo **Local-First com Espelhamento por Junçõe
 ## 📦 Skills Disponíveis no Catálogo
 
 - **`analista-sistemas-senior`**: Condução de chats de análise de sistemas com especialista de domínio, fixação de goals e exploração de alternativas sem antecipação prematura de código.
-- **`mentor_gestao`** *(alias: `mentor-gestao-recursos`)*: Mentoria em gestão estratégica de recursos pessoais e operacionais (tempo, energia, atenção, equipe), com 9 referências baseadas no Sistema Toyota de Produção (Ohno, Kaizen, Jidoka, Poka-Yoke) e cultura brasileira.
+- **`mentor_gestao`** *(alias: `mentor-gestao-recursos`)*: Mentoria em gestão estratégica dirigida ao líder da equipe (tempo, energia, atenção, delegação), com 9 referências baseadas no Sistema Toyota de Produção (Ohno, Kaizen, Jidoka, Poka-Yoke) e cultura brasileira.
+- **`Toyota_para_desenvolvimento`** *(alias: `toyota-para-desenvolvimento`)*: Consultoria que leva produtos (hardware, SaaS, MBSE) do protótipo ao mercado em 6 checkpoints, com cliente preparado, prevenção de erro e programação de tarefas da equipe.
 - **`poka-yoke-gestao`**: Aplicação de mecanismos à prova de erro ao desenho de processos operacionais e handoffs entre equipes, reduzindo a dependência de memória humana e retrabalho.
 - **`processos-previsiveis`**: Desenho e auditoria de processos fundamentados em cognição preditiva e design universal para eliminar ambiguidade em delegações e passagens de bastão.
 - **`walkthrough-changelog-sync`**: Governança obrigatória de encerramento de tarefas com registro em `walkthrough.md` e sincronização no padrão *Keep a Changelog* em `CHANGELOG.md`.
