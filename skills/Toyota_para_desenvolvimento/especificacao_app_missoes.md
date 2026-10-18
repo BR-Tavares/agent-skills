@@ -1,6 +1,6 @@
 # Especificação — App de missões (PWA)
 
-Versão 1.0 • 18/10/2026 • Base: `protocolo_missoes.md` v2.7
+Versão 1.1 • 18/10/2026 • Base: `protocolo_missoes.md` v2.7
 
 > **Para quem vai construir.** Este documento diz **o que** o app faz e **como** ele é construído. As regras de uso, o porquê de cada campo e o exemplo completo estão no protocolo. Em caso de conflito, o protocolo vence. Não acrescente mecanismos que não estejam aqui ou no protocolo, e nunca aumente o registro diário do responsável.
 
@@ -13,7 +13,8 @@ Versão 1.0 • 18/10/2026 • Base: `protocolo_missoes.md` v2.7
 | Usuários | 4 pessoas: 1 gestor e 3 responsáveis |
 | Substitui | Kanban e GitHub Projects |
 | Unidade | Missão = tarefa com ID, um responsável e uma data estimada única. Não é projeto |
-| Escopo da v1 | Folha da missão (responsável e gestor), lista e painel do gestor, criação de missão, revisão |
+| Escopo da v1 | Folha da missão (responsável e gestor), lista e painel do gestor, tela Equipe, criação de missão, revisão, notificações |
+| Futuro | Pode virar produto para outras equipes; a estrutura de dados já separa as equipes |
 | Fora da v1 | Ver seção 13 (inclui o chat numa segunda aba) |
 
 ## 2. Decisões vigentes
@@ -31,65 +32,44 @@ Versão 1.0 • 18/10/2026 • Base: `protocolo_missoes.md` v2.7
 | Sinais | Só na tela do gestor; metade deles cobra o próprio gestor | Gestão sem atrito |
 | Acesso | Cada missão é individual; só o gestor vê a lista | Missões são individuais |
 | Comunicação | Pendência e resposta; resposta ≠ alteração; quem abre, fecha | Registro na folha; controle de mudanças |
+| Plataforma | Firebase: Hosting, Authentication, Firestore, Cloud Messaging e Cloud Functions | Conta do demandante; tempo real, regras de acesso no servidor e notificações; pronto para várias equipes |
 
 ## 3. Arquitetura
 
-**Decisão: PWA estático, sem servidor próprio, com os dados no Google Drive.**
+**Plataforma: Firebase.** Tudo no mesmo projeto, sem servidor próprio para manter.
 
-| Peça | Escolha | Motivo |
+| Peça | Serviço | Uso |
 |---|---|---|
-| App | PWA estático (HTML, CSS e JavaScript em módulos; sem *build* obrigatório), hospedado em qualquer serviço de páginas estáticas | Nada para manter rodando |
-| Login | Conta Google (Google Identity Services, OAuth) | A equipe já usa Google Docs e Drive |
-| Dados | Arquivos JSON no Google Drive, na pasta de cada missão | O compartilhamento do Drive já faz o controle de acesso |
-| Escopo de acesso ao Drive | `drive`, com o app no Google Cloud em modo de teste, liberado só para os 4 usuários | Com o escopo menor (`drive.file`), o responsável teria de abrir cada pasta compartilhada pelo seletor do Google uma vez, o que é atrito. O app só lê e grava dentro de `Missões/` |
-| Offline | Cache em IndexedDB e fila de gravação; sincroniza ao voltar a conexão | O registro do dia não pode depender de sinal |
-| Análise | `analise.js`, módulo de funções puras, roda no aparelho do gestor | Sem banco de dados nem servidor |
+| App | PWA (HTML, CSS e JavaScript em módulos) no **Firebase Hosting** | Um só link para todos |
+| Login | **Firebase Authentication**, provedor Google | E-mail e senha ou link por e-mail ficam para quando o app atender outras equipes |
+| Dados | **Cloud Firestore** | Leitura em tempo real: a tela espelhada do gestor se atualiza sozinha |
+| Proteção | **Regras de segurança do Firestore** | Quem lê e quem grava cada documento é decidido no servidor, não no app |
+| Sem conexão | Cache local do Firestore (`persistentLocalCache`) | O registro do dia funciona sem sinal e sincroniza depois |
+| Análise | `analise.js`, funções puras | Roda no app do gestor e também na função agendada de notificação. É o mesmo arquivo nos dois lugares |
+| Notificações | **Cloud Messaging (FCM)** + **Cloud Functions** | Funções por evento (pendência aberta, resposta) e uma agendada, de hora em hora, para os sinais. Exigem o plano Blaze (pago por uso; para 4 pessoas, o consumo fica dentro da cota gratuita) |
+| Região | `southamerica-east1` (São Paulo) | Menor latência para a equipe |
 
-**Organização no Drive** (criada pelo app, no Drive do gestor):
+**Pronto para várias equipes.** Os dados ficam sob `equipes/{equipeId}`, e cada regra de segurança começa conferindo a equipe. Hoje existe uma equipe só; outras entram sem mudar a estrutura.
 
-```
-Missões/                      pasta raiz, só do gestor
-  config.json                 feriados e lista da equipe (gestor grava)
-  MS-027 — Calibrar sensor…/  pasta da missão = link "Pasta" do cabeçalho
-    gestor.json               só o gestor grava
-    responsavel.json          só o responsável grava
-    (insumos, trabalho e evidências)
-```
-
-- Ao **emitir** a missão, o app cria a pasta e os dois arquivos e compartilha a pasta com o responsável, como editor.
-- **Um escritor por arquivo:** o gestor nunca grava `responsavel.json`, e o responsável nunca grava `gestor.json`. Assim não há conflito de gravação simultânea.
-- A **situação** da missão não é gravada: é calculada a partir dos dois arquivos (`situacao()` em `analise.js`).
-- O responsável abre o app e vê só as missões cujas pastas foram compartilhadas com ele (busca no Drive por `gestor.json` compartilhado com o usuário). A pasta raiz e as missões dos outros não aparecem.
-- **Limite assumido:** como editor da pasta, o responsável conseguiria mudar `gestor.json` direto no Drive, fora do app. A equipe é de confiança, o app nunca faz isso, e o Drive guarda o histórico de versões de cada arquivo.
+**Um escritor por documento.** Cada documento tem um dono, gestor ou responsável, e as regras impedem o outro de gravá-lo. A situação da missão não é gravada: o app a calcula com `situacao()`.
 
 ## 4. Usuários, papéis e acesso
 
-**Um só link do PWA para todos.** O papel vem do cadastro, não do link:
-- **Gestor:** quem é dono da pasta `Missões/` e do `config.json`. No primeiro acesso, o app oferece "Criar espaço da equipe", que cria a pasta e o `config.json` com o gestor dentro.
-- **Responsável:** quem está em `config.json → equipe` e não é o gestor. Ao entrar, o app procura as missões compartilhadas com ele e abre direto na missão.
-- **Pessoa não cadastrada:** vê "Peça ao gestor para incluir você" e nada mais.
+**Um só link para todos.** O papel vem do cadastro, não do endereço:
+- **Gestor:** quem criou a equipe. No primeiro acesso, o app oferece "Criar equipe", e quem cria vira o gestor (`equipes/{id}.gestorUid`).
+- **Responsável:** quem tem o e-mail cadastrado em `equipes/{id}/membros/{email}`. Ao entrar com a conta Google desse e-mail, o app encontra a equipe e abre direto na missão dele.
+- **Pessoa não cadastrada:** vê "Peça ao gestor para incluir você" e nada mais. As regras não deixam essa pessoa ler nenhum documento.
 
-Dois links (um do gestor e outro do responsável) não dão segurança, porque quem controla o acesso é o compartilhamento do Drive, não o endereço. Além disso, duplicariam o código e as atualizações.
+Dois links não dariam segurança, porque quem decide o acesso são as regras do Firestore, não o endereço. Além disso, duplicariam o app.
 
-**Administração de usuários (tela Equipe, só do gestor):**
+**Administração (tela Equipe, só do gestor):**
 
-| Ação | O que o app faz | Passo manual, fora do app |
-|---|---|---|
-| Incluir pessoa | Grava nome e e-mail em `config.json → equipe` | Incluir o e-mail como usuário de teste no projeto do Google Cloud (dispensado se a equipe usar Google Workspace com o app interno) |
-| Atribuir missão | Ao emitir, compartilha a pasta da missão com o responsável | — |
-| Trocar o responsável | Gera uma alteração, tira o compartilhamento do antigo e compartilha com o novo | — |
-| Remover pessoa | Tira a pessoa da equipe e o compartilhamento das pastas das missões dela que estiverem abertas | Remover dos usuários de teste |
-
-`config.json`:
-
-```json
-{
-  "gestor": { "nome": "…", "email": "…" },
-  "equipe": [{ "nome": "Ana", "email": "ana@…", "ativo": true }],
-  "feriados": ["2026-11-02", "2026-11-15"],
-  "proximoId": 28
-}
-```
+| Ação | O que o app faz |
+|---|---|
+| Incluir pessoa | Grava `membros/{email}` com nome, papel `responsavel` e `ativo: true`. Não há passo manual no Google Cloud |
+| Atribuir missão | O campo `responsavelEmail` da missão decide quem a vê |
+| Trocar o responsável | Gera uma alteração, e a missão some da tela do antigo |
+| Desativar pessoa | `ativo: false`. A pessoa perde o acesso, e o histórico fica |
 
 ### Quem vê e grava cada bloco
 
@@ -102,85 +82,61 @@ Dois links (um do gestor e outro do responsável) não dão segurança, porque q
 | 5. Registro do dia | Lê, na linha do tempo | Grava; não vê histórico |
 | Lista, painel, sinais e linha do tempo | Vê | **Não vê** |
 
-## 5. Modelo de dados
+## 5. Modelo de dados (Firestore)
 
-### `gestor.json` (só o gestor grava)
+```
+equipes/{equipeId}                                   gestor grava
+  { nome, gestorUid, gestorEmail, proximoNumero, feriados: ["2026-11-02"] }
 
-```json
-{
-  "id": "MS-027",
-  "versao": 2,
-  "titulo": "Calibrar sensor de umidade em solo argiloso",
-  "gestor": { "nome": "…", "email": "…" },
-  "responsavel": { "nome": "…", "email": "…" },
-  "docsUrl": "https://docs.google.com/…",
-  "pastaId": "id da pasta no Drive",
-  "emitidaEm": "2026-10-19",
-  "dataEstimada": "2026-10-28",
-  "descricao": {
-    "necessidade": "…",
-    "resultadoEsperado": "…",
-    "tarefa": "…",
-    "entrega": "…",
-    "criterios": [{ "condicao": "Erro médio ≤ 3 p.p., 4 níveis × 3 rep.", "verificacao": "teste" }],
-    "insumos": "…"
-  },
-  "requisitos": {
-    "precisa": ["Registrar todas as leituras, inclusive as descartadas, com o motivo"],
-    "naoPode": ["Usar solo de outra classe textural"],
-    "consultarAntes": ["Mudar o número de níveis ou de repetições"]
-  },
-  "alteracoes": [{ "versao": 2, "em": "2026-10-22T15:00", "resumo": "Critério passa a 4 × 3", "pendenciaId": "p1" }],
-  "respostas": [{ "pendenciaId": "p1", "em": "2026-10-22T15:00", "tipo": "alteracao", "texto": "De acordo: 4 níveis × 3 rep." }],
-  "revisoes": [{ "entregaId": "e1", "em": "2026-10-28", "resultado": "concluida", "produto": "atende", "ajustes": [] }],
-  "fraseGestor": "Nas próximas calibrações, a capacidade da estufa entra nos insumos.",
-  "cancelada": null
-}
+  membros/{email}                                    gestor grava
+    { nome, email, papel: "responsavel", ativo: true }
+
+  missoes/{missaoId}                                 gestor grava
+    { codigo: "MS-027", titulo, gestorUid, responsavelEmail,
+      docsUrl, pastaUrl, emitidaEm, dataEstimada, versao,
+      descricao: { necessidade, resultadoEsperado, tarefa, entrega,
+                   criterios: [{ condicao, verificacao }], insumos },
+      requisitos: { precisa: [], naoPode: [], consultarAntes: [] },
+      fraseGestor, cancelada: { em, motivo } | null }
+
+    alteracoes/{id}    gestor       { versao, em, resumo, pendenciaId }
+    respostas/{pendenciaId}  gestor { em, tipo: "resposta" | "alteracao", texto }
+    revisoes/{entregaId}     gestor { em, resultado, produto, ajustes: [] }
+
+    responsavel/estado  responsável { vistoVersao, primeiroPlanoEm,
+                                      etapas: [{ id, ordem, nome, concluidaEm }],
+                                      fraseResponsavel }
+    registros/{AAAA-MM-DD}  responsável  { atividade } | { motivo }
+    pendencias/{id}         responsável  { tipo, bloqueio, texto, abertaEm, fechadaEm }
+    entregas/{id}           responsável  { em, resultado,
+                                           evidencias: [{ criterio, status, onde }], desvios }
 ```
 
-### `responsavel.json` (só o responsável grava)
-
-```json
-{
-  "vistoVersao": 2,
-  "primeiroPlanoEm": "2026-10-19T09:30",
-  "etapas": [
-    { "id": "t1", "ordem": 1, "nome": "Amostras preparadas", "concluidaEm": "2026-10-19" },
-    { "id": "t2", "ordem": 2, "nome": "Níveis 1 a 3 medidos", "concluidaEm": null }
-  ],
-  "registros": [
-    { "dia": "2026-10-20", "atividade": "secar amostras n1", "motivo": null },
-    { "dia": "2026-10-23", "atividade": null, "motivo": "outra_missao" }
-  ],
-  "pendencias": [
-    { "id": "p1", "tipo": "impedimento", "bloqueio": "parte", "texto": "…", "abertaEm": "2026-10-22T10:00", "fechadaEm": "2026-10-22T16:00" }
-  ],
-  "entregas": [
-    { "id": "e1", "em": "2026-10-27T17:00", "resultado": "…",
-      "evidencias": [{ "criterio": 0, "status": "atendido", "onde": "pasta/planilha.xlsx" }],
-      "desvios": "…" }
-  ],
-  "fraseResponsavel": "A folha deveria ter dito a capacidade da estufa."
-}
-```
+- **Um registro por dia, garantido pela chave:** o ID do documento é a data. Gravar de novo no mesmo dia substitui o anterior.
+- **Uma resposta por pendência e uma revisão por entrega:** o ID do documento é o da pendência ou o da entrega.
+- **Adaptador para a análise:** o app monta os objetos `g` (missão, respostas, alterações, revisões) e `r` (estado, registros, pendências, entregas) e chama `analise.js`.
 
 **Valores fechados:**
 
 | Campo | Valores |
 |---|---|
 | `verificacao` | `inspecao`, `analise`, `demonstracao`, `teste` |
-| `pendencias[].tipo` | `duvida`, `consulta`, `impedimento`, `nova_data` |
-| `pendencias[].bloqueio` | `tudo`, `parte`, `nenhum` |
-| `registros[].motivo` | `folga_saude`, `outra_missao`, `fora_de_missao` |
-| `respostas[].tipo` | `resposta`, `alteracao` |
-| `revisoes[].resultado` | `concluida`, `em_ajuste` |
-| `revisoes[].produto` | `atende`, `nao_atende`, `inconclusivo` |
-| `evidencias[].status` | `atendido`, `parcial`, `nao_atendido` |
+| `pendencias.tipo` | `duvida`, `consulta`, `impedimento`, `nova_data` |
+| `pendencias.bloqueio` | `tudo`, `parte`, `nenhum` |
+| `registros.motivo` | `folga_saude`, `outra_missao`, `fora_de_missao` |
+| `respostas.tipo` | `resposta`, `alteracao` |
+| `revisoes.resultado` | `concluida`, `em_ajuste` |
+| `revisoes.produto` | `atende`, `nao_atende`, `inconclusivo` |
+| `evidencias.status` | `atendido`, `parcial`, `nao_atendido` |
 
-**Regras de validação:**
-- Um registro por `dia`. Gravar de novo no mesmo dia substitui o anterior.
-- Cada registro tem `atividade` **ou** `motivo`, nunca os dois. A atividade é gravada sem espaços nas pontas.
-- Nova data: o gestor responde com `alteracao`, e o app grava a nova `dataEstimada` e avança a `versao`.
+**Regras de segurança (resumo do que o arquivo `firestore.rules` deve garantir):**
+- Só usuários com e-mail verificado e cadastrados na equipe leem algo da equipe. O login com Google já vem com e-mail verificado.
+- O gestor da equipe lê tudo e grava os documentos marcados como "gestor".
+- O responsável lê só as missões em que `responsavelEmail` é o e-mail dele e que já foram emitidas, com suas subcoleções.
+- O responsável grava só os documentos marcados como "responsável", e só enquanto a missão não estiver concluída nem cancelada.
+- `registros`: aceita `atividade` **ou** `motivo`, nunca os dois. A atividade tem até 80 caracteres e é gravada sem espaços nas pontas.
+- Ninguém apaga documentos, exceto o gestor ao cancelar um rascunho.
+- O gestor não grava em `registros`, `pendencias`, `entregas` nem em `responsavel/estado`.
 
 ## 6. Situações e transições
 
@@ -226,6 +182,8 @@ stateDiagram-v2
 | `sinais(g, r, hoje)` | Sinais da seção 8 |
 | `linhaPainel(g, r, hoje)` | Uma linha do painel do gestor |
 | `linhaDoTempo(r)` | Os registros dia a dia, para o gestor abrir antes de conversar |
+
+**O mesmo módulo roda em dois lugares:** no app do gestor (painel e linha do tempo) e na Cloud Function agendada (sinais que notificam). A data de "hoje" usa o fuso `America/Sao_Paulo`.
 
 **Testes:** o módulo foi testado com o exemplo MS-027 e com missões fictícias (impedimento total, pendência parada, entrega sem revisão e feriado). O resultado de cada caso está na seção 12.
 
@@ -280,27 +238,29 @@ Esboço: `tela_missao_funcionario.svg`. O app abre direto na missão atribuída.
 
 | Tela | Conteúdo |
 |---|---|
-| Equipe | Incluir, desativar e remover pessoas; feriados |
+| Equipe | Incluir e desativar pessoas; feriados |
 | Lista de missões | Uma linha por missão aberta: ID, título, responsável, situação, data estimada, etapas concluídas, atividade atual e há quantos dias, marcas de sinal. No topo, os sinais que notificam |
 | Folha espelhada | A mesma folha, só leitura, com painel da missão e linha do tempo dos registros; botões **Responder**, **Alterar** e **Revisar** |
-| Nova missão | Cabeçalho completo; **Emitir** cria a pasta e os arquivos. Mostra os encerramentos de missões parecidas para reler |
+| Nova missão | Cabeçalho completo; **Emitir** grava `emitidaEm`, gera o código (MS-NNN) e avisa o responsável. A pasta do Drive e o Docs entram como links. Mostra os encerramentos de missões parecidas para reler |
 | Responder pendência | Escolha entre **Resposta** (texto) e **Alteração** (edita o cabeçalho ou a data, e a versão avança) |
 | Revisão | Por critério e requisito: atendido ou não; produto: atende / não atende / inconclusivo; resultado: concluída / em ajuste; frase do gestor |
 
 ## 10. Notificações (v1)
 
-Sem servidor próprio, a v1 não envia *push*. As notificações aparecem **ao abrir o app** e no contador do ícone (Badging API, onde houver suporte).
+Por **Firebase Cloud Messaging**, no navegador e no PWA instalado. No iPhone, só funciona com o app adicionado à tela inicial (iOS 16.4 ou superior). O app pede permissão de notificação na primeira vez que a pessoa entra, com uma frase dizendo para que serve.
 
-| Evento | Quem é avisado |
-|---|---|
-| Missão emitida | Responsável |
-| Resposta recebida ou alteração feita | Responsável |
-| Primeiro plano salvo | Gestor (aviso único) |
-| Pendência aberta | Gestor |
-| Sinal que notifica (seção 8) | Gestor |
-| Entrega feita | Gestor |
+| Evento | Quem é avisado | Como |
+|---|---|---|
+| Missão emitida | Responsável | Função por evento (missão com `emitidaEm`) |
+| Resposta recebida ou alteração feita | Responsável | Função por evento (`respostas`, `alteracoes`) |
+| Primeiro plano salvo | Gestor (aviso único) | Função por evento (`primeiroPlanoEm` preenchido) |
+| Pendência aberta | Gestor | Função por evento (`pendencias`) |
+| Sinal que notifica (seção 8) | Gestor | Função agendada, de hora em hora, das 8h às 18h nos dias úteis; avisa uma vez por sinal |
+| Entrega feita | Gestor | Função por evento (`entregas`) |
 
-*Push* de verdade exige um pequeno serviço de envio (Web Push) e fica para depois (seção 13).
+**O responsável nunca recebe aviso de sinal.** Ele só recebe o que é resposta a ele ou missão nova.
+
+Os tokens de notificação ficam em `equipes/{id}/tokens/{uid}`, gravados por cada usuário só para si.
 
 ## 11. Fluxo de uso
 
@@ -312,7 +272,7 @@ O diagrama está no protocolo, na seção *Fluxo de uso do app*.
 |---|---|---|
 | 1 | O responsável não consegue abrir a missão de outra pessoa nem a lista | Teste com duas contas |
 | 2 | O registro do dia é feito com no máximo 3 toques quando a atividade já existe | Demonstração |
-| 3 | O registro feito sem conexão é gravado no Drive quando a conexão volta | Teste |
+| 3 | O registro feito sem conexão é gravado no Firestore quando a conexão volta | Teste |
 | 4 | A tela do responsável não mostra sinal, contagem nem histórico | Inspeção |
 | 5 | Uma alteração avança a versão e aparece como "não vista" até o responsável abrir a folha | Teste |
 | 6 | A pendência só fecha pelo responsável que a abriu | Teste |
@@ -320,15 +280,17 @@ O diagrama está no protocolo, na seção *Fluxo de uso do app*.
 | 8 | MS-027 em 29/10 (impedimento ainda aberto): dias sem registro (4 dias úteis), data estimada passou, impedimento respondido e aberto há 5 dias úteis | Teste de `analise.js` |
 | 9 | Impedimento total sem resposta por 5 dias úteis: situação "Impedida", data estimada avança 5 dias úteis, sem sinal de dias sem registro | Teste de `analise.js` |
 | 10 | Entrega sem revisão há 5 dias úteis: sinal de espera pela revisão, que notifica | Teste de `analise.js` |
-| 11 | Feriado em `config.json` não conta como dia útil | Teste de `analise.js` |
+| 11 | Feriado cadastrado na equipe não conta como dia útil | Teste de `analise.js` |
 | 12 | O mesmo link abre a lista para o gestor e a missão para o responsável; quem não está na equipe vê só o aviso para pedir acesso | Teste com três contas |
+| 13 | As regras do Firestore bloqueiam: o responsável gravar no que é do gestor; o gestor gravar registro do dia; um responsável ler a missão de outro; alguém de fora ler qualquer documento | Testes no Firebase Emulator (`@firebase/rules-unit-testing`) |
+| 14 | O gestor recebe notificação de pendência aberta em até 1 minuto, e o responsável nunca recebe aviso de sinal | Demonstração |
 
 ## 13. Fora da v1 (backlog)
 
 | Item | Por que fica para depois |
 |---|---|
-| **Chat entre responsável e gestor, numa segunda aba da missão** | Na v1, a pendência com resposta cobre a comunicação e deixa registro na folha. Regra para quando entrar: o que for decidido no chat e mudar o cabeçalho vira alteração |
-| *Push* (Web Push) | Exige um serviço de envio |
+| **Chat entre responsável e gestor, numa segunda aba da missão** | Na v1, a pendência com resposta cobre a comunicação e deixa registro na folha. No Firestore, entra como subcoleção `mensagens` da missão, em tempo real. Regra para quando entrar: o que for decidido no chat e mudar o cabeçalho vira alteração |
+| Produto para outras equipes | A estrutura já separa as equipes; faltam cadastro sem convite, planos, termos e LGPD (seção 14) |
 | Seletor de missões para quem tem mais de uma atribuída | Decidir junto com a visão de equipe |
 | Visão de equipe: limite de missões em andamento, prioridade, *heijunka*, carga invisível | São regras entre folhas |
 | Complemento de pesquisa e teste | Tipo especial de missão |
@@ -337,7 +299,8 @@ O diagrama está no protocolo, na seção *Fluxo de uso do app*.
 
 ## 14. Questões em aberto
 
-- Hospedagem do PWA: GitHub Pages, Firebase Hosting ou outro serviço de páginas estáticas.
-- Projeto no Google Cloud para o OAuth: quem cria e quem administra (o gestor, de preferência). Se a equipe usar Google Workspace, o app pode ser marcado como interno, sem modo de teste.
-- O link "Docs" do cabeçalho: o app cria o documento ao emitir a missão, ou o gestor cola o link?
+- Plano Blaze no projeto Firebase: as Cloud Functions (notificações) só funcionam nele. Sem o Blaze, a v1 sai sem notificação no celular, e os avisos aparecem ao abrir o app.
+- Projeto Firebase: usar um projeto novo, só para este app (recomendado), ou um existente?
+- O link "Docs": o gestor cola o link (v1) ou o app cria o documento ao emitir (depois)?
 - Lista de feriados: nacionais apenas, ou também os locais?
+- Para virar produto: cadastro de equipe sem convite, planos, termos de uso e privacidade (LGPD, porque o registro diário é dado sobre o trabalho de pessoas) e marca. Fica para quando houver uma segunda equipe interessada.

@@ -1,8 +1,10 @@
 // Protocolo de missões v2.7 — análise do gestor (módulo do PWA)
 //
-// Funções puras, sem dependências. Entram os dois arquivos da missão
-// (gestor.json e responsavel.json, ver especificacao_app_missoes.md),
+// Funções puras, sem dependências. Entram os dados da missão montados
+// pelo adaptador do Firestore em dois objetos (g: o que o gestor grava;
+// r: o que o responsável grava; ver especificacao_app_missoes.md, seção 5),
 // a data de hoje e os feriados; sai o que a tela do gestor mostra.
+// Roda no app do gestor e na Cloud Function agendada de notificações.
 // Datas são strings 'AAAA-MM-DD'. Nada daqui aparece para o responsável,
 // exceto sugerirAtividades (só nomes, sem datas).
 
