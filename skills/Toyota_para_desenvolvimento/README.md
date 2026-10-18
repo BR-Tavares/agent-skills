@@ -23,6 +23,7 @@ Seis checkpoints, cada um com uma prova observável antes de seguir: cliente pre
   - `tela_missao_funcionario.svg`: esboço visual da folha do responsável no celular.
   - `prompt_implementacao.md`: roteiro de implementação em fatias.
   - `HANDOFF_E_OPERACAO.md`: manual de operação, arquitetura, segurança, runbook de manutenção, handoff técnico e status dos 14 critérios de aceite.
+  - `BACKLOG.md`: backlog vivo de melhorias identificadas pelo usuário no uso real (ex.: Estilo Black / modo escuro) e roteiro para a v1.1 e v2.0.
   - `guia_uso_gestor.md` e `guia_uso_responsavel.md`: guias rápidos de 1 página para uso diário.
 
 ## Skill irmã
