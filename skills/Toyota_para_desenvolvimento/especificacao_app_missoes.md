@@ -62,7 +62,36 @@ Missões/                      pasta raiz, só do gestor
 - O responsável abre o app e vê só as missões cujas pastas foram compartilhadas com ele (busca no Drive por `gestor.json` compartilhado com o usuário). A pasta raiz e as missões dos outros não aparecem.
 - **Limite assumido:** como editor da pasta, o responsável conseguiria mudar `gestor.json` direto no Drive, fora do app. A equipe é de confiança, o app nunca faz isso, e o Drive guarda o histórico de versões de cada arquivo.
 
-## 4. Papéis e acesso
+## 4. Usuários, papéis e acesso
+
+**Um só link do PWA para todos.** O papel vem do cadastro, não do link:
+- **Gestor:** quem é dono da pasta `Missões/` e do `config.json`. No primeiro acesso, o app oferece "Criar espaço da equipe", que cria a pasta e o `config.json` com o gestor dentro.
+- **Responsável:** quem está em `config.json → equipe` e não é o gestor. Ao entrar, o app procura as missões compartilhadas com ele e abre direto na missão.
+- **Pessoa não cadastrada:** vê "Peça ao gestor para incluir você" e nada mais.
+
+Dois links (um do gestor e outro do responsável) não dão segurança, porque quem controla o acesso é o compartilhamento do Drive, não o endereço. Além disso, duplicariam o código e as atualizações.
+
+**Administração de usuários (tela Equipe, só do gestor):**
+
+| Ação | O que o app faz | Passo manual, fora do app |
+|---|---|---|
+| Incluir pessoa | Grava nome e e-mail em `config.json → equipe` | Incluir o e-mail como usuário de teste no projeto do Google Cloud (dispensado se a equipe usar Google Workspace com o app interno) |
+| Atribuir missão | Ao emitir, compartilha a pasta da missão com o responsável | — |
+| Trocar o responsável | Gera uma alteração, tira o compartilhamento do antigo e compartilha com o novo | — |
+| Remover pessoa | Tira a pessoa da equipe e o compartilhamento das pastas das missões dela que estiverem abertas | Remover dos usuários de teste |
+
+`config.json`:
+
+```json
+{
+  "gestor": { "nome": "…", "email": "…" },
+  "equipe": [{ "nome": "Ana", "email": "ana@…", "ativo": true }],
+  "feriados": ["2026-11-02", "2026-11-15"],
+  "proximoId": 28
+}
+```
+
+### Quem vê e grava cada bloco
 
 | Bloco | Gestor | Responsável |
 |---|---|---|
@@ -251,6 +280,7 @@ Esboço: `tela_missao_funcionario.svg`. O app abre direto na missão atribuída.
 
 | Tela | Conteúdo |
 |---|---|
+| Equipe | Incluir, desativar e remover pessoas; feriados |
 | Lista de missões | Uma linha por missão aberta: ID, título, responsável, situação, data estimada, etapas concluídas, atividade atual e há quantos dias, marcas de sinal. No topo, os sinais que notificam |
 | Folha espelhada | A mesma folha, só leitura, com painel da missão e linha do tempo dos registros; botões **Responder**, **Alterar** e **Revisar** |
 | Nova missão | Cabeçalho completo; **Emitir** cria a pasta e os arquivos. Mostra os encerramentos de missões parecidas para reler |
@@ -291,6 +321,7 @@ O diagrama está no protocolo, na seção *Fluxo de uso do app*.
 | 9 | Impedimento total sem resposta por 5 dias úteis: situação "Impedida", data estimada avança 5 dias úteis, sem sinal de dias sem registro | Teste de `analise.js` |
 | 10 | Entrega sem revisão há 5 dias úteis: sinal de espera pela revisão, que notifica | Teste de `analise.js` |
 | 11 | Feriado em `config.json` não conta como dia útil | Teste de `analise.js` |
+| 12 | O mesmo link abre a lista para o gestor e a missão para o responsável; quem não está na equipe vê só o aviso para pedir acesso | Teste com três contas |
 
 ## 13. Fora da v1 (backlog)
 
@@ -307,6 +338,6 @@ O diagrama está no protocolo, na seção *Fluxo de uso do app*.
 ## 14. Questões em aberto
 
 - Hospedagem do PWA: GitHub Pages, Firebase Hosting ou outro serviço de páginas estáticas.
-- Projeto no Google Cloud para o OAuth: quem cria e quem administra. Se a equipe usar Google Workspace, o app pode ser marcado como interno, sem modo de teste.
+- Projeto no Google Cloud para o OAuth: quem cria e quem administra (o gestor, de preferência). Se a equipe usar Google Workspace, o app pode ser marcado como interno, sem modo de teste.
 - O link "Docs" do cabeçalho: o app cria o documento ao emitir a missão, ou o gestor cola o link?
 - Lista de feriados: nacionais apenas, ou também os locais?
