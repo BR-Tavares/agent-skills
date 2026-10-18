@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1380" viewBox="0 0 820 1380" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1270" viewBox="0 0 820 1270" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
 <title>Tela da missão — funcionário</title>
-<rect x="0" y="0" width="820" height="1380" rx="0" fill="#FBFBFC" stroke="#FBFBFC" stroke-width="1"/>
-<rect x="20" y="20" width="400" height="1340" rx="36" fill="#F4F5F7" stroke="#C9CED4" stroke-width="2"/>
+<rect x="0" y="0" width="820" height="1270" rx="0" fill="#FBFBFC" stroke="#FBFBFC" stroke-width="1"/>
+<rect x="20" y="20" width="400" height="1218" rx="36" fill="#F4F5F7" stroke="#C9CED4" stroke-width="2"/>
 <rect x="36" y="40" width="368" height="452" rx="12" fill="#FFFFFF" stroke="#E1E4E8" stroke-width="1"/>
 <text x="52" y="64" font-size="12" font-weight="500" fill="#656D76" text-anchor="start">MS-027 · versão 2</text>
 <text x="52" y="90" font-size="18" font-weight="700" fill="#1F2328" text-anchor="start">Calibrar sensor de umidade em</text>
@@ -65,23 +65,23 @@
 <text x="52" y="968" font-size="12" font-weight="400" fill="#656D76" text-anchor="start">Resultado, evidência por critério, desvios.</text>
 <rect x="296" y="928" width="92" height="26" rx="13" fill="#FFFFFF" stroke="#E1E4E8" stroke-width="1"/>
 <text x="342" y="945" font-size="12" font-weight="600" fill="#1F2328" text-anchor="middle">Preencher</text>
-<rect x="36" y="994" width="368" height="318" rx="12" fill="#FFFFFF" stroke="#0B6BCB" stroke-width="1.5"/>
+<rect x="36" y="994" width="368" height="214" rx="12" fill="#FFFFFF" stroke="#0B6BCB" stroke-width="1.5"/>
 <text x="52" y="1020" font-size="14" font-weight="700" fill="#1F2328" text-anchor="start">Registro do dia</text>
-<text x="52" y="1048" font-size="10.5" font-weight="700" fill="#656D76" text-anchor="start">DATA</text>
-<rect x="52" y="1056" width="336" height="36" rx="8" fill="#FFFFFF" stroke="#9AA1A9" stroke-width="1"/>
-<text x="64" y="1079" font-size="13" font-weight="500" fill="#1F2328" text-anchor="start">Qui, 22/10/2026</text>
-<text x="376" y="1079" font-size="12" font-weight="600" fill="#0B6BCB" text-anchor="end">hoje ▾</text>
-<text x="52" y="1116" font-size="10.5" font-weight="700" fill="#656D76" text-anchor="start">ATIVIDADE PRINCIPAL</text>
-<rect x="52" y="1124" width="336" height="36" rx="8" fill="#FFFFFF" stroke="#0B6BCB" stroke-width="1.5"/>
-<text x="64" y="1147" font-size="13" font-weight="500" fill="#1F2328" text-anchor="start">sec</text>
-<line x1="87" y1="1135" x2="87" y2="1151" stroke="#0B6BCB" stroke-width="1.5"/>
-<rect x="52" y="1164" width="336" height="64" rx="8" fill="#FFFFFF" stroke="#E1E4E8" stroke-width="1"/>
-<rect x="53" y="1165" width="334" height="30" rx="7" fill="#E8F1FB" stroke="#E8F1FB" stroke-width="0"/>
-<text x="64" y="1185" font-size="13" font-weight="600" fill="#0B6BCB" text-anchor="start">secar amostras n1</text>
-<text x="64" y="1217" font-size="12.5" font-weight="500" fill="#656D76" text-anchor="start">+ nova atividade: “sec…”</text>
-<text x="52" y="1256" font-size="12" font-weight="600" fill="#0B6BCB" text-anchor="start">ou: sem trabalho na missão hoje ▾</text>
-<rect x="52" y="1268" width="336" height="34" rx="17" fill="#0B6BCB" stroke="#0B6BCB" stroke-width="1"/>
-<text x="220" y="1290" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Registrar</text>
+<rect x="52" y="1036" width="82" height="38" rx="8" fill="#FFFFFF" stroke="#9AA1A9" stroke-width="1"/>
+<text x="62" y="1060" font-size="12.5" font-weight="600" fill="#1F2328" text-anchor="start">Qui 22/10</text>
+<text x="126" y="1060" font-size="10" font-weight="600" fill="#656D76" text-anchor="end">▾</text>
+<rect x="140" y="1036" width="204" height="38" rx="8" fill="#FFFFFF" stroke="#0B6BCB" stroke-width="1.5"/>
+<text x="152" y="1060" font-size="13" font-weight="500" fill="#1F2328" text-anchor="start">sec</text>
+<line x1="175" y1="1047" x2="175" y2="1063" stroke="#0B6BCB" stroke-width="1.5"/>
+<circle cx="370" cy="1055" r="19" fill="#0B6BCB"/>
+<path d="M361 1055 l6 6 l11 -12" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="140" y="1080" width="204" height="116" rx="8" fill="#FFFFFF" stroke="#E1E4E8" stroke-width="1"/>
+<rect x="141" y="1081" width="202" height="26" rx="7" fill="#E8F1FB" stroke="#E8F1FB" stroke-width="0"/>
+<text x="152" y="1099" font-size="12.5" font-weight="600" fill="#0B6BCB" text-anchor="start">secar amostras n1</text>
+<line x1="150" y1="1114" x2="334" y2="1114" stroke="#E1E4E8"/>
+<text x="152" y="1134" font-size="12" font-weight="500" fill="#656D76" text-anchor="start">Sem trabalho: folga ou saúde</text>
+<text x="152" y="1158" font-size="12" font-weight="500" fill="#656D76" text-anchor="start">Sem trabalho: outra missão</text>
+<text x="152" y="1182" font-size="12" font-weight="500" fill="#656D76" text-anchor="start">Sem trabalho: fora de missão</text>
 <text x="446" y="52" font-size="20" font-weight="800" fill="#1F2328" text-anchor="start">Tela da missão — funcionário</text>
 <text x="446" y="74" font-size="12.5" font-weight="500" fill="#656D76" text-anchor="start">Esboço de intenção · celular · dados do exemplo MS-027</text>
 <line x1="412" y1="96" x2="446" y2="96" stroke="#0B6BCB" stroke-width="1.5" stroke-dasharray="3 3"/>
@@ -124,19 +124,19 @@
 <text x="458" y="949" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
 <text x="480" y="948" font-size="12.5" font-weight="700" fill="#1F2328" text-anchor="start">Entrega</text>
 <text x="480" y="965" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">Quando o trabalho estiver pronto.</text>
-<line x1="412" y1="1086" x2="446" y2="1086" stroke="#0B6BCB" stroke-width="1.5" stroke-dasharray="3 3"/>
-<circle cx="458" cy="1086" r="12" fill="#0B6BCB"/>
-<text x="458" y="1091" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
-<text x="480" y="1090" font-size="12.5" font-weight="700" fill="#1F2328" text-anchor="start">Registro do dia: data + atividade</text>
-<text x="480" y="1107" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">Só a atividade principal do dia. O auto-complete</text>
-<text x="480" y="1124" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">sugere as que você já usou nesta missão, para</text>
-<text x="480" y="1141" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">escrever sempre do mesmo jeito.</text>
-<line x1="412" y1="1236" x2="446" y2="1236" stroke="#0B6BCB" stroke-width="1.5" stroke-dasharray="3 3"/>
-<circle cx="458" cy="1236" r="12" fill="#0B6BCB"/>
-<text x="458" y="1241" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
-<text x="480" y="1240" font-size="12.5" font-weight="700" fill="#1F2328" text-anchor="start">Sem histórico, contagem ou alerta</text>
-<text x="480" y="1257" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">Você registra e segue. A análise da sequência</text>
-<text x="480" y="1274" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">de dias é feita só na tela do gestor.</text>
-<rect x="446" y="1328" width="350" height="26" rx="8" fill="#FFFFFF" stroke="#E1E4E8" stroke-width="1"/>
-<text x="458" y="1346" font-size="12" font-weight="600" fill="#656D76" text-anchor="start">Análise e sinais: só na tela do gestor (analise_gestor.sql).</text>
+<line x1="412" y1="1048" x2="446" y2="1048" stroke="#0B6BCB" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="458" cy="1048" r="12" fill="#0B6BCB"/>
+<text x="458" y="1053" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+<text x="480" y="1052" font-size="12.5" font-weight="700" fill="#1F2328" text-anchor="start">Registro do dia: uma linha</text>
+<text x="480" y="1069" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">Data à esquerda, atividade no meio, ícone de</text>
+<text x="480" y="1086" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">registrar à direita. O auto-complete sugere as</text>
+<text x="480" y="1103" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">atividades já usadas e, no fim, "sem trabalho".</text>
+<line x1="412" y1="1146" x2="446" y2="1146" stroke="#0B6BCB" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="458" cy="1146" r="12" fill="#0B6BCB"/>
+<text x="458" y="1151" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
+<text x="480" y="1150" font-size="12.5" font-weight="700" fill="#1F2328" text-anchor="start">Sem histórico, contagem ou alerta</text>
+<text x="480" y="1167" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">Você registra e segue. A análise da sequência</text>
+<text x="480" y="1184" font-size="12.5" font-weight="400" fill="#656D76" text-anchor="start">de dias é feita só na tela do gestor.</text>
+<rect x="446" y="1226" width="350" height="26" rx="8" fill="#FFFFFF" stroke="#E1E4E8" stroke-width="1"/>
+<text x="458" y="1244" font-size="12" font-weight="600" fill="#656D76" text-anchor="start">Análise e sinais: só na tela do gestor (analise.js).</text>
 </svg>

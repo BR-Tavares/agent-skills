@@ -1,6 +1,6 @@
 # Protocolo de missões
 
-Versão 2.6 básica • 18/10/2026 • Equipe pequena • Folha única por missão (PWA)
+Versão 2.7 básica • 18/10/2026 • Equipe pequena • Folha única por missão (PWA)
 
 ## Princípio
 
@@ -13,9 +13,9 @@ Uma missão é uma tarefa com ID, um responsável e uma data estimada única. A 
 **Cada missão é individual.** A folha é vista só pelo gestor e pelo responsável. O responsável abre o app direto na sua missão e não acessa as missões dos outros; só o gestor vê a lista da equipe.
 
 **Gestão sem atrito.** A folha informa; não cobra.
-- O registro diário é **um campo de data e um de atividade, com auto-complete**. O responsável não precisa ver histórico: ele sabe em que está trabalhando, e há atividades que demoram mesmo. A tela dele **não tem sinais, alertas nem análise**.
+- O registro diário é **uma linha: data, atividade com auto-complete e um botão**. O responsável não precisa ver histórico: ele sabe em que está trabalhando, e há atividades que demoram mesmo. A tela dele **não tem sinais, alertas nem análise**.
 - A **data estimada** é uma estimativa, não uma cobrança. Se mudar, o responsável informa a nova data.
-- A **análise fica só na tela do gestor**, calculada a partir dos registros (`analise_gestor.sql`), e serve para ele saber onde remover obstáculos, não para cobrar quem executa.
+- A **análise fica só na tela do gestor**, calculada pelo próprio app a partir dos registros (`analise.js`), e serve para ele saber onde remover obstáculos, não para cobrar quem executa.
 - Quem encontra um problema para e o mostra (*jidoka*, andon).
 
 **Linguagem.** A folha diz o porquê de cada pedido e evita termos de comando (apoio à autonomia, Teoria da Autodeterminação).
@@ -170,12 +170,16 @@ As duas frases melhoram as próximas missões. Uma dúvida aberta mostra onde a 
 
 ### 5. Registro do dia (responsável)
 
-É o último bloco e o único de uso diário. Tem dois campos e um botão:
-- **Data:** hoje, por padrão. Pode ser trocada para registrar um dia anterior esquecido.
-- **Atividade principal:** o que ocupou a maior parte do dia na missão (verbo + objeto). O campo tem **auto-complete** com as atividades já registradas nesta missão, para que a mesma atividade seja escrita do mesmo jeito.
-- **Ou sem trabalho na missão**, com um toque no motivo: folga ou saúde; outra missão; demanda fora de missão.
+É o último bloco e o único de uso diário: **uma linha só**.
 
-Um registro por dia, sem descrição. A tela não mostra histórico, contagem nem alerta: o registro é informação para a análise do gestor, não cobrança.
+| À esquerda | No meio | À direita |
+|---|---|---|
+| **Data:** hoje, por padrão; um toque troca para registrar um dia esquecido | **Atividade principal:** o que ocupou a maior parte do dia na missão (verbo + objeto) | **Ícone de registrar** |
+
+- O campo tem **auto-complete** com as atividades já registradas nesta missão, para que a mesma atividade seja escrita do mesmo jeito.
+- A lista do auto-complete termina com as três opções de **sem trabalho na missão**: folga ou saúde; outra missão; demanda fora de missão.
+- Um registro por dia, sem descrição. Registrar de novo no mesmo dia substitui o anterior.
+- A tela não mostra histórico, contagem nem alerta: o registro é informação para a análise do gestor, não cobrança.
 
 ---
 
@@ -199,7 +203,7 @@ Um registro por dia, sem descrição. A tela não mostra histórico, contagem ne
 
 ## Análise do gestor
 
-A análise sai só dos registros do dia, das etapas e das pendências, sem nenhum campo extra. **Não aparece para o responsável.** O SQL está em `analise_gestor.sql`.
+A análise sai só dos registros do dia, das etapas e das pendências, sem nenhum campo extra. **Não aparece para o responsável.** O cálculo está em `analise.js`, um módulo do próprio app, sem servidor de banco de dados.
 
 **Painel do gestor** (uma linha por missão aberta): responsável, situação, data estimada (com os dias suspensos), etapas concluídas, último registro, atividade atual e **há quantos dias seguidos** ela é a atividade principal, dias em outra missão e fora de missão, e os sinais.
 
@@ -269,6 +273,7 @@ Nenhum alerta foi disparado e ninguém foi cobrado. Quem trabalhava percebeu o p
 | Bloco "Autonomia" em três níveis | A autonomia passa a ser tudo o que o cabeçalho não fixa; resta só "consultar antes" | — |
 | Sinais, alertas, calendário, histórico e andamento na tela do responsável | Gestão sem atrito: ele só registra a atividade do dia; a análise é do gestor, e há atividades que demoram mesmo | — |
 | Atividades como subitens das etapas, com marcação de concluída | Etapa é o plano do início; atividade é o registro do dia. Misturar as duas dobrava o cadastro | — |
+| Chat entre responsável e gestor, aberto numa segunda aba da missão | Na versão básica, a pendência com resposta cobre a comunicação e deixa registro na folha. Regra para quando entrar: o que for decidido no chat e mudar o cabeçalho vira **alteração**; o chat não substitui a folha | Próxima versão |
 | Mais de uma atividade por dia | O registro é da atividade principal; basta para a análise | Se a análise mostrar que a atividade principal esconde trabalho relevante |
 | Prazo com revisão embutida e "entregar até" | Criavam cobrança entre responsável e gestor; substituídos pela data estimada | — |
 | Requisitos *Should*, *Could* e *Won't* (MoSCoW completo) | A versão básica fica só com o que é obrigatório e o que é proibido | Se surgirem missões com escopo negociável |
