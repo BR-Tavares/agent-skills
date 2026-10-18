@@ -17,6 +17,7 @@ Seis checkpoints, cada um com uma prova observável antes de seguir: cliente pre
 - **URL de Produção:** `https://tarefas-build.web.app`
 - **Repositório de Código do App:** `https://github.com/BR-Tavares/Tarefas-build` (`C:\Users\andre\Tarefas-build`)
 - **Documentação e Módulos nesta pasta:**
+  - `fundamentos_engenharia_missoes.md`: documento de orientação teórica e argumentativa (espaço semântico para humanos e modelos de IA — DoDAF, NASA/JPL, SpaceX, Mission Command, Toyota e Avaliador JEV).
   - `protocolo_missoes.md` (v2.7): regras de uso, princípios Lean/Toyota e justificativa de cada campo da folha.
   - `especificacao_app_missoes.md` (v1.2): especificação funcional e de arquitetura no Firebase, atualizada com as decisões da v1.
   - `analise.js`: módulo puro de análise do gestor, compartilhado entre o PWA e a Cloud Function agendada.
