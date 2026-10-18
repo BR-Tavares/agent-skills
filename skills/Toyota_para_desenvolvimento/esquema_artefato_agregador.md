@@ -1,13 +1,13 @@
 # Esquema do artefato agregador — Especificação do app de missões (PWA)
 
-> **Status:** esqueleto para conferência. Cada seção diz **o que vai conter** e **de onde vem** no `protocolo_missoes.md` (v2.5). O conteúdo final é escrito na próxima conversa.
+> **Status:** esqueleto para conferência. Cada seção diz **o que vai conter** e **de onde vem** no `protocolo_missoes.md` (v2.6). O conteúdo final é escrito na próxima conversa.
 
 ---
 
 ## 0. Como usar este artefato
 
 - **Objetivo da próxima conversa:** sair com a especificação pronta para codificar o PWA.
-- **Fonte de verdade:** `protocolo_missoes.md` v2.5. Em caso de conflito, o protocolo vence.
+- **Fonte de verdade:** `protocolo_missoes.md` v2.6. Em caso de conflito, o protocolo vence.
 - **Regra para o agente:** usar práticas consagradas, não inventar mecanismos e não aumentar o registro diário do responsável.
 
 ## 1. Contexto e escopo
@@ -23,7 +23,7 @@
 ## 2. Decisões vigentes
 
 Tabela consolidada das decisões desta conversa: pergunta → decisão → motivo.
-*Fonte:* nivelamento das 9 perguntas, v2.1 a v2.5, avaliações independentes.
+*Fonte:* nivelamento das 9 perguntas, v2.1 a v2.6, avaliações independentes.
 
 ## 3. Papéis e permissões
 
@@ -31,19 +31,18 @@ Tabela consolidada das decisões desta conversa: pergunta → decisão → motiv
 - O **responsável** vê **somente as missões atribuídas a ele**. O app abre direto na folha da missão, sem lista. Ele não vê, não busca e não recebe notificação de missões de outras pessoas.
 - **Só o gestor** vê a lista de missões da equipe e abre qualquer folha.
 - Os links de Docs e de pasta seguem a mesma regra: são compartilhados só com o gestor e com o responsável da missão.
-- **Sem atrito:** a tela do responsável não tem sinais nem alertas. Os sinais ficam só na tela do gestor.
+- **Sem atrito:** a tela do responsável não tem sinais, alertas, histórico nem análise. A análise fica só na tela do gestor (`analise_gestor.sql`).
 
 Matriz **campo × papel** com quem **vê**, **edita** e **é notificado**.
 
 | Bloco | Gestor | Responsável |
 |---|---|---|
 | 1. Cabeçalho: identificação, links Docs e pasta, data estimada, descrição, requisitos | edita (alteração após emitir) | vê |
-| 2. Etapas e atividades | vê | edita |
-| 3. Calendário | vê | edita |
-| 4. Pendências | responde | abre e fecha |
-| 5. Entrega / Revisão / Encerramento | revisa + 1 frase | entrega + 1 frase |
-| 6. Andamento (calculado) | vê | vê |
-| Sinais | vê | **não vê** |
+| 2. Etapas (no início) | vê | edita e marca concluída |
+| 3. Pendências | responde | abre e fecha |
+| 4. Entrega / Revisão / Encerramento | revisa + 1 frase | entrega + 1 frase |
+| 5. Registro do dia | não edita | grava (não vê histórico) |
+| Análise: painel, sinais, linha do tempo | vê | **não vê** |
 
 ## 4. Modelo de dados
 
@@ -53,9 +52,7 @@ erDiagram
     MISSAO ||--o{ REQUISITO : "tem"
     MISSAO ||--o{ CRITERIO : "tem"
     MISSAO ||--o{ ETAPA : "tem"
-    ETAPA ||--o{ ATIVIDADE : "tem"
-    ATIVIDADE ||--o{ MARCACAO : "recebe"
-    MISSAO ||--o{ DIA_SEM_TRABALHO : "registra"
+    MISSAO ||--o{ REGISTRO_DIA : "recebe um por dia"
     MISSAO ||--o{ PENDENCIA : "tem"
     PENDENCIA ||--o| RESPOSTA : "recebe"
     RESPOSTA |o--o| VERSAO : "gera, se alteração"
@@ -82,18 +79,25 @@ erDiagram
         string condicao
         string verificacao "inspecao, analise, demonstracao, teste"
     }
-    MARCACAO {
-        date dia
+    ETAPA {
+        int ordem
+        string nome
+        date concluida_em
+    }
+    REGISTRO_DIA {
+        date dia "chave com missao"
+        string atividade "auto-complete; ou motivo"
+        string motivo "folga_saude, outra_missao, fora_de_missao"
     }
     PENDENCIA {
         string tipo "duvida, consulta, impedimento, nova_data"
-        string bloqueio "tudo, atividade, nenhum"
+        string bloqueio "tudo, parte, nenhum"
         datetime aberta_em
         datetime fechada_em
     }
 ```
 
-A seguir, a lista de campos por entidade, com o tipo, a obrigatoriedade e a origem no protocolo.
+A seguir, a lista de campos por entidade, com o tipo, a obrigatoriedade e a origem no protocolo. As tabelas usadas pela análise já estão em `analise_gestor.sql` (PostgreSQL, testado com o exemplo MS-027).
 
 ## 5. Situações e transições
 
@@ -126,29 +130,31 @@ Pseudofórmulas a detalhar:
 |---|---|
 | Data estimada exibida | `data_estimada + dias suspensos` |
 | Dias suspensos | dias úteis entre a abertura de um impedimento total e a resposta |
-| Andamento | decorridos / dias até a data estimada; atividades concluídas / total; dias sem trabalho por motivo |
-| Etapa concluída | todas as atividades concluídas |
+| Atividade em dias seguidos | sequência de registros com a mesma atividade (*gaps-and-islands*, `v_sequencias`) |
+| Auto-complete | atividades já usadas na missão, mais recentes primeiro (`sugerir_atividades`) |
+| Painel do gestor | `v_painel_gestor` |
 | Versão "não vista" | alteração com `visto_em` nulo para o responsável |
 | Dia útil | **a definir:** calendário de feriados |
 
 ## 7. Sinais
 
-Para cada sinal: gatilho → se notifica → o que apaga. Os sinais existem só na tela do gestor.
+Só na tela do gestor. Implementados em `v_sinais`.
 
-| Sinal (só gestor) | Quando aparece | Notifica? | Apaga quando |
+| Sinal | Quando aparece | Notifica? | Apaga quando |
 |---|---|---|---|
-| Dias sem marcação | … | não (marca na lista) | … |
-| Data estimada passou | … | não (marca na lista) | … |
-| Pendência sem resposta | … | sim | … |
-| Espera pelo gestor | … | sim | … |
+| Dias sem registro | 2 dias úteis sem registro, fora de impedimento total | não (marca na lista) | registro feito |
+| Data estimada passou | data passou sem entrega nem pedido de nova data | não (marca na lista) | entrega ou nova data |
+| Pendência sem resposta | impedimento: 1 dia útil; demais: 2 | sim | resposta |
+| Espera pela revisão | entregue há mais de 2 dias úteis | sim | revisão |
+| Impedimento respondido e aberto | 3 dias úteis | sim | responsável fecha |
 
 ## 8. Telas
 
 | Tela | Quem | Conteúdo previsto |
 |---|---|---|
 | Lista de missões | **só o gestor** | ID, título, responsável, situação, marca de sinal, data estimada |
-| Folha da missão | responsável (só a dele) | Abre direto na missão atribuída; blocos 1 a 6, na ordem do protocolo; sem sinais; marcação do dia em um toque. Esboço: `tela_missao_funcionario.svg` |
-| Folha espelhada (celular) | gestor | Mesma folha, só leitura, com os sinais da missão no topo; botões *responder*, *alterar* e *revisar* |
+| Folha da missão | responsável (só a dele) | Abre direto na missão atribuída; blocos 1 a 5, na ordem do protocolo; sem sinais nem histórico; registro do dia com data + atividade (auto-complete). Esboço: `tela_missao_funcionario.svg` |
+| Folha espelhada (celular) | gestor | Mesma folha, só leitura, com o painel da missão e a linha do tempo dos registros; botões *responder*, *alterar* e *revisar* |
 | Nova missão | gestor | Bloco 1, com os links de Docs e pasta e acesso para os encerramentos de missões parecidas |
 | Pendência | gestor e o responsável da missão | Tipo, texto, resposta ou alteração, fechar |
 | Notificações | cada um só as suas | Responsável: resposta recebida, alteração feita. Gestor: pendência aberta, sinais que o cobram, aviso do primeiro plano, entrega feita |
@@ -158,11 +164,11 @@ Esboço do layout de cada tela: wireframe em texto ou HTML estático.
 ## 9. Notificações
 
 Matriz evento → destinatário → canal (push PWA) → texto curto.
-Eventos: missão emitida, primeiro plano salvo, pendência aberta, resposta recebida, alteração feita, sinal na tela do gestor, entrega feita, revisão feita.
+Eventos: missão emitida, primeiro plano salvo, pendência aberta, resposta recebida, alteração feita, sinal na análise do gestor, entrega feita, revisão feita.
 
 ## 10. Fluxo de uso
 
-Diagrama Mermaid do protocolo v2.5 (seção *Fluxo de uso do app*), copiado sem alteração.
+Diagrama Mermaid do protocolo v2.6 (seção *Fluxo de uso do app*), copiado sem alteração.
 
 ## 11. Exemplo de ponta a ponta
 
@@ -176,7 +182,8 @@ A tabela do protocolo, ordenada por valor para as próximas versões.
 
 - Stack do PWA e armazenamento (offline primeiro? sincronização?).
 - Autenticação (conta Google, aproveitando o Docs e a pasta?).
-- Calendário de dias úteis e feriados.
+- Calendário de dias úteis e feriados (tabela `feriado`).
+- Banco: PostgreSQL/Supabase, como em `analise_gestor.sql`, com regras de acesso por linha (o responsável só lê e grava a própria missão)?
 - Docs e pasta: só os links (v1) ou criação automática via API (depois)?
 - Responsável com duas missões ao mesmo tempo: seletor só das dele, ou uma missão por vez?
 - Quem pode criar missão: só o gestor?
