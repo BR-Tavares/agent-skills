@@ -1,6 +1,6 @@
 # Protocolo de missões
 
-Versão 2.3 básica • 18/10/2026 • Equipe pequena • Folha única por missão (PWA)
+Versão 2.4 básica • 18/10/2026 • Equipe pequena • Folha única por missão (PWA)
 
 ## Princípio
 
@@ -16,6 +16,60 @@ Uma missão é uma tarefa com ID, um responsável e um prazo único. A folha da 
 
 ---
 
+## Fluxo de uso do app
+
+O gestor só entra em quatro pontos: ao emitir, ao ler o primeiro plano, ao responder uma pendência ou um vermelho e na revisão. O resto do ciclo é do responsável.
+
+```mermaid
+flowchart TD
+    subgraph G["Gestor"]
+        G1["Cria o rascunho: cabeçalho, pasta, missão e requisitos"]
+        G2["Emite a missão"]
+        G3{"O plano mostra que a tarefa foi entendida?"}
+        G4["Responde ou faz uma alteração"]
+        G5["Conversa Kata diante do trabalho real"]
+        G6{"Revisão: critérios e requisitos cumpridos?"}
+        G7["Encerramento: o que muda na próxima folha?"]
+    end
+
+    subgraph R["Responsável"]
+        R1["Recebe a missão e abre a pasta"]
+        R2["Cria e edita etapas e atividades"]
+        R3["Trabalha e marca no calendário as atividades do dia"]
+        R4{"Precisa do gestor?"}
+        R5["Abre pendência: dúvida, consulta, impedimento ou novo prazo"]
+        R6["Fecha a pendência"]
+        R7{"Todas as atividades concluídas?"}
+        R8["Preenche a entrega, com evidências na pasta"]
+        R9["Encerramento: o que a folha deveria ter dito?"]
+    end
+
+    subgraph A["App"]
+        A1["Aviso único do primeiro plano"]
+        A2{"Sinal?"}
+        A3["Amarelo para o responsável"]
+        A4["Vermelho também para o gestor"]
+    end
+
+    G1 --> G2 --> R1 --> R2
+    R2 --> A1 --> G3
+    G3 -- "não" --> G4
+    G3 -- "sim: nada a fazer" --> R3
+    R2 --> R3
+    R3 --> A2
+    A2 -- "nenhum" --> R4
+    A2 -- "amarelo" --> A3 --> R2
+    A2 -- "vermelho" --> A4 --> G5 --> R2
+    R4 -- "sim" --> R5 --> G4 --> R6 --> R3
+    R4 -- "não" --> R7
+    R7 -- "não" --> R3
+    R7 -- "sim" --> R8 --> G6
+    G6 -- "em ajuste" --> R3
+    G6 -- "concluída" --> R9 --> G7
+```
+
+---
+
 ## A folha, bloco a bloco
 
 São sete blocos, na ordem da tela. Cada bloco indica quem o preenche. Os campos **calculados** são mostrados pelo app e ninguém os preenche.
@@ -24,6 +78,7 @@ São sete blocos, na ordem da tela. Cada bloco indica quem o preenche. Os campos
 
 - **ID e título:** número sequencial; título com verbo + objeto. Ex.: *MS-027 — Calibrar sensor de umidade em solo argiloso*
 - **Gestor e responsável:** uma pessoa cada. Ninguém revisa a própria entrega.
+- **Pasta da missão** (opcional): link de uma pasta do Google Drive, onde ficam os insumos, o trabalho e as evidências. Um toque abre a pasta. O app guarda só o link: o acesso à pasta é dado no próprio Google Drive, para o gestor e o responsável.
 - **Prazo:** uma data, que já inclui os 2 dias úteis da revisão.
 - **Entregar até** (calculado): o prazo menos 2 dias úteis. É a data que vale para o responsável.
 - **Versão:** avança a cada alteração da missão ou dos requisitos. Uma alteração aparece como **"não vista"** até o responsável abrir a folha.
@@ -38,11 +93,11 @@ São sete blocos, na ordem da tela. Cada bloco indica quem o preenche. Os campos
 - **Necessidade:** o que precisa ser resolvido, por que importa e que decisão depende disso.
 - **Resultado esperado:** como fica a situação quando a missão termina bem. Se o plano não se encaixar na realidade, o responsável decide pela necessidade e pelo resultado esperado.
 - **Tarefa:** o que fazer, em uma ou duas frases.
-- **Entrega:** o quê, em que formato e onde.
+- **Entrega:** o quê, em que formato e onde. Se a missão tem pasta, o padrão é entregar nela.
 - **Critérios de conclusão:** as condições que a **entrega** precisa cumprir, uma por linha, no formato **"[condição] — verificado por [inspeção / análise / demonstração / teste]"**.
   Ex.: *Erro médio ≤ 3 p.p. frente ao gravimétrico, em 5 níveis × 3 repetições — verificado por teste.*
   Se os critérios não cabem em três linhas, a missão está grande demais e deve ser dividida.
-- **Insumos:** o que já está disponível e onde. Antes de emitir uma missão parecida com outra já encerrada, o gestor relê o encerramento dela (bloco 7).
+- **Insumos:** o que já está disponível e onde; o que estiver na pasta da missão basta citar pelo nome. Antes de emitir uma missão parecida com outra já encerrada, o gestor relê o encerramento dela (bloco 7).
 
 ### 3. Requisitos da tarefa (gestor)
 
@@ -108,7 +163,7 @@ Uma missão inviável não é recusada: o responsável abre um impedimento dizen
 
 **Entrega (responsável):**
 - **Resultado:** o que foi obtido, separando o dado da interpretação.
-- **Evidência por critério de conclusão:** atendido / parcial / não atendido, e onde está a evidência.
+- **Evidência por critério de conclusão:** atendido / parcial / não atendido, e onde está a evidência (de preferência, um arquivo da pasta da missão).
 - **Desvios e limites:** o que mudou em relação ao combinado, se algum requisito ficou em risco, e o que o resultado não permite concluir.
 
 **Revisão (gestor),** em até 2 dias úteis, **somente pelo que está na folha:** os critérios de conclusão foram atendidos? O que precisava acontecer aconteceu, e o que não podia acontecer não aconteceu? O gestor abre a evidência, não só o resumo. Uma exigência nova vira outra missão, não um ajuste desta. São dois olhares separados:
@@ -179,13 +234,13 @@ Os limiares (1 e 2 dias; 3 e 5 dias; 4 dias; metade do tempo) são valores inici
 
 ## Exemplo
 
-**MS-027 — Calibrar sensor de umidade em solo argiloso** • Emitida em 19/10 • Prazo: 30/10 • Entregar até: 28/10 • v1
+**MS-027 — Calibrar sensor de umidade em solo argiloso** • Emitida em 19/10 • Prazo: 30/10 • Entregar até: 28/10 • v1 • Pasta: *Drive › Calibração › MS-027*
 
 **Missão**
 - **Necessidade:** saber se o sensor v2 mede bem em solo argiloso para ir ao piloto com agricultores.
 - **Resultado esperado:** a curva de calibração para solo argiloso, com erro conhecido.
 - **Tarefa:** comparar as leituras do sensor com o método gravimétrico em amostras de solo argiloso.
-- **Entrega:** planilha e curva de calibração na pasta do projeto.
+- **Entrega:** planilha e curva de calibração na pasta da missão.
 - **Critérios de conclusão:** erro médio ≤ 3 p.p. frente ao gravimétrico, em 5 níveis × 3 repetições — verificado por teste.
 
 **Requisitos da tarefa**
@@ -225,6 +280,7 @@ O gestor não precisou perguntar nada. O desvio apareceu no dia 4, primeiro para
 | Motivo marcado para um intervalo de dias ("outra missão até sexta") | Detalhe de interface; reduz o registro e pode entrar se for barato de implementar | Na primeira versão do app |
 | Limite de 2 missões por pessoa, prioridade entre missões e nivelamento (*heijunka*) | São regras entre folhas, e o app é de folha única | Na visão de equipe (várias folhas) |
 | Sinal de carga invisível entre folhas | Depende da visão entre folhas; dentro da folha, o painel já soma os dias sem trabalho | Junto com a visão de equipe |
+| Integração com a API do Google Drive (criar a pasta ao emitir, listar arquivos, anexar evidência pelo app) | A versão básica guarda só o link; o acesso fica no próprio Drive | Quando colar o link passar a ser atrito real |
 | Biblioteca de insumos e requisitos aprendidos | Por enquanto, o gestor relê os encerramentos das missões parecidas | Na visão de equipe |
 | Tabela de critérios em 4 colunas (condição, medida, critério, verificação) | Pesada para missões simples; a linha "condição — verificado por" mantém o núcleo verificável | Missões técnicas com vários requisitos |
 | Complemento de pesquisa e teste (pergunta, hipótese, protocolo antes dos dados, limites) | É um tipo especial de missão | Primeira extensão recomendada (ver `proposta_solicitacao_pesquisa_testes.md`) |
