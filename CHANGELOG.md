@@ -6,6 +6,8 @@ As alterações relevantes seguem o padrão Keep a Changelog.
 
 ### Added
 
+- Implementação completa da **v1.0.0 do App de Missões (PWA no Firebase)** publicada em `https://tarefas-build.web.app` e no repositório dedicado `BR-Tavares/Tarefas-build` (`C:\Users\andre\Tarefas-build`), com Hosting, Authentication (Google), Cloud Firestore (`southamerica-east1`), `firestore.rules` testadas no Emulator e 6 Cloud Functions v2 de notificações push (FCM).
+- Documentação completa de operação, handoff e uso em `skills/Toyota_para_desenvolvimento/`: `HANDOFF_E_OPERACAO.md` (manual de operação, arquitetura, segurança, manutenção e status dos 14 critérios de aceite), `guia_uso_gestor.md` e `guia_uso_responsavel.md`.
 - Skill `Toyota_para_desenvolvimento` (`toyota-para-desenvolvimento`, consolidada a partir de `mentor-gestao-v2`): consultoria do protótipo ao mercado em 6 checkpoints com Seletor de Escopo, 12 referências completas em `references/` (`checkpoints.md`, `prevencao-de-erro.md`, `previsibilidade.md`, etc.) e templates `template_solicitacao_atividade.md` e `proposta_solicitacao_pesquisa_testes.md`.
 - Suporte ao diretório de runtime oficial do OpenAI Codex CLI (`~/.codex/skills`) no instalador local.
 - Skills poka-yoke-gestao e processos-previsiveis adicionadas ao catálogo compartilhado com suas referências.
@@ -13,6 +15,8 @@ As alterações relevantes seguem o padrão Keep a Changelog.
 - Walkthrough com objetivo, plano de implementação e verificações da entrega.
 
 ### Changed
+
+- `skills/Toyota_para_desenvolvimento/especificacao_app_missoes.md` atualizada para a versão **1.2**, registrando as decisões fechadas no nivelamento e na implementação (edição de links `Docs` e `Pasta` por ambos os papéis mantendo escritor único via `linksEm`, projeto `tarefas-build` no plano Blaze e pré-carga de feriados 2026/2027).
 
 - Skill `mentor_gestao` unificada com a revisão `gestao-v0.2.1` e foco explícito no líder da equipe; `Readme.txt` substituído por `README.md`.
 - Atualização profunda da skill `mentor_gestao` (`SKILL.md` e referências: `ferramentas.md`, `fontes.md`, `mapa-ferramentas.md`, `perspectivas.md`, `premissas.md`, `toyota.md`).

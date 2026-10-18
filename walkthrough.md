@@ -1,4 +1,29 @@
-# Objetivo do chat e plano de implementação — revisão das skills de gestão
+# Objetivo do chat e plano de implementação — App de Missões (PWA v1.0.0 no Firebase) e revisão das skills de gestão
+
+## Implementação da v1.0.0 do App de Missões (PWA no Firebase) — 2026-10-18
+
+**Objetivo da Sessão / Chat:** Implementar e publicar em produção a v1.0.0 do aplicativo de missões (PWA no Firebase) seguindo o `protocolo_missoes.md` (v2.7), a `especificacao_app_missoes.md` (v1.2), o módulo puro `analise.js` e o esboço `tela_missao_funcionario.svg` em `skills/Toyota_para_desenvolvimento/`.
+
+**Decisões de Nivelamento e Arquitetura:**
+1. **Projeto Firebase:** `tarefas-build` (`https://tarefas-build.web.app`), região `southamerica-east1` (São Paulo), plano **Blaze** ativado.
+2. **Repositório do Código:** `https://github.com/BR-Tavares/Tarefas-build` (`C:\Users\andre\Tarefas-build`).
+3. **Links `Docs` e `Pasta`:** Colados como URLs opcionais e editáveis a qualquer momento tanto pelo gestor (`missoes/{id}`) quanto pelo responsável (`responsavel/estado`), exibindo sempre o par com `linksEm` mais recente e preservando a regra de um único escritor por documento no `firestore.rules`.
+4. **Feriados:** Feriados nacionais de 2026 e 2027 pré-carregados ao criar a equipe, com inclusão e remoção livre na tela **Equipe**.
+
+**Plano de Implementação Executado (Fatias `a` a `g`):**
+- **Fatia (a):** Configuração do projeto `tarefas-build`, Firestore nativo em `southamerica-east1`, login Google, tela **Equipe**, `firestore.rules` e testes automatizados no Emulator (`test/firestore.rules.test.js`) e em Node (`test/analise.test.js`).
+- **Fatia (b):** Criação de rascunho, leitura de aprendizados de missões encerradas, preenchimento rápido do exemplo MS-027 e emissão de missão (`MS-NNN`).
+- **Fatia (c):** Folha do responsável em 5 blocos (sem lista, sinais, histórico ou contagem), escrita do 1º plano de etapas (`primeiroPlanoEm`) e registro do dia em uma linha com auto-complete em até 3 toques e suporte offline (`persistentLocalCache` + `sw.js`).
+- **Fatia (d):** Abertura e fechamento de pendências pelo responsável e resposta do gestor como esclarecimento ou alteração de versão (`vN`, `mudou na vN` e `vistoVersao`).
+- **Fatia (e):** Lista e painel do gestor em tempo real (`onSnapshot` + `analise.js`), com destaque para sinais que notificam, folha espelhada, linha do tempo e perguntas do Coaching Kata.
+- **Fatia (f):** Entrega com evidências por critério, revisão do gestor (`concluida` / `em_ajuste` e avaliação do produto) e encerramento em 1 frase do responsável e do gestor.
+- **Fatia (g):** 6 Cloud Functions v2 em `southamerica-east1` (`aoEmitirMissao`, `aoResponderPendencia`, `aoSalvarPrimeiroPlano`, `aoAbrirPendencia`, `aoFazerEntrega`, `verificarSinaisAgendado`) + FCM e documentação completa (`HANDOFF_E_OPERACAO.md`, `guia_uso_gestor.md`, `guia_uso_responsavel.md` e `especificacao_app_missoes.md` v1.2).
+
+**Resultados e Verificações:**
+- `npm test` executado com **14/14 testes aprovados** (8 testes em `test/analise.test.js` cobrindo os critérios 5, 7, 8, 9, 10 e 11 + 6 testes em `test/firestore.rules.test.js` no Firebase Firestore Emulator cobrindo os critérios 1, 6, 12 e 13).
+- Deploy completo realizado em `https://tarefas-build.web.app` (Hosting, Firestore Rules/Indexes e 6 Cloud Functions em `southamerica-east1`).
+
+---
 
 ## Unificação local/remoto — `Toyota_para_desenvolvimento` e `gestao-v0.2.1` (2026-10-17)
 
