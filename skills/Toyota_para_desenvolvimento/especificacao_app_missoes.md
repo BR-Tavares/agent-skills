@@ -1,6 +1,6 @@
 # Especificação — App de missões (PWA)
 
-Versão 1.1 • 18/10/2026 • Base: `protocolo_missoes.md` v2.7
+Versão 1.2 • 18/10/2026 • Base: `protocolo_missoes.md` v2.7
 
 > **Para quem vai construir.** Este documento diz **o que** o app faz e **como** ele é construído. As regras de uso, o porquê de cada campo e o exemplo completo estão no protocolo. Em caso de conflito, o protocolo vence. Não acrescente mecanismos que não estejam aqui ou no protocolo, e nunca aumente o registro diário do responsável.
 
@@ -93,17 +93,19 @@ equipes/{equipeId}                                   gestor grava
 
   missoes/{missaoId}                                 gestor grava
     { codigo: "MS-027", titulo, gestorUid, responsavelEmail,
-      docsUrl, pastaUrl, emitidaEm, dataEstimada, versao,
+      docsUrl, pastaUrl, linksEm, emitidaEm, dataEstimada, versao,
+      camposMudaramUltimaVersao: [],
       descricao: { necessidade, resultadoEsperado, tarefa, entrega,
                    criterios: [{ condicao, verificacao }], insumos },
       requisitos: { precisa: [], naoPode: [], consultarAntes: [] },
-      fraseGestor, cancelada: { em, motivo } | null }
+      fraseGestor, concluidaEm, cancelada: { em, motivo } | null }
 
     alteracoes/{id}    gestor       { versao, em, resumo, pendenciaId }
     respostas/{pendenciaId}  gestor { em, tipo: "resposta" | "alteracao", texto }
     revisoes/{entregaId}     gestor { em, resultado, produto, ajustes: [] }
 
     responsavel/estado  responsável { vistoVersao, primeiroPlanoEm,
+                                      docsUrl, pastaUrl, linksEm,
                                       etapas: [{ id, ordem, nome, concluidaEm }],
                                       fraseResponsavel }
     registros/{AAAA-MM-DD}  responsável  { atividade } | { motivo }
@@ -297,10 +299,10 @@ O diagrama está no protocolo, na seção *Fluxo de uso do app*.
 | Biblioteca de aprendizados dos encerramentos | Por enquanto, o gestor relê os encerramentos das missões parecidas |
 | Demais itens | Ver "Fora da versão básica" no protocolo |
 
-## 14. Questões em aberto
+## 14. Decisões fechadas na implementação da v1 e próximos passos
 
-- Plano Blaze no projeto Firebase: as Cloud Functions (notificações) só funcionam nele. Sem o Blaze, a v1 sai sem notificação no celular, e os avisos aparecem ao abrir o app.
-- Projeto Firebase: usar um projeto novo, só para este app (recomendado), ou um existente?
-- O link "Docs": o gestor cola o link (v1) ou o app cria o documento ao emitir (depois)?
-- Lista de feriados: nacionais apenas, ou também os locais?
-- Para virar produto: cadastro de equipe sem convite, planos, termos de uso e privacidade (LGPD, porque o registro diário é dado sobre o trabalho de pessoas) e marca. Fica para quando houver uma segunda equipe interessada.
+- **Projeto Firebase e Repositório:** Projeto dedicado `tarefas-build` (`https://tarefas-build.web.app`), região `southamerica-east1`, com código-fonte publicado no repositório `BR-Tavares/Tarefas-build`.
+- **Plano Blaze:** Ativado no projeto `tarefas-build`, habilitando as Cloud Functions v2 e notificações push via FCM em `southamerica-east1`.
+- **Links "Docs" e "Pasta":** Na v1, os links são colados como URLs opcionais e podem ser atualizados a qualquer momento tanto pelo gestor (em `missoes/{id}`) quanto pelo responsável (em `responsavel/estado`), exibindo sempre o par com `linksEm` mais recente e mantendo a regra de um único escritor por documento no `firestore.rules`.
+- **Lista de feriados:** Os feriados nacionais de 2026 e 2027 são pré-carregados automaticamente ao criar a equipe, com adição e remoção livre na tela **Equipe** para incluir feriados locais e emendas.
+- **Para virar produto (futuro):** Cadastro de equipe sem convite, planos, termos de uso e privacidade (LGPD, porque o registro diário é dado sobre o trabalho de pessoas) e marca. Fica para quando houver uma segunda equipe interessada.
