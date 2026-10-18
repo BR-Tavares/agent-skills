@@ -1,12 +1,14 @@
 # Protocolo de emissão de missões
 
-Versão 1.0 • 18/10/2026 • Equipe pequena • Folha única por missão (PWA)
+Versão 1.1 • 18/10/2026 • Equipe pequena • Folha única por missão (PWA)
 
 ## Princípio
 
-Uma missão é uma tarefa com ID, um responsável e um prazo. A folha da missão é o acordo vigente entre gestor e funcionário: o que não está nela não foi combinado.
+Uma missão é uma tarefa com ID, um responsável e um prazo. A folha da missão é o acordo vigente entre gestor e funcionário. O que não está nela não foi combinado.
 
-O desvio deve aparecer sozinho e cedo, sem depender de alguém perguntar (*jidoka*, controle visual). Por isso a folha tem poucos checkpoints de conversa e um calendário de atividades que mostra, por si, o andamento: dia sem marcação e atividade que se arrasta ficam evidentes.
+**Gestão por balizas.** O gestor define **o quê, por quê e os limites**: propósito, estado final, padrão de aceite, liberdade de ação e prazo. O responsável define **o como**: as etapas, as atividades e as decisões dentro da liberdade de ação. O gestor intervém cedo, nas balizas e na primeira etapa, e não depois, revendo decisões que já tinha delegado. No Lean, respeitar as pessoas é deixá-las pensar e resolver os próprios problemas; padrão exigente e autonomia andam juntos.
+
+**O desvio aparece sozinho** (*jidoka*, controle visual). O calendário de atividades mostra o andamento sem que ninguém precise perguntar. Ele serve **primeiro ao próprio responsável**, e só chega ao gestor o sinal que o responsável não tratou. Visibilidade sem cobrança diária é o que separa controle visual de microgerenciamento.
 
 ---
 
@@ -17,110 +19,119 @@ A folha tem sete blocos, na ordem em que aparecem na tela.
 ### 1. Cabeçalho
 
 - **ID e título:** sequencial, verbo + objeto. Ex.: *MS-027 — Calibrar sensor de umidade em solo argiloso*
-- **Emissor:** gestor, que emite, responde, avalia e decide
+- **Emissor:** o gestor, que emite, responde, avalia e decide
 - **Responsável:** um funcionário, que responde pela missão até o fim
 - **Apoio** (opcional): quem fornece uma parte definida, sem dividir a responsabilidade
 - **Prazo:** uma data, que já inclui o tempo de avaliação
 - **Limite de esforço:** dias de trabalho previstos
-- **Versão:** muda a cada alteração
+- **Versão:** muda a cada alteração das balizas
 - **Situação e próxima ação:** quem precisa agir agora
 
 Ninguém avalia a própria entrega.
 
-### 2. Ordem
+### 2. Balizas (preenchidas pelo gestor)
 
-- **Propósito:** por que isto importa e que decisão apoia
-- **Estado final:** como fica a situação quando a missão termina bem. Se o plano não se encaixar na realidade, o responsável decide pela intenção (propósito + estado final)
-- **Tarefa:** o que fazer, em uma ou duas frases
-- **Padrão de aceite:** uma linha por requisito
+- **Propósito:** por que isto importa e que decisão apoia.
+- **Estado final:** como fica a situação quando a missão termina bem. Se o plano não se encaixar na realidade, o responsável decide pela intenção, isto é, pelo propósito e pelo estado final.
+- **Tarefa:** o que fazer, em uma ou duas frases.
+- **Padrão de aceite:** uma linha por requisito.
 
   | Condição | Medida | Critério | Verificação |
   |---|---|---|---|
   | ambiente em que vale | o que se mede | nível mínimo aceitável | inspeção / análise / demonstração / teste |
 
-- **Liberdade de ação:** o que o responsável pode decidir sozinho e o que precisa consultar
-- **Entrega:** o quê, em que formato, onde
-- **Insumos:** o que já está disponível e onde
+- **Liberdade de ação:** o que o responsável **decide sozinho**, o que ele **avisa antes de fazer** (aviso de intenção, bloco 5) e o que **precisa consultar**.
+- **Entrega:** o quê, em que formato e onde.
+- **Insumos:** o que já está disponível e onde.
 
 Somente em missões de **pesquisa ou teste**:
-- **Pergunta e hipótese**
-- **Protocolo antes dos dados:** amostra, procedimento, repetições e regra de análise, aprovados no checkpoint 1 e congelados antes da coleta
-- **Limites:** o que a missão não permitirá concluir
+- **Pergunta e hipótese.**
+- **Protocolo antes dos dados:** amostra, procedimento, repetições e regra de análise, definidos na etapa de confirmação e congelados antes da coleta.
+- **Limites:** o que a missão não permitirá concluir.
 
-Se o padrão de aceite não cabe em três linhas, a missão está grande demais: divida em mais de uma missão.
+Se o padrão de aceite não cabe em três linhas, a missão está grande demais: divida em duas ou mais.
 
-### 3. Checkpoints
+### 3. Etapas
 
-Os checkpoints são três pontos fixos de conversa entre funcionário e gestor. Não têm data própria: o prazo é um só, o da missão.
+Etapas são os pontos em que o andamento é conferido com uma prova. Não têm data própria: o prazo é um só, o da missão.
 
-| Checkpoint | Quem abre | Prova | Resposta do gestor |
-|---|---|---|---|
-| **C1 — Confirmação** | Responsável, até 1 dia útil após a emissão | Confirmação com as próprias palavras (*backbrief*) e, em pesquisa ou teste, o protocolo antes dos dados | **Segue** ou **ajusta** |
-| **C2 — Primeira peça** | Responsável, assim que tiver | O primeiro resultado real e pequeno que mostra que o caminho funciona: a primeira amostra medida, o primeiro trecho rodando, a primeira fonte analisada | **Segue** ou **ajusta** |
-| **C3 — Entrega** | Responsável, até o prazo | A entrega (bloco 6) | Avaliação (bloco 7) |
+**Três etapas fixas:**
 
-**C1, frase de confirmação:**
+| Etapa | Prova | Conferência do gestor |
+|---|---|---|
+| **Confirmação** | Confirmação com as próprias palavras (*backbrief*) e, em pesquisa ou teste, o protocolo antes dos dados | Sempre: **segue** ou **ajusta** |
+| **Primeira peça** | O primeiro resultado real e pequeno que mostra que o caminho funciona: a primeira amostra medida, o primeiro trecho rodando, a primeira fonte analisada | Sempre: **segue** ou **ajusta** |
+| **Entrega** | A entrega (bloco 6) | Avaliação (bloco 7) |
+
+**Etapas do responsável.** Entre a primeira peça e a entrega, o responsável cria as etapas que quiser, cada uma com um nome e uma prova. Elas **não precisam de aprovação**: são o plano dele. Em cada etapa criada, ele escolhe se quer **pedir conferência** do gestor. A conferência é puxada por quem executa, não imposta por quem gerencia.
+
+**Confirmação.** O responsável preenche a frase:
 > Vou [tarefa] para [propósito]. Entrego [entrega] até [prazo]. O aceite será [padrão principal]. Não poderei concluir [limite].
 
-No C1, em vez de confirmar, o responsável pode **pedir esclarecimento** (bloco 5) ou **recusar com motivo**: falta de competência, insumo impossível ou conflito com missão prioritária. Prazo curto não é motivo de recusa; nesse caso, pede-se prorrogação. A missão só entra em execução após o C1.
+Em vez de confirmar, ele pode **pedir esclarecimento** (bloco 5) ou **recusar com motivo**: falta de competência, insumo impossível de obter ou conflito com outra missão prioritária. Prazo curto não é motivo de recusa; nesse caso, pede-se prorrogação. A missão só entra em execução depois da confirmação.
 
-**Por que o C2 existe:** um caminho errado descoberto na primeira peça custa um dia; descoberto na entrega, custa a missão inteira. É o checkpoint que mais previne retrabalho (*poka-yoke*).
+**Por que a primeira peça é fixa:** um caminho errado descoberto na primeira peça custa um dia; descoberto na entrega, custa a missão inteira. É também o último momento em que o gestor intervém por iniciativa própria antes da entrega. Daí em diante, ele age quando é chamado ou quando surge um sinal vermelho.
 
 ### 4. Atividades e calendário
 
-**Lista de atividades.** São itens curtos (verbo + objeto), criados pelo responsável ou pelo gestor na própria folha. Ex.: *preparar amostras nível 1*, *secar amostras nível 1*, *lançar planilha*. Cada atividade fica **aberta** ou **concluída**.
+**Atividades** são itens curtos (verbo + objeto), ligados a uma etapa. Ex.: *preparar amostras nível 1*, *secar amostras nível 1*, *lançar planilha*. Cada atividade fica aberta ou concluída.
 
-As atividades organizam **como** fazer. Não mudam **o que** foi combinado: mudar tarefa, padrão, entrega ou prazo é alteração (bloco 5).
+- **Quem cria:** o responsável, que é o dono do como. O gestor também pode criar, de preferência na confirmação ou quando o responsável pede. Para mudar o rumo da missão, o gestor ajusta as balizas, não as atividades.
+- **O que as atividades não fazem:** organizam o como, mas não mudam o que foi combinado. Mudar tarefa, padrão, entrega ou prazo é alteração (bloco 5).
 
-**Calendário.** Ao fim de cada dia útil, o responsável toca nas atividades em que trabalhou naquele dia, sem descrição. Um dia sem trabalho na missão pode ser marcado como **ausência**.
+**Calendário.** Ao fim de cada dia útil, o responsável toca nas atividades em que trabalhou, sem descrição. Um dia sem trabalho na missão pode ser marcado como **ausência**.
 
-O calendário mostra, sem que ninguém precise interpretar:
-- **dias vazios:** nenhuma atividade marcada e nenhuma ausência;
-- **atividades longas:** a mesma atividade marcada em muitos dias;
-- **esforço consumido:** dias marcados comparados com o limite de esforço.
+O calendário mostra sozinho três coisas:
+- os **dias vazios**;
+- as **atividades longas**, marcadas em muitos dias;
+- o **esforço consumido**: dias marcados contra o limite de esforço.
 
 ### 5. Comunicações
 
-O responsável abre uma comunicação; ela aparece para o gestor, que responde em texto, e a resposta aparece para o responsável. O gestor pode abrir as mesmas comunicações no sentido contrário.
+O responsável abre uma comunicação, o gestor responde em texto, e a resposta aparece para o responsável. O gestor pode abrir as mesmas comunicações no sentido contrário.
 
-| Tipo | Quando | Campos |
+| Tipo | Quando usar | Campos |
 |---|---|---|
+| **Aviso de intenção** | Uma decisão que a liberdade de ação manda avisar antes | "Pretendo [ação], porque [motivo]." Se não houver objeção em 1 dia útil, segue. |
 | **Esclarecimento** | Dúvida sobre o que está escrito | Pergunta; item da folha; sugestão de resposta |
-| **Impedimento** (andon) | Algo impede o trabalho | O que impede; bloqueia tudo ou só [atividade]; o que já foi tentado |
+| **Impedimento** (andon) | Algo impede o trabalho | O que impede; se bloqueia tudo ou só [atividade]; o que já foi tentado |
 | **Prorrogação** | O prazo não será cumprido | Motivo; nova data. Pedir assim que perceber, não no vencimento |
-| **Proposta de mudança** | A missão deveria mudar | O que mudar; por quê; efeito no prazo |
+| **Proposta de mudança** | As balizas deveriam mudar | O que mudar; por quê; efeito no prazo |
 
-A resposta do gestor é sempre de um destes tipos:
-- **Resposta:** esclarece, e a folha não muda;
-- **Alteração:** muda a folha; a versão avança e o responsável confirma.
+**Por que o aviso de intenção existe:** em vez de pedir permissão ("posso?"), o responsável comunica o que vai fazer ("pretendo"), e o silêncio do gestor vale como concordância. Isso desloca a decisão para quem tem a informação e tira do gestor o papel de gargalo. É a liderança por intenção (Marquet).
+
+**A resposta do gestor é de um de dois tipos:**
+- **Resposta:** esclarece; a folha não muda.
+- **Alteração:** muda as balizas; a versão avança e o responsável confirma a nova versão.
 
 **Quem abriu a comunicação é quem a fecha,** depois de confirmar que a resposta resolve.
 
 ### 6. Entrega
 
-- **Resultado:** o que foi obtido, separando o dado da interpretação
-- **Evidência por linha do padrão:** atendido / parcial / não atendido / não verificado, e onde está a evidência
-- **Falhas encontradas:** falhas do produto observadas, com as condições em que ocorreram
-- **Desvios e limites:** o que mudou em relação ao combinado (com a versão) e o que o resultado não permite concluir
+- **Resultado:** o que foi obtido, separando o dado observado da interpretação.
+- **Evidência por linha do padrão:** atendido / parcial / não atendido / não verificado, e onde está a evidência.
+- **Falhas encontradas:** cada falha do produto observada, com as condições em que ocorreu.
+- **Desvios e limites:** o que mudou em relação ao combinado, com a versão em que foi acordado, e o que o resultado não permite concluir.
 
 ### 7. Avaliação e encerramento
 
-O gestor avalia em até 2 dias úteis, com dois julgamentos separados:
+O gestor avalia em até 2 dias úteis, **somente pelo padrão de aceite combinado**. Uma exigência nova é alteração para uma próxima missão, não motivo de devolução.
 
-1. **A missão foi cumprida?** Seguiu o combinado, cobriu o escopo e trouxe evidências?
+São dois julgamentos separados:
+1. **A missão foi cumprida?** O responsável seguiu o combinado, cobriu o escopo e trouxe evidências?
 2. **O que o resultado diz sobre o produto?** Atende, não atende ou é inconclusivo.
 
-Uma missão pode ser cumprida mesmo quando o produto falha: encontrar a falha costuma ser o melhor resultado de um teste.
+Uma missão pode ser cumprida mesmo quando o produto falha. Encontrar a falha costuma ser o melhor resultado de um teste.
 
 **Decisão:**
-- **aceita;**
-- **aceita com ressalva:** a ressalva vira nova missão;
-- **devolvida:** cada ajuste aponta a linha do padrão não atendida.
+- **Aceita.**
+- **Aceita com ressalva:** a ressalva vira uma nova missão.
+- **Devolvida:** cada ajuste aponta qual linha do padrão não foi atendida.
 
-**Encerramento:** uma revisão pós-ação curta, em três respostas:
-1. o que deveria acontecer;
-2. o que aconteceu;
-3. por que houve diferença (o calendário responde a isso melhor que a memória).
+**Encerramento:** a revisão pós-ação, preenchida pelo responsável em três respostas curtas:
+1. O que deveria acontecer?
+2. O que aconteceu?
+3. Por que houve diferença? O calendário responde melhor que a memória.
 
 O próximo passo vira uma nova missão, ligada a esta.
 
@@ -130,7 +141,7 @@ O próximo passo vira uma nova missão, ligada a esta.
 
 | Situação | Próxima ação com | Sai para |
 |---|---|---|
-| Emitida | Responsável | Em execução (C1 aceito), Em esclarecimento, Recusada |
+| Emitida | Responsável | Em execução (confirmação aceita), Em esclarecimento, Recusada |
 | Em esclarecimento | Gestor | Emitida |
 | Em execução | Responsável | Impedida, Entregue |
 | Impedida | Gestor | Em execução |
@@ -143,26 +154,34 @@ O próximo passo vira uma nova missão, ligada a esta.
 
 ## Sinais automáticos
 
-Os sinais saem do calendário, dos checkpoints e das comunicações:
+Os sinais vêm do calendário, das etapas e das comunicações. **Todo sinal aparece primeiro para o responsável.** O gestor só recebe o sinal quando ele passa a vermelho.
 
-| Sinal | Regra | Cor |
+| Sinal | Amarelo (para o responsável) | Vermelho (vai para o gestor) |
 |---|---|---|
-| Dia vazio | Dia útil sem marcação nem ausência, com a missão em execução | Amarelo; vermelho no 2º dia seguido |
-| Atividade longa | A mesma atividade aberta e marcada em 3 dias | Amarelo; vermelho aos 5 dias |
-| Sem primeira peça | Passou 1/3 do prazo sem o C2 | Vermelho |
-| Esforço estourado | Dias marcados atingiram o limite de esforço sem a entrega | Vermelho |
-| Prazo vencido | Passou o prazo sem C3 nem prorrogação aceita | Vermelho |
-| Confirmação parada | 1 dia útil sem o C1 | Amarelo |
-| Comunicação parada | Impedimento sem resposta no mesmo dia; outras comunicações sem resposta após 1 dia útil | Vermelho |
+| Dia vazio | 1 dia útil sem marcação nem ausência | 2 dias seguidos |
+| Atividade longa | A mesma atividade aberta e marcada em 3 dias | 5 dias |
+| Sem primeira peça | 1/4 do prazo sem a primeira peça | 1/3 do prazo |
+| Esforço | 80% do limite de esforço consumido | Limite atingido sem a entrega |
+| Prazo | — | Vencido sem entrega nem prorrogação aceita |
+| Confirmação | 1 dia útil sem a confirmação | 2 dias úteis |
+| Comunicação sem resposta | — | Impedimento sem resposta no mesmo dia; demais comunicações após 1 dia útil |
 
-**Regras de uso:**
-- O amarelo é para o responsável agir: dividir a atividade, abrir um impedimento ou atualizar o calendário.
-- O vermelho é para o gestor agir no mesmo dia.
-- Um impedimento que bloqueia tudo suspende o prazo até a resposta.
+O sinal de comunicação sem resposta é o **único que cobra o gestor**, e aparece para os dois.
 
-**O sinal aponta para o processo, não para a pessoa.** A primeira pergunta diante de um vermelho é: o que na missão, no insumo ou na carga permitiu isso? Se o calendário virar vigilância, ele passa a registrar o que agrada, e os sinais perdem o valor.
+**Diante de um amarelo,** o responsável age sozinho: divide a atividade, cria uma etapa, abre um impedimento ou atualiza o calendário.
 
-Os limites (1/3 do prazo, 3 e 5 dias) são valores iniciais. Ajuste-os com o uso.
+**Diante de um vermelho,** o gestor pergunta antes de ordenar. Usa as perguntas de coaching do Toyota Kata:
+1. Qual é o estado final?
+2. Onde estamos agora?
+3. O que está impedindo?
+4. Qual é o próximo passo, e o que você espera que aconteça?
+5. Quando vemos o resultado desse passo?
+
+A solução continua com o responsável. O gestor remove o obstáculo que só ele pode remover.
+
+**O sinal aponta para o processo, não para a pessoa.** A primeira pergunta diante de qualquer vermelho é: o que na missão, no insumo ou na carga permitiu isso? Se o calendário virar vigilância, ele passa a registrar o que agrada, e os sinais perdem o valor.
+
+Os limites (1/4 e 1/3 do prazo, 3 e 5 dias, 80%) são valores iniciais. Ajuste-os com o uso.
 
 ---
 
@@ -180,17 +199,21 @@ Os limites (1/3 do prazo, 3 e 5 dias) são valores iniciais. Ajuste-os com o uso
   | 5 níveis, 3 repetições | Erro absoluto médio frente ao gravimétrico | ≤ 3 p.p. (ilustrativo) | Teste |
   | — | Planilha com todas as leituras, inclusive as descartadas, com motivo | Completa | Inspeção |
 
-- **Liberdade de ação:** pode escolher a ordem e o horário das coletas. Precisa consultar para trocar o tipo de solo ou o número de níveis.
-- **Atividades:** preparar amostras (n1 a n5), secar amostras (n1 a n5), lançar planilha, escrever nota.
+- **Liberdade de ação:**
+  - decide sozinho: a ordem e o horário das coletas;
+  - avisa antes: repetir uma amostra suspeita;
+  - consulta: trocar o tipo de solo ou o número de níveis.
+
+**Etapas criadas pelo responsável:** "Níveis 1 a 3 medidos", sem pedir conferência; "Planilha consolidada", pedindo conferência.
 
 **Andamento:**
-- **Dia 1:** C1 aceito.
-- **Dia 4:** nenhum C2, e "secar amostras n1" marcada nos dias 2, 3 e 4. Sinal amarelo de atividade longa.
-- O responsável abre um impedimento que bloqueia só o nível 5: a estufa não atinge a temperatura necessária. Ele sugere 4 níveis com 4 repetições.
-- O gestor responde com uma **alteração**: o padrão passa a 4 níveis × 4 repetições. A folha vai para a v2, e o responsável confirma.
-- **Dia 5:** C2, com a primeira amostra lançada. O gestor responde **segue**.
+- **Dia 1:** confirmação aceita.
+- **Dia 3:** o responsável envia um aviso de intenção: "Pretendo repetir a amostra n1-r2, porque a leitura ficou fora da faixa das outras duas." O gestor não se manifesta, e o responsável segue.
+- **Dia 4:** "secar amostras n1" está marcada nos dias 2, 3 e 4, e o responsável vê o sinal amarelo de atividade longa. Ele abre um impedimento que bloqueia só o nível 5: a estufa não atinge a temperatura necessária. Sugere 4 níveis com 4 repetições cada.
+- O gestor responde com uma **alteração**: o padrão passa a 4 níveis × 4 repetições, e a folha vai para a versão 2. O responsável confirma.
+- **Dia 5:** primeira peça, com a amostra do nível 1 lançada na planilha. O gestor responde **segue**.
 
-O desvio apareceu no dia 4, não no dia 10.
+Em nenhum momento o gestor precisou abrir o calendário. O desvio apareceu no dia 4, primeiro para quem podia corrigir.
 
 ---
 
@@ -198,16 +221,19 @@ O desvio apareceu no dia 4, não no dia 10.
 
 | Elemento | Prática de origem |
 |---|---|
-| Propósito, estado final, liberdade de ação | Ordem de operações; intenção do comandante |
+| Balizas: propósito, estado final, liberdade de ação | Ordem de operações; intenção do comandante; comando por missão |
+| O gestor define o quê; o responsável define o como | Respeito às pessoas e liderança Lean (Toyota) |
+| Aviso de intenção com concordância tácita | Liderança por intenção (Marquet, *Turn the Ship Around!*) |
 | Responsável único e apoio; prazo; recusa com motivo; prorrogação antecipada | Controle de tarefas dos estados-maiores (OPR/OCR, *suspense*) |
-| Condição, medida e critério | UJTL e T&EO (tarefa, condições, padrões) |
+| Condição, medida e critério | UJTL e T&EO (tarefa, condições e padrões) |
 | Inspeção, análise, demonstração e teste | Verificação de requisitos (ISO/IEC/IEEE 29148, NASA) |
-| C1 com as próprias palavras | *Backbrief* |
-| C2 primeira peça | Inspeção de primeira peça (manufatura) |
+| Confirmação com as próprias palavras | *Backbrief* |
+| Primeira peça | Inspeção de primeira peça (manufatura) |
 | Protocolo antes dos dados | Pré-registro científico |
 | Resposta versus alteração; versões | Controle de mudanças de engenharia |
 | Calendário e sinais automáticos | *Jidoka* e controle visual (Toyota) |
 | Impedimento | Andon (Toyota) |
+| Perguntas diante do vermelho | Coaching Kata (Rother, *Toyota Kata*) |
 | Sinal aponta para o processo | Respeito às pessoas (Toyota) |
 | Encerramento | Revisão pós-ação (AAR) |
 | Situações e regras | DoDAF OV-6b (estados) e OV-6a (regras) |
