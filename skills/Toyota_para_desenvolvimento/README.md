@@ -16,16 +16,13 @@ Seis checkpoints, cada um com uma prova observável antes de seguir: cliente pre
 
 - **URL de Produção:** `https://tarefas-build.web.app`
 - **Repositório de Código do App:** `https://github.com/BR-Tavares/Tarefas-build` (`C:\Users\andre\Tarefas-build`)
-- **Documentação e Módulos nesta pasta:**
-  - `fundamentos_engenharia_missoes.md`: documento de orientação teórica e argumentativa (espaço semântico para humanos e modelos de IA — DoDAF, NASA/JPL, SpaceX, Mission Command, Toyota e Avaliador JEV).
-  - `protocolo_missoes.md` (v2.7): regras de uso, princípios Lean/Toyota e justificativa de cada campo da folha.
-  - `especificacao_app_missoes.md` (v1.2): especificação funcional e de arquitetura no Firebase, atualizada com as decisões da v1.
-  - `analise.js`: módulo puro de análise do gestor, compartilhado entre o PWA e a Cloud Function agendada.
-  - `tela_missao_funcionario.svg`: esboço visual da folha do responsável no celular.
-  - `prompt_implementacao.md`: roteiro de implementação em fatias.
-  - `HANDOFF_E_OPERACAO.md`: manual de operação, arquitetura, segurança, runbook de manutenção, handoff técnico e status dos 14 critérios de aceite.
-  - `BACKLOG.md`: backlog vivo de melhorias identificadas pelo usuário no uso real (ex.: Estilo Black / modo escuro) e roteiro para a v1.1 e v2.0.
-  - `guia_uso_gestor.md` e `guia_uso_responsavel.md`: guias rápidos de 1 página para uso diário.
+- **Documentação e Metodologia nesta pasta:**
+  - `fundamentos_engenharia_missoes.md`: fundamentos teóricos e espaço semântico (DoDAF, NASA/JPL, SpaceX, Mission Command, Toyota e Avaliador JEV).
+  - `protocolo_missoes.md` (v2.7): regras do protocolo, princípios Lean/Toyota e justificativa de cada campo da folha.
+  - `especificacao_app_missoes.md` (v1.2): especificação de requisitos funcionais originais.
+  - `analise.js`: algoritmo de análise de sinais Lean compartilhado.
+- **Operação de Software e Backlog:**
+  - O código-fonte, suíte de testes, runbook de operação e o **Backlog vivo de produto** (`BACKLOG.md`) são mantidos exclusivamente no repositório do software: [`https://github.com/BR-Tavares/Tarefas-build`](https://github.com/BR-Tavares/Tarefas-build).
 
 ## Skill irmã
 
