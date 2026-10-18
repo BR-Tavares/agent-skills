@@ -10,7 +10,7 @@ Seis checkpoints, cada um com uma prova observável antes de seguir: cliente pre
 
 - `SKILL.md`: contrato principal da skill (`toyota-para-desenvolvimento`).
 - `references/`: conjunto completo de 12 referências (`checkpoints.md`, `prevencao-de-erro.md`, `previsibilidade.md`, `ferramentas.md`, `casos.md`, `toyota.md`, `origens-toyota.md`, `premissas.md`, `perspectivas.md`, `mapa-ferramentas.md`, `contexto-brasileiro.md` e `fontes.md`).
-- `template_solicitacao_atividade.md` e `proposta_solicitacao_pesquisa_testes.md`: templates operacionais para delegação de atividades, pesquisas e testes com checkpoints.
+- `proposta_solicitacao_pesquisa_testes.md`: template operacional para solicitação de pesquisas e testes de produto com checkpoints.
 
 ## Protocolo e Aplicativo de Missões (PWA no Firebase — v1.0.0)
 

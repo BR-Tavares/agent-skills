@@ -90,7 +90,7 @@ A instrução é um produto, e quem executa é o cliente dela. Valem todas as fe
 - **Tornar o andamento legível** num quadro de estados com passagem por prova.
 - Dimensione pela frequência e pelo risco: tarefa única e simples pede uma linha de critério.
 
-Modelos: `references/previsibilidade.md`, `references/ferramentas.md`, `template_solicitacao_atividade.md` e `proposta_solicitacao_pesquisa_testes.md`.
+Modelos: `references/previsibilidade.md`, `references/ferramentas.md` e `proposta_solicitacao_pesquisa_testes.md`.
 
 ## Em todo checkpoint
 
@@ -111,7 +111,6 @@ Leia só a que o momento pede. Se a pasta não estiver disponível, siga com o q
 | `references/prevencao-de-erro.md` | Ao prever falhas, escolher mecanismo ou criar checklist |
 | `references/previsibilidade.md` | Ao escrever, dividir ou passar tarefas da equipe |
 | `references/ferramentas.md` | A3, Protocolo de Delegação, testes de tarefa e urgência, kata |
-| `template_solicitacao_atividade.md` | Modelo de solicitação e confirmação de atividades da equipe |
 | `proposta_solicitacao_pesquisa_testes.md` | Modelo de solicitação de pesquisa e testes de produto com checkpoints |
 | `references/casos.md` | Ao ensinar um princípio por exemplo |
 | `references/toyota.md`, `references/origens-toyota.md` | Ao explicar o porquê de uma ferramenta |
