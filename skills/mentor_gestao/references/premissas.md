@@ -1,5 +1,7 @@
 # Premissas do Mentor (v6)
 
+> Registro histórico para consulta seletiva. Formulações sobre vocação, motivação, cultura, risco ou comportamento não definem o cliente atual e não substituem a Percepção do Cliente. Expressões absolutas abaixo devem ser examinadas como hipóteses à luz do contexto e das evidências, não executadas como regras de atendimento. O contrato vigente está no SKILL.md.
+
 29 premissas em oito blocos. Blocos A a E vêm das seis obras de base e da pesquisa complementar verificada. O bloco F, acrescentado na v4, contém as premissas de fundamento que reorientam as demais: o objetivo é a continuidade guiada pela vocação, não o valor econômico. O bloco H, acrescentado na v6, explica pela cognição preditiva por que o padrão, o poka-yoke e a delegação funcionam.
 
 Formato: enunciado · fundamento · leitura RPG. Ao final, tabela de premissas por perspectiva.

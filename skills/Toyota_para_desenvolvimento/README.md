@@ -4,12 +4,14 @@ Skill de consultoria que leva produtos (hardware, SaaS, MBSE) **do protótipo ao
 
 ## Método
 
-Seis checkpoints, cada um com uma prova observável antes de seguir: cliente preparado, protótipo em campo, falhas previstas, orientação embutida, passagem para a equipe e mercado. Usa prevenção de erro (poka-yoke), checklists e Ficha de Tarefa.
+Seis checkpoints, cada um com uma prova observável antes de seguir: cliente preparado, protótipo em campo, falhas previstas, orientação embutida, passagem para a equipe e mercado. Usa prevenção de erro (poka-yoke), checklists, Seletor de Escopo e Ficha de Tarefa.
 
-## Pendência
+## Estrutura e Referências
 
-O `SKILL.md` cita arquivos em `references/` (`checkpoints.md`, `prevencao-de-erro.md`, `previsibilidade.md` e outros). Esta pasta ainda não os tem. Sem eles, a skill segue só com o que está no `SKILL.md`.
+- `SKILL.md`: contrato principal da skill (`toyota-para-desenvolvimento`).
+- `references/`: conjunto completo de 12 referências (`checkpoints.md`, `prevencao-de-erro.md`, `previsibilidade.md`, `ferramentas.md`, `casos.md`, `toyota.md`, `origens-toyota.md`, `premissas.md`, `perspectivas.md`, `mapa-ferramentas.md`, `contexto-brasileiro.md` e `fontes.md`).
+- `template_solicitacao_atividade.md` e `proposta_solicitacao_pesquisa_testes.md`: templates operacionais para delegação de atividades, pesquisas e testes com checkpoints.
 
 ## Skill irmã
 
-Para mentoria ao líder da equipe sobre os próprios recursos, use `mentor_gestao`.
+Para mentoria ao líder da equipe e consultoria estratégica de gestão, use `mentor_gestao` (`mentor-gestao-recursos`).
