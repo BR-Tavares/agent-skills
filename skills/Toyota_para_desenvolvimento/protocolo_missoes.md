@@ -10,6 +10,8 @@ Uma missão é uma tarefa com ID, um responsável e um prazo único. A folha da 
 
 **A folha é preenchida durante a execução.** O responsável recebe a missão, escreve as etapas e vai marcando o calendário, abrindo pendências e preenchendo a entrega conforme trabalha. O gestor vê a mesma folha, espelhada no celular, e só age quando precisa.
 
+**Cada missão é individual.** A folha é vista só pelo gestor e pelo responsável. O responsável abre o app direto na sua missão e não acessa as missões dos outros; só o gestor vê a lista da equipe.
+
 **O desvio aparece sozinho** (controle visual e *jidoka*). Dia sem marcação, atividade que se arrasta e trabalho que não avança ficam evidentes sem que ninguém pergunte. Os sinais servem **primeiro ao responsável**, e o gestor é chamado só quando o sinal fica vermelho. Quem encontra um problema para e o mostra. A diferença entre controle visual e microgerenciamento está em mostrar o andamento sem cobrar todo dia.
 
 **Linguagem.** A folha diz o porquê de cada pedido e evita termos de comando (apoio à autonomia, Teoria da Autodeterminação).

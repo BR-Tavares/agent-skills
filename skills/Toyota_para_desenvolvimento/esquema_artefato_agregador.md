@@ -27,6 +27,11 @@ Tabela consolidada das decisões desta conversa: pergunta → decisão → motiv
 
 ## 3. Papéis e permissões
 
+**Regra de acesso:** as missões são individuais.
+- O **responsável** vê **somente as missões atribuídas a ele**. O app abre direto na folha da missão, sem lista. Ele não vê, não busca e não recebe notificação de missões de outras pessoas.
+- **Só o gestor** vê a lista de missões da equipe e abre qualquer folha.
+- A pasta do Drive segue a mesma regra: ela é compartilhada só com o gestor e com o responsável da missão.
+
 Matriz **campo × papel** com quem **vê**, **edita** e **é notificado**.
 
 | Bloco | Gestor | Responsável |
@@ -141,12 +146,12 @@ Para cada sinal: gatilho → cor → destinatário → o que apaga.
 
 | Tela | Quem | Conteúdo previsto |
 |---|---|---|
-| Lista de missões | ambos | ID, título, situação, sinal mais forte, "entregar até" |
-| Folha (edição) | responsável | Blocos 1 a 7, na ordem do protocolo; marcação do dia em um toque |
+| Lista de missões | **só o gestor** | ID, título, responsável, situação, sinal mais forte, "entregar até" |
+| Folha da missão | responsável (só a dele) | Abre direto na missão atribuída; blocos 1 a 7, na ordem do protocolo; marcação do dia em um toque. Esboço: `tela_missao_funcionario.svg` |
 | Folha espelhada (celular) | gestor | Mesma folha, só leitura, com painel no topo; botões *responder*, *alterar* e *revisar* |
 | Nova missão | gestor | Blocos 1 a 3, com campo para a pasta do Drive e link para os encerramentos de missões parecidas |
-| Pendência | ambos | Tipo, texto, resposta ou alteração, fechar |
-| Notificações | ambos | Amarelos (responsável), vermelhos (gestor), aviso do primeiro plano |
+| Pendência | gestor e o responsável da missão | Tipo, texto, resposta ou alteração, fechar |
+| Notificações | cada um só as suas | Amarelos (responsável), vermelhos (gestor), aviso do primeiro plano |
 
 Esboço do layout de cada tela: wireframe em texto ou HTML estático.
 
