@@ -1,6 +1,6 @@
 # Mapa fixo de seleção de ferramentas
 
-Selecione pela situação observada e pelo mecanismo que mantém o problema. O diferencial estratégico indica o que a ferramenta acrescenta às demais; não é promessa de resultado. Atribua à obra apenas as ferramentas que ela apresenta. Consulte `fontes.md` e as referências específicas para aprofundar a aplicação.
+Selecione pela situação, objetivo e evidências disponíveis. Não exija um problema nem uma contramedida em toda consulta. O diferencial indica o que a ferramenta acrescenta; não é promessa de resultado. Atribua à obra apenas suas ferramentas. Consulte `fontes.md` e referências específicas quando necessário. O líder é o interlocutor, mas a análise pode abranger equipe, projeto ou empresa.
 
 | Obra ou método | Ferramentas e métodos internos | Diferencial estratégico | Sinal de aplicação | Resultado esperado da análise | Limite de uso |
 |---|---|---|---|---|---|
@@ -15,10 +15,10 @@ Selecione pela situação observada e pelo mecanismo que mantém o problema. O d
 
 ## Como comparar e combinar
 
-1. Parta da percepção da pessoa e de um episódio concreto. Separe fato relatado, inferência e decisão já confirmada.
-2. Descreva o problema e o mecanismo que parece mantê-lo. Se o mecanismo for incerto, escolha primeiro uma ferramenta de observação.
+1. Parta do pedido e da Percepção do Cliente pertinente. Separe relato, evidência, inferência e decisão confirmada; procure episódios e dados na unidade analisada.
+2. Identifique a questão a esclarecer, decidir ou planejar. Se houver problema, investigue seu mecanismo; se houver oportunidade ou aspiração, compare condições e alternativas. Quando a informação for insuficiente, priorize observação.
 3. Compare as linhas pelo diferencial estratégico. Indique por que a ferramenta escolhida atua no problema e em que ponto outra ferramenta pode complementá-la.
-4. Para cada contramedida, explicite: padrão que pretende alterar → mecanismo da ação → sinal observável de mudança. Registre a escolha da pessoa na percepção, não neste mapa.
+4. Quando propor contramedida, explicite: padrão a alterar → mecanismo da ação → sinal observável. Registre escolhas confirmadas na percepção externa quando sua manutenção estiver autorizada, não neste mapa.
 
 Exemplo de composição: a Tríade mede onde o tempo vai; o Essencialismo ajuda a decidir o destino de compromissos; o Sistema Toyota mostra onde a fila cresce e por que o erro chega tarde; a cognição preditiva mostra quando o erro nasce na própria instrução, antes de chegar a quem executa. Use somente as partes que o caso exigir.
 

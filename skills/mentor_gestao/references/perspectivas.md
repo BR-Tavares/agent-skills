@@ -1,138 +1,63 @@
-# As seis perspectivas
+# Perspectivas para mentoria e consultoria
 
-Cada perspectiva traz: pergunta central, sinais de que está em jogo, armadilhas típicas, perguntas do mentor, contramedidas e premissas de apoio. Uma situação real costuma cruzar duas ou três; comece pela que a pessoa trouxe e mostre a conexão com as outras.
+Escolha a perspectiva que esclarece o pedido e leia apenas o necessário. O líder é o interlocutor, mas a unidade analisada pode ser equipe, projeto ou empresa. Sinais são pistas para investigar, não diagnósticos. Perguntas e contramedidas abaixo são opções, não um roteiro obrigatório.
 
-## Sumário
-1. Postura pessoal
-2. Uso do tempo
-3. Relação com outros
-4. Trabalho focado
-5. Redução de risco
-6. Conhecimento embutido no produto
+## 1. Postura e direção do líder
 
----
+**Questão:** o que o líder busca, precisa preservar e pode decidir?
 
-## 1. Postura pessoal
+Investigue objetivos, limites, compromissos e conflitos entre seu papel e as condições da empresa. Não presuma que a motivação seja vocacional ou não econômica. Consulte a Percepção do Cliente e confirme informações que mudaram.
 
-**Pergunta central:** o que me move, e o que eu não negocio?
+Perguntas possíveis: quais resultados importam? Quais limites foram definidos? Que obrigações e autoridades condicionam a escolha? Onde há conflito entre objetivos pessoais e organizacionais?
 
-**Sinais:** prioridades que mudam de direção; sensação de trabalhar muito sem chegar; conflito entre o que a pessoa acredita e o que o ambiente pede; cansaço sem causa clara; dificuldade de dizer não.
+Intervenções possíveis: explicitar critérios de decisão, renegociar compromissos, avaliar alternativas e registrar escolhas. As premissas históricas não definem os valores do cliente.
 
-**Armadilhas:** confundir intensidade com compromisso; tomar a própria lucidez como obrigação de corrigir tudo (premissa 26); negociar balizas sob pressão; depender de força de vontade em vez de sistema.
+## 2. Recursos, capacidade e prioridades
 
-**Perguntas do mentor:**
-- Se dinheiro deixasse de ser motivo, por que você continuaria?
-- O que não pode acontecer na sua vida e no seu trabalho, mesmo que custe resultado?
-- O que precisa acontecer este ano para que você sinta que foi fiel ao que te move?
-- Onde você já vive a coerência que busca? O que é diferente lá?
+**Questão:** onde os recursos vão e como isso contribui ao resultado?
 
-**Contramedidas:** consultar objetivos e limites no arquivo de percepção da pessoa; escolher poucas inconsistências para corrigir agora e registrar as demais; usar uma situação em que a pessoa já obtém o resultado desejado como referência, se houver; hansei, reflexão periódica sem autocondenação.
+Examine tempo, atenção, energia, credibilidade, pessoas e condições materiais. Diferencie agenda do líder, carga da equipe e portfólio da empresa. Busque dados ou episódios; marque estimativas.
 
-**Premissas:** 3, 7, 9, 19, 20, 24, 25, 26.
+Perguntas possíveis: que demandas disputam capacidade? O que fica em fila? Qual obrigação impede retirar uma atividade? Que resultado seria afetado por adiamento?
 
----
+Intervenções possíveis: mapa de recursos, classificação de desperdícios quando pertinente, escolha de prioridades, limite de trabalho simultâneo e revisão de compromissos. Folga e capacidade devem ser fundamentadas, não percentuais universais.
 
-## 2. Uso do tempo
+## 3. Liderança, delegação e coordenação
 
-**Pergunta central:** onde o meu recurso realmente vai?
+**Questão:** como desenvolver autonomia e fazer o trabalho passar entre pessoas?
 
-**Sinais:** agenda cheia e poucas entregas; muitas tarefas abertas; urgências constantes; reuniões demais; tempo gasto em organizar o trabalho em vez de fazê-lo.
+Examine clareza da direção, competência, autoridade, confiança, coordenação e retorno sobre o trabalho. Antes de atribuir falha ao executor, verifique a instrução real e as condições de execução. Não trate toda discordância como resistência ou conformismo.
 
-**Armadilhas:** estimar em vez de medir; tratar a agenda como o único recurso (tempo sem atenção e energia não produz); aceitar compromissos que são dívidas futuras; manter compromissos mortos.
+Perguntas possíveis: o que ocorreu no último episódio? O resultado e a autonomia estavam claros? A pessoa tinha competência, acesso e capacidade? A condição era nova? Quem podia decidir sobre a dúvida?
 
-**Perguntas do mentor:**
-- Como foi a última semana real, dia a dia?
-- Que proporção foi essencial, urgente e circunstancial?
-- Quantas frentes estão abertas agora? Qual é o próximo passo concreto de cada uma?
-- Qual tarefa, se feita com perfeição, não mudaria nada no resultado?
+Intervenções possíveis: ensino do trabalho com TWI quando adequado, demonstração e primeira amostra, autonomia progressiva, consulta prévia às partes afetadas e canais de ajuda. A mentor pode explicitar resultado, critério, tolerâncias e passagem numa orientação localizada; processos-previsiveis aprofunda quando o pedido exigir desenho detalhado.
 
-**Contramedidas:** Mapa de Desperdício Pessoal (muda, mura, muri); limite de trabalho em andamento; Registro de Compromissos com próximo passo ou encerramento; nivelar a semana (heijunka); um destaque por dia ligado ao gargalo.
+## 4. Trabalho focado e interrupções
 
-**Premissas:** 1, 2, 4, 5, 10, 11, 12, 13, 16.
+**Questão:** como criar condições para avançar no trabalho que exige atenção contínua?
 
----
+Investigue alternância, interrupções, disponibilidade exigida e compromissos de atendimento. Um bloco protegido não resolve sozinho prioridade indefinida ou capacidade insuficiente.
 
-## 3. Relação com outros
+Perguntas possíveis: que trabalho não avança? Que interrupções são necessárias? Qual o custo de ficar indisponível? Como a equipe trata uma urgência real?
 
-**Pergunta central:** como o trabalho passa por outras pessoas sem se perder?
+Intervenções possíveis: períodos protegidos, acordos de disponibilidade, rituais e agrupamento de ajustes, preservando as exigências reais de operação.
 
-**Sinais:** o resultado trava quando escala; erros que se repetem quando outros executam; "não era isso que eu queria"; retrabalho descoberto só no fim; necessidade de estar presente em tudo; reuniões de alinhamento que não decidem; ideias corretas rejeitadas por conformismo.
+## 5. Risco, limites e continuidade
 
-**Armadilhas:** ensinar uma vez e confiar; culpar a pessoa pelo erro que o processo permitiu; delegar em condição nova sem verificação da primeira peça; tentar convencer pela autoridade técnica em vez de mostrar pelo resultado; aumentar o número de envolvidos sem medir o custo de coordenação; dar instruções com termos subjetivos ("capricha", "bem feito", "o quanto antes") e cobrar como se o critério tivesse sido dito.
+**Questão:** que consequências importam e como percebê-las a tempo de agir?
 
-**Perguntas do mentor:**
-- Da última vez que deu errado com outra pessoa, o que exatamente aconteceu? Quando o erro foi descoberto?
-- A pessoa já tinha enfrentado aquela condição antes?
-- Havia como ela perceber sozinha que estava errando?
-- Ela sabia que podia, e devia, parar e chamar?
-- A resistência que você encontra é por não entender, por não concordar, ou por não executar?
-- Qual foi o texto exato da instrução? Ele permitia a interpretação que a pessoa fez? O que ela precisou adivinhar?
+Examine danos, capacidade, reversibilidade, dependência de pessoas e descoberta tardia de desvios. Não converta todo risco em bloqueio nem atribua atraso automaticamente à disciplina.
 
-**Contramedidas:** Protocolo de Delegação (TWI + primeira peça + andon); padrão visual em vez de explicação verbal; autonomia progressiva (fazer junto, observar, verificar por amostra, liberar); nemawashi antes de reuniões decisivas; diante do conformismo, mostrar o resultado medido em vez de argumentar (a evidência embutida convence onde o título não convence).
+Perguntas possíveis: qual dano é difícil de recuperar? Qual evidência indicaria desvio cedo? Quem decide? Que alternativa preserva continuidade?
 
-Antes de ensinar, verifique a própria instrução, porque o método de ensino não corrige um pedido ambíguo. Três lacunas se repetem, e cada uma obriga quem executa a adivinhar algo diferente: o escopo sem borda (diz o que fazer, mas não o que fica de fora nem onde parar), o termo subjetivo (exige adivinhar um gosto) e o término sem critério observável (o "pronto" depende de alguém achar que está pronto). Fechadas as lacunas, declare também as tolerâncias, isto é, o que pode variar sem problema, já que sem elas a pessoa trata cada detalhe como decisivo. Por fim, faça a passagem de trabalho depender de uma prova combinada (foto, arquivo, teste registrado), e não da impressão de quem entrega; assim ela não depende de ler intenções. Quando o pedido for a auditoria completa de um texto ou o desenho do fluxo de uma equipe, use a skill processos-previsiveis.
+Intervenções possíveis: rever compromissos, reservar capacidade, definir autoridade, testar em escala limitada e planejar recuperação. A mentor pode recomendar prevenção ou detecção próxima da origem, com condição e resposta proporcionais. Poka-yoke-gestao aprofunda a análise especializada e consolida um protocolo quando esse produto for solicitado.
 
-**Premissas:** 11, 14, 15, 23, 25, 27, 29.
+## 6. Conhecimento e qualidade no processo produtivo
 
----
+**Questão:** como o conhecimento sustenta qualidade sem depender da presença constante do especialista?
 
-## 4. Trabalho focado
+Examine critérios tácitos, informação inacessível, qualidade variável e detecção tardia. Documentação e treinamento podem ser necessários, mas não garantem resultado sozinhos.
 
-**Pergunta central:** como proteger profundidade no que importa?
+Perguntas possíveis: onde se decide o que é aceitável? Que conhecimento só uma pessoa detém? Como o executor reconhece divergência? Que evidência comprova a qualidade definida?
 
-**Sinais:** dia fragmentado; dificuldade de concluir trabalho complexo; alternância constante entre assuntos; sensação de estar sempre respondendo.
-
-**Armadilhas:** multitarefa como virtude; conectividade permanente por medo de parecer ausente; confiar na disciplina em vez de desenhar o ambiente; dispersão por excesso de frentes certas.
-
-**Perguntas do mentor:**
-- Quando foi a última vez que você trabalhou duas horas sem interrupção? O que tornou isso possível?
-- Quais interrupções vêm de fora e quais você mesmo abre?
-- O que aconteceria se você ficasse inacessível por três horas por dia?
-
-**Contramedidas:** blocos protegidos no horário de maior energia; fluxo unitário (uma coisa até o fim, não várias em paralelo); barreiras de ambiente (aparelhos fora de alcance, notificações desligadas); acordo explícito de disponibilidade com a equipe, para romper a armadilha coletiva; ritual de início e fim.
-
-Como cada interrupção destrói o que a pessoa mantinha na memória de trabalho, os ajustes com a equipe rendem mais quando agrupados em momentos previstos (fim de bloco, fim de etapa) do que espalhados pelo dia.
-
-**Premissas:** 2, 6, 17, 18, 26, 29.
-
----
-
-## 5. Redução de risco
-
-**Pergunta central:** o que não pode acontecer, e como saber cedo que está acontecendo?
-
-**Sinais:** operação no limite; imprevistos virando crises; dependência de uma pessoa só; decisões grandes tomadas às pressas; jornadas extremas prolongadas.
-
-**Armadilhas:** otimizar a utilização até 100%; tratar decisões irreversíveis com pressa e reversíveis com lentidão; descobrir o problema no final; normalizar o desgaste físico.
-
-**Perguntas do mentor:**
-- Quais são os danos irreversíveis possíveis aqui (financeiros, de saúde, de credibilidade)?
-- Quanta folga existe hoje em horas, dinheiro e pessoas?
-- Esta decisão é uma porta de ida e volta ou só de ida?
-- Qual seria o primeiro sinal de que algo está saindo do controle, e quem o veria?
-
-**Contramedidas:** balizas do que não pode acontecer; folga explícita reservada (não planejar além de uma fração da capacidade); andon (sinais de alerta definidos antes); decisão lenta para o irreversível e rápida para o reversível; redundância onde o erro é caro; trava de restauração após períodos intensos.
-
-**Saúde:** jornadas extremas por anos são risco real, mesmo quando movidas por vocação. Nomeie com cuidado e sugira acompanhamento profissional.
-
-**Premissas:** 8, 16, 20, 21, 22, 25, 27.
-
----
-
-## 6. Conhecimento embutido no produto
-
-**Pergunta central:** como o produto ou processo garante o critério sem depender de confiança?
-
-**Sinais:** qualidade depende da presença do especialista; clientes ou parceiros desconfiam; o conhecimento está na cabeça de alguém; o mesmo erro aparece em lugares diferentes.
-
-**Armadilhas:** confiar no treinamento como única barreira; inspecionar só no fim; criar documentação que ninguém lê em vez de desenho que impede o erro; buscar a solução perfeita antes da solução garantida; esquecer que a instrução também é parte do produto e que o erro de interpretação nasce nela; especificar só obrigações, sem dizer o que pode variar.
-
-**Perguntas do mentor:**
-- Que erro, se acontecer, é mais caro? Onde ele nasce?
-- É possível desenhar para que esse erro seja impossível? Se não, como torná-lo visível na hora?
-- Como o produto prova, por si mesmo, que é confiável?
-- Qual é a primeira peça que deve ser verificada antes de liberar o restante?
-
-**Contramedidas:** Ficha de Poka-yoke; inspeção na fonte; redundância que gera credibilidade (medições repetidas, triplicatas); gabaritos, encaixes que só aceitam a forma certa, testes por trecho; padrão visual no próprio objeto. Começar pela solução mais garantida, não pela mais elegante; otimizar depois, por kaizen.
-
-**Premissas:** 1, 13, 22, 27, 29.
+Intervenções possíveis: organizar conhecimento, explicitar critérios, desenvolver competência e escolher experimentos. Na própria mentoria, compare tornar o resultado compreensível, prevenir o erro por desenho e detectá-lo cedo; uma regra escrita, um gabarito e uma primeira peça têm funções diferentes. Blueprint e Protocolo aprofundam essas intervenções quando solicitados. Medições repetidas ou controles só se justificam quando tratam incerteza ou risco identificados.

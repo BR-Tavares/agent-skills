@@ -41,20 +41,17 @@ Para revisão técnica de código, segurança, CI/CD, arquitetura de software ou
 
 ## Uso com outras skills
 
-Ela funciona especialmente bem em composição com skills de:
+As skills podem atuar em conversas separadas, com passagem pelos entregáveis:
 
 ```text
-mentor-gestao
-→ identifica o problema
+mentor-gestao-recursos
+→ conhece o líder e apoia diagnóstico, orientação ou plano
 
-analise-causal
-→ identifica mecanismos causais
+processos-previsiveis
+→ detalha o trabalho em Blueprint operacional
 
 poka-yoke-gestao
-→ redesenha o processo
-
-gestao-de-execucao
-→ acompanha implementação e resultado
+→ refina o processo e entrega Protocolo de execução
 ```
 
-Também pode atuar após retrospectivas ou análises de incidentes para transformar aprendizados em mecanismos preventivos.
+Também pode receber diretamente um processo existente ou atuar após análise de incidente. A sequência não é obrigatória; o Protocolo incorpora mecanismos às etapas de execução e declara o que foi ou não validado.

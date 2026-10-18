@@ -1,116 +1,87 @@
-# Ferramentas: modelos de registro
+# Modelos de desenho operacional
 
-Cada modelo corresponde a um elo da cadeia (ver `fundamentos.md`). Escolha pelo elo em que a previsão está falhando, e não pelo hábito: um modelo aplicado ao elo errado só acrescenta papel.
+Use o Blueprint para processo completo e uma ficha para pedido localizado. Os modelos são autossuficientes; não exigem leitura da mentor. Registre apenas campos pertinentes e separe decisões confirmadas de propostas.
 
-| Onde a previsão falha | Modelo indicado |
-|---|---|
-| Na instrução que sai | Auditoria de Instrução |
-| No que é "pronto" para uma tarefa | Ficha de Tarefa |
-| Ninguém sabe em que ponto o trabalho está | Mapa de Estados do Fluxo |
-| O trabalho se perde ao mudar de mão | Protocolo de Passagem |
-| O fluxo muda mais do que a equipe absorve | Regra de Disjuntor |
+## 1. Blueprint operacional
 
-Quando o caso já couber num registro da skill mentor-gestao-recursos (Protocolo de Delegação, Ficha de Poka-yoke), use o registro dela e acrescente os campos daqui que faltarem, em especial tolerâncias e critério de aceite.
-
----
-
-## 1. Auditoria de Instrução
-
-Serve para examinar uma instrução antes de ela chegar a quem executa, porque é mais barato fechar a lacuna no texto do que no retrabalho.
-
-```
-INSTRUÇÃO ORIGINAL: [texto exato, sem resumir]
-
-LACUNAS
-Escopo sem borda:      [o que não diz que fica de fora, ou onde parar]
-Termos subjetivos:     [palavras que exigem adivinhar um gosto: "bom", "rápido"...]
-Término sem critério:  [como se saberá que acabou]
-Tolerâncias ausentes:  [o que pode variar e não foi dito]
-Ênfase como remendo:   [caixa alta, "urgente", repetição — e a restrição que falta]
-
-PERGUNTAS (uma por lacuna, com resposta curta)
-1.
-2.
-
-VERSÃO REESCRITA: [a instrução com as respostas incorporadas]
+```text
+PROCESSO, FINALIDADE E ESCOPO:
+FONTE / VERSÃO DE ENTRADA: plano, diagnóstico, instrução ou demanda
+OBJETIVO E DECISÕES CONFIRMADAS:
+INÍCIO E TÉRMINO:
+ENTRADAS, INSUMOS E RECURSOS:
+RESULTADO E CRITÉRIOS DE ACEITE:
+PERFIS, COMPETÊNCIAS, ACESSOS E RESPONSABILIDADES:
+FLUXO: funções ou etapas, dependências e passagens
+TAREFAS: fichas no detalhe necessário
+ESTADOS OU MARCOS E EVIDÊNCIAS:
+AUTONOMIA, TOLERÂNCIAS E LIMITES:
+MUDANÇAS, BLOQUEIOS E EXCEÇÕES:
+PROPOSTAS E DECISÕES PENDENTES:
+RISCOS PERCEBIDOS E NECESSIDADES DE REFINAMENTO:
+VERIFICAÇÃO DO DESENHO: revisão, simulação ou teste real realizado
 ```
 
-Preencha só as linhas em que houver lacuna. Uma auditoria sem lacunas é um resultado válido, e deve ser dito assim.
+O Blueprint pode incluir representações gráficas, tabelas e fichas. Não precisa de formato visual específico. Deve ser compreensível sem histórico de outro chat e declarar o que não foi validado.
 
----
+## 2. Ficha de tarefa
 
-## 2. Ficha de Tarefa
-
-Serve para uma tarefa que vai para outra pessoa, ou para a própria IA, e cujo resultado precisa ser verificável.
-
-```
-TAREFA: [verbo + objeto]
-PARA QUE SERVE: [uma frase; ajuda o executor a decidir casos não previstos]
-
-CRITÉRIO DE ACEITE
-Dado que:   [insumos e condições que precisam estar prontos antes]
-Quando:     [a ação, com o escopo delimitado]
-Então:      [propriedades observáveis do resultado, em lista curta]
-
-FORA DO ESCOPO: [o que não fazer, inclusive o que o executor não pode fazer]
-TOLERÂNCIAS:    [o que pode variar sem problema]
-PRAZO:          [data real, não a desejada]
-PRIMEIRA PEÇA:  [amostra pequena a ser mostrada antes do todo, e quando]
-SINAL DE BLOQUEIO: [em que situação o executor para e avisa, e como avisa]
+```text
+TAREFA E PROPÓSITO:
+RESPONSÁVEL / PERFIL E AUTONOMIA:
+ENTRADAS E CONDIÇÕES DE INÍCIO:
+AÇÃO OU PASSOS NECESSÁRIOS:
+SAÍDA E CRITÉRIO DE ACEITE:
+FORA DO ESCOPO:
+TOLERÂNCIAS: o que pode variar; critérios inegociáveis, se houver
+DEPENDÊNCIAS E PRAZO, QUANDO DEFINIDOS:
+EVIDÊNCIA E DESTINO DA ENTREGA:
+BLOQUEIOS, DÚVIDAS E EXCEÇÕES: quem decide e como encaminhar
+PRIMEIRA AMOSTRA OU REVISÃO: quando proporcional
 ```
 
-O campo "para que serve" não é enfeite: é o que permite ao executor resolver sozinho uma situação que a ficha não previu, sem precisar adivinhar a intenção. Já as tolerâncias impedem que ele trate cada detalhe como decisivo.
+Dado / Quando / Então pode expressar condições, ação e resultado. Em trabalho exploratório ou avaliativo, explicite critérios de aprendizagem ou julgamento sem inventar conclusão antecipada. Não garanta execução por qualquer pessoa: declare competências e acessos necessários.
 
----
+## 3. Auditoria de instrução
 
-## 3. Mapa de Estados do Fluxo
-
-Serve para um trabalho que atravessa várias etapas ou pessoas, de modo que o estado de cada item possa ser lido em vez de deduzido.
-
-```
-FLUXO: [nome]
-
-ESTADO              | ENTRA QUANDO (guarda verificável)        | EVIDÊNCIA
-A fazer             | tarefa tem Ficha preenchida              | ficha
-Pronto para iniciar | insumos do "Dado que" disponíveis        | [onde estão]
-Em execução         | alguém assumiu                           | nome no quadro
-Bloqueado           | sinal de bloqueio acionado               | motivo escrito
-Em verificação      | entrega depositada                       | [link, foto, arquivo]
-Entregue            | todos os "Então" conferidos              | checklist marcado
-
-LIMITE EM EXECUÇÃO: [quantos itens ao mesmo tempo por pessoa]
+```text
+INSTRUÇÃO ORIGINAL: texto real, sem substituir por resumo
+LACUNAS RELEVANTES:
+- escopo e onde parar;
+- critério subjetivo sem referência suficiente;
+- conclusão ou aceite indefinidos;
+- tolerâncias ausentes;
+- responsabilidade ou passagem implícita.
+PERGUNTAS INDISPENSÁVEIS:
+VERSÃO REESCRITA: respostas confirmadas e propostas identificadas
 ```
 
-Adapte os nomes à realidade da equipe, mantendo duas propriedades: cada estado é mutuamente exclusivo, e nenhum estado depende de opinião ("aguardando alinhamento" não entra). Um quadro físico na parede cumpre a mesma função que um software.
+Auditoria sem lacunas é resultado válido. Ênfase não prova defeito de processo. Pergunte apenas o que altera uma decisão essencial; não peça confirmação de todo detalhe reversível.
 
----
+## 4. Mapa de estados ou marcos
 
-## 4. Protocolo de Passagem
+| Estado ou marco | Reconhecido quando | Responsável | Evidência ou registro | Próxima passagem |
+|---|---|---|---|---|
 
-Serve para o ponto em que o trabalho muda de mão, onde as perdas costumam acontecer em silêncio.
+Estados possíveis incluem pronto para iniciar, em execução, bloqueado, aguardando aprovação e concluído. Use nomes da operação com condições reconhecíveis. Para esperas, explicite o que falta e de quem depende; não invente prazo de escalonamento. Para componentes paralelos, represente estados por componente quando um rótulo único esconder o andamento.
 
-```
-DE: [quem entrega]        PARA: [quem recebe]
-O QUE PASSA: [item]
-PROVA DEPOSITADA: [o artefato que comprova o estado, e onde fica]
-O RECEPTOR CONFERE: [lista curta do que verifica antes de aceitar]
-SE FALTAR ALGO: [devolve para qual estado, e por qual canal]
-```
+Limites de trabalho simultâneo podem ser propostos conforme capacidade e fluxo; marque o que depende de decisão de gestão.
 
-A passagem depende da prova, e não da conversa, porque a conversa se perde e varia com o humor do dia. Isso não impede que as pessoas conversem; apenas faz com que a passagem não dependa disso.
+## 5. Passagem de trabalho
 
----
-
-## 5. Regra de Disjuntor
-
-Serve para proteger um fluxo quando a variação passa do que a equipe consegue absorver.
-
-```
-FLUXO PROTEGIDO: [nome]
-SINAL DE DISPARO: [ex.: 3 mudanças de escopo na mesma semana; 2 itens bloqueados há mais de 5 dias]
-O QUE PARA: [entrada de novos itens]
-COMO ESTABILIZAR: [revisar fichas, fechar ou renegociar itens abertos]
-QUANDO RETOMA: [condição verificável]
+```text
+DE / PARA:
+ITEM E RESPONSABILIDADE TRANSFERIDOS:
+EVIDÊNCIA E ONDE CONSULTAR:
+O RECEPTOR VERIFICA:
+CONDIÇÃO PARA ACEITAR OU DEVOLVER:
+TRATAMENTO DE PENDÊNCIAS:
 ```
 
-O sinal precisa ser contável, porque um disjuntor que depende de "sentir que está demais" dispara tarde. Comece com um limiar simples e ajuste depois de observar.
+O registro preserva a informação sem dispensar a conversa necessária. Confirmações adicionais e barreiras críticas podem ser refinadas no Protocolo de execução.
+
+## 6. Mudança e estabilização do fluxo
+
+Declare quando uma alteração entra, quais compromissos afeta, quem decide e como informar os executores. Distinga ajustes que podem esperar de mudanças urgentes. Quando houver necessidade de interromper o fluxo, especifique condição de parada, o que para e condição de retomada como proposta; não crie limiares arbitrários.
+
+A análise de falhas e a força dos mecanismos podem ser aprofundadas em poka-yoke-gestao. O Blueprint já deve conter o tratamento básico de dúvidas e bloqueios; não deixe o desenho incompleto à espera de outra skill.

@@ -1,146 +1,121 @@
 # Ferramentas e modelos de registro
 
-## Sumário
-1. Testes diagnósticos
-2. Mapa de Desperdício Pessoal
-3. Mapa de Processo do Comportamento
-4. A3 Pessoal
-5. Protocolo de Delegação
-6. Ficha de Poka-yoke
-7. Registro de Compromissos
-8. Perguntas do kata de coaching
+Escolha o registro pelo pedido. Estes modelos apoiam mentoria do líder e consultoria empresarial; não são etapas obrigatórias. Omita campos sem pertinência e declare dados ausentes.
 
----
+## 1. Percepção do Cliente
 
-## 1. Testes diagnósticos
+Este modelo orienta um arquivo externo à skill, no diretório do cliente. Não crie uma percepção fictícia ou um arquivo pessoal dentro do repositório de skills.
 
-**Tarefa real ou falsa**
-1. Teste do gargalo: esta tarefa atua sobre o que hoje limita o resultado? (Goldratt)
-2. Teste da entrega: gera um produto final ou só organiza, discute e sincroniza? (Reinertsen)
-3. Teste da omissão: se ninguém fizer por três semanas, que dano concreto ocorre além do desconforto social? (inspirado em Graeber)
-4. Teste do cliente: alguém, fora do processo, perceberia a diferença? (conceito de valor do Lean)
+```text
+CLIENTE / LÍDER E CONTEXTO DE ATUAÇÃO:
+OBJETIVOS E RESULTADOS QUE BUSCA:
+LIMITES, VALORES E COMPROMISSOS RELATADOS:
+RECURSOS E CONDIÇÕES DISPONÍVEIS:
+PAPEL DO LÍDER, AUTORIDADE E DEPENDÊNCIAS:
+EQUIPE, PROJETOS E SITUAÇÃO DA EMPRESA:
+EPISÓDIOS E PADRÕES RELATADOS: fonte e data, quando disponíveis
+EVIDÊNCIAS OBSERVADAS: documentos, dados e observações
+HIPÓTESES A CONFIRMAR: não são características comprovadas do cliente
+DECISÕES CONFIRMADAS: contexto, escolha e motivo
+QUESTÕES ABERTAS E CORREÇÕES:
+```
 
-**Urgência real ou fabricada**
-1. Custo de atraso: adiar 24 horas gera penalidade em degrau ou só alguém esperando? (Reinertsen)
-2. Dependência: o pedido chegou completo ou estou pagando a falta de planejamento alheia? (Newport, Perlow)
-3. Trinta dias: qual o impacto disso na meta principal daqui a um mês?
+Preserve a distinção entre pessoa, equipe e empresa. Atualize conforme a autorização de manutenção e as confirmações do usuário; não reescreva o histórico silenciosamente nem registre hipóteses como relatos.
 
-**Instrução clara ou ambígua** (premissa 29)
-1. Borda: diz o que fica de fora e onde parar?
-2. Termos subjetivos: há palavras que exigem adivinhar um gosto ("bom", "rápido", "caprichado", "enxuto")?
-3. Término: dá para verificar que acabou sem depender da opinião de alguém?
-4. Tolerâncias: diz o que pode variar sem problema?
-Se alguma resposta for não, a lacuna é da instrução, e não de quem vai executar.
+## 2. Diagnóstico de gestão
 
-**Decisão**
-1. Reversibilidade: porta de ida e volta ou só de ida? (premissa 21)
-2. Limites da pessoa: a opção contraria algum limite registrado na percepção atual?
+```text
+PEDIDO E UNIDADE ANALISADA: líder, equipe, projeto ou empresa
+CONTEXTO: objetivos, limites e condições relevantes
+BASE DA ANÁLISE: percepção, documentos, episódios e dados disponíveis
+SITUAÇÃO ATUAL: condições favoráveis, padrões e dificuldades
+EFEITOS OBSERVADOS: contribuição ao resultado, custo, carga ou risco
+INTERPRETAÇÕES E HIPÓTESES: evidências favoráveis e limites
+ALTERNATIVAS OU RECOMENDAÇÕES: quando fizerem parte do pedido
+DECISÕES PENDENTES: autoridade e informação necessária
+LIMITE DO DIAGNÓSTICO: o que não pôde ser concluído
+```
 
-**Classificação de desperdício**
-- Muda: consome sem agregar.
-- Mura: irregularidade de carga ou direção.
-- Muri: sobrecarga além da capacidade.
+Não force plano de ação nem diagnóstico clínico. Se o usuário pediu somente avaliação, uma conclusão fundamentada pode encerrar a entrega.
 
----
+## 3. Plano de gestão, estratégico ou de processos
 
-## 2. Mapa de Desperdício Pessoal
+```text
+FINALIDADE E ESCOPO:
+BASE: diagnóstico ou contexto disponível, sem exigir etapa anterior
+RESULTADOS PRETENDIDOS E CRITÉRIOS DE VERIFICAÇÃO:
+CENÁRIO E HIPÓTESES RELEVANTES:
+ALTERNATIVAS CONSIDERADAS:
+DIREÇÃO ESCOLHIDA E RENÚNCIAS: separar proposta de decisão confirmada
+PRIORIDADES E FRENTES DE AÇÃO:
+RECURSOS, CAPACIDADE, RESPONSABILIDADES E HORIZONTE:
+DEPENDÊNCIAS, RISCOS E LIMITES:
+EXPERIMENTOS OU VERIFICAÇÃO:
+DECISÕES PENDENTES:
+```
 
-| Atividade | Horas/semana | Essencial / Urgente / Circunstancial | Tipo (muda, mura, muri, nenhum) | Atua no gargalo? | Decisão (manter, padronizar, delegar, eliminar) |
+O plano de processos define finalidade, funções principais, interfaces e direção do processo produtivo no nível de gestão. A especificação das tarefas pode ser desenvolvida no Blueprint operacional. Não detalhe prematuramente uma alternativa ainda não escolhida.
+
+## 4. Testes para investigar recursos e decisões
+
+Use perguntas pertinentes ao contexto, não um questionário completo.
+
+- **Contribuição:** que resultado a atividade produz? Organizar e coordenar podem ser necessários; não classifique uma atividade como desperdício apenas porque não entrega produto diretamente.
+- **Gargalo:** ela atua sobre o que limita o resultado? Que evidência indica esse limite?
+- **Omissão:** qual consequência ocorreria se a atividade fosse adiada ou retirada? Há obrigação que impede removê-la?
+- **Urgência:** qual o custo real do atraso, a dependência e o impacto no objetivo?
+- **Capacidade:** carga, competência e acesso cabem nos recursos disponíveis?
+- **Decisão:** a alternativa respeita limites pessoais e organizacionais? É reversível? Quem tem autoridade?
+- **Delegação:** resultado, autonomia e competência necessários estão claros? O desenho precisa ser aprofundado?
+
+Muda, mura e muri são lentes para desperdício, irregularidade e sobrecarga, quando úteis. Não substituem evidência sobre o caso.
+
+## 5. Mapa de recursos e compromissos
+
+| Atividade ou compromisso | Resultado e obrigação | Carga observada ou estimada | Capacidade e dependências | Decisão confirmada ou proposta | Próximo passo e horizonte |
 |---|---|---|---|---|---|
 
-Ao final: gargalo atual; proporção por esfera; uma atividade a eliminar nesta semana.
+Pode representar a agenda do líder, o portfólio de projetos ou a carga de equipe. Não confunda estimativa com medição; não imponha eliminar uma atividade se a análise não sustentar isso.
 
----
+## 6. Mapa do comportamento ou fluxo atual
 
-## 3. Mapa de Processo do Comportamento
+Registre padrões observados como P1, P2...: contexto, resposta, consequência e relações sustentadas por evidência. Crenças entram como relato ou hipótese, não causa presumida. Para o processo da empresa, represente demanda, decisões, execução, filas e resultado sem atribuir um comportamento individual à organização inteira.
 
-Use quando houver padrões recorrentes e for preciso descobrir onde uma intervenção pode agir. Numere os padrões observados como P1, P2... e descreva, conforme as evidências disponíveis, origem da demanda, condição que a mantém, decisão ou resposta, acúmulo e efeito. Essas posições são perguntas para investigar, não etapas obrigatórias nem causas já demonstradas. Uma crença só entra como relato ou hipótese a confirmar.
+Mantenha contramedidas separadas como C1, C2...; para cada uma, indique o padrão que pretende alterar, o mecanismo e o sinal de efeito. Se houver diagrama, distinga observação, relato e inferência. Use SVG quando ajudar.
 
-Mantenha as contramedidas numa lista separada, como C1, C2...; uma ação proposta nunca é um padrão. Para cada C, registre a ligação `C → P`, o mecanismo pelo qual deve alterar P e o sinal observável que permitirá verificar o efeito. Se a ligação não puder ser explicada com clareza, investigue o processo antes de recomendar a ação.
+## 7. A3 de gestão
 
-Quando um diagrama ajudar, represente o processo atual em SVG. Distinga visualmente relatos, observações e inferências e confirme as relações com a pessoa.
-
----
-
-## 4. A3 Pessoal
-
-```
-TÍTULO:
-1. CONTEXTO: por que isso importa para os objetivos e limites registrados na percepção da pessoa
-2. SITUAÇÃO ATUAL: fatos observados (genchi genbutsu), números se houver
-3. META / CONDIÇÃO-ALVO: como deve estar, até quando
-4. ANÁLISE DE CAUSA: 5 porquês
-5. CONTRAMEDIDAS: o menor passo que atua na causa
-6. PLANO: o quê, quem, quando
-7. VERIFICAÇÃO: como e quando saber se funcionou
-8. PADRONIZAÇÃO: o que vira padrão se funcionar
+```text
+CONTEXTO E OBJETIVO:
+SITUAÇÃO ATUAL E EVIDÊNCIAS:
+CONDIÇÃO-ALVO:
+ANÁLISE: causas verificadas e hipóteses pendentes
+CONTRAMEDIDAS PROPOSTAS OU ESCOLHIDAS:
+PLANO: o que, quem, horizonte e recursos
+VERIFICAÇÃO: critério, evidência e momento
+PADRONIZAÇÃO OU AJUSTE: após observar o resultado
 ```
 
----
+Os 5 porquês podem apoiar a investigação; não são obrigatórios nem comprovam causalidade por si.
 
-## 5. Protocolo de Delegação
+## 8. Desenvolvimento da delegação pelo líder
 
-Baseado em TWI Job Instruction, jidoka, inspeção na fonte e na premissa 29.
+Use TWI Job Instruction quando o caso pedir ensino do trabalho: preparar, apresentar passos e pontos-chave com suas razões, permitir execução com explicação e acompanhar. Calibre autonomia e verificação pela competência demonstrada e pelo risco, não apenas pela confiança pessoal.
 
-0. **Especificar:** antes de ensinar, escreva o que será entregue, porque o ensino transmite o método, mas não corrige um pedido ambíguo. Dimensione pelo risco: tarefa única e de baixo risco pede só o critério; tarefa repetida, com segurança ou material caro pede todos os campos.
-   ```
-   TAREFA E PARA QUE SERVE: [verbo + objeto; uma frase de propósito, que permite à pessoa resolver casos não previstos]
-   CRITÉRIO DE ACEITE
-     Dado que: [insumos e condições prontos antes]
-     Quando:   [a ação, com o escopo delimitado]
-     Então:    [propriedades observáveis do resultado]
-   FORA DO ESCOPO: [o que não fazer, inclusive o que o executor não pode fazer]
-   TOLERÂNCIAS: [o que pode variar sem problema]
-   PRAZO REAL: [data verdadeira, não a desejada]
-   PROVA DE ENTREGA: [o que comprova o estado: foto, arquivo, teste registrado]
-   ```
-1. **Preparar:** decompor a tarefa em passos, pontos-chave (o que garante qualidade e segurança) e razões de cada ponto-chave.
-2. **Apresentar:** mostrar, explicar os pontos-chave e o porquê.
-3. **Testar:** a pessoa faz na sua frente, explicando os pontos-chave; corrigir na hora.
-4. **Primeira peça:** a pessoa executa a primeira unidade real; verificar antes de liberar a série (primeira rosca, primeiro trecho, primeiro relatório).
-5. **Amostragem crescente:** verificar a cada N unidades, espaçando conforme a confiança cresce.
-6. **Andon:** combinar explicitamente quando parar e chamar (condição nova, dúvida, resultado diferente do padrão), por qual canal avisar, e acolher a parada sem punição.
-7. **Poka-yoke:** onde o erro é caro, embutir o critério (gabarito, teste por trecho, marca visual).
-8. **Condição nova:** se a pessoa nunca enfrentou aquela condição, volte ao passo 3 nela, mesmo que já domine a tarefa em outro contexto.
+Antes de ensinar, verifique se resultado e critérios estão suficientemente definidos. A primeira peça pode revelar divergências cedo. Em condição nova, avalie a necessidade de nova demonstração. Combine como pedir ajuda sem punição por revelar dificuldades.
 
-Princípio: se o aprendiz não aprendeu, o instrutor não ensinou.
+Para uma orientação localizada, a mentor pode tornar explícitos resultado, critério, tolerâncias, autonomia e passagem, e propor uma contramedida contra falha sem recorrer a outra skill. O registro mínimo de apoio é: situação e evidência → dependência ou lacuna → mudança proposta → mecanismo esperado → observação de efeito. Não imponha uma ficha se uma explicação ou acordo curto resolver.
 
----
+Exemplos para distinguir mecanismos, não receitas:
 
-## 6. Ficha de Poka-yoke
+- “Não era isso que eu queria”: examine o pedido real e calibre o critério com o líder; referência e leitura de volta podem revelar interpretação divergente antes do trabalho completo.
+- “Só descubro o erro na entrega”: investigue onde nasce; uma primeira peça pode detectar antes de repetir, enquanto um gabarito adequado pode prevenir a montagem incorreta. Não trate os dois como proteção equivalente.
+- “Preciso perguntar toda vez se está parado”: combine como tornar o bloqueio visível, quem responde e a condição de retomada; não acrescente registro sem responsabilidade e resposta associadas.
 
-```
-ERRO A PREVENIR:
-NATUREZA: [ ] de execução  [ ] de interpretação (a instrução permitia outra leitura)
-ONDE NASCE (fonte):
-CUSTO SE PASSAR ADIANTE:
-TIPO: [ ] impede o erro (controle)  [ ] revela o erro na hora (alerta)
-MECANISMO:
-COMO O ERRO FICA VISÍVEL E PARA QUEM:
-TESTE DO MECANISMO:
-```
+Para um desenho completo de tarefas, processos-previsiveis aprofunda a especificação. Para refinamento especializado de falhas e Protocolo de execução, poka-yoke-gestao aprofunda os mecanismos. A mentor conserva os conceitos e a capacidade de intervenção pontual.
 
-Tipos clássicos de Shingo: por contato (forma, encaixe), por número fixo (contagem de passos ou peças), por sequência (ordem obrigatória).
+## 9. Acompanhamento e aprendizagem
 
-O erro de interpretação também se previne por desenho, e não por mais atenção: critério de aceite escrito, exemplo de referência (a peça certa ao lado da bancada), primeira peça verificada e leitura de volta, em que a pessoa explica com as próprias palavras o que é "pronto" antes de começar.
+Perguntas adaptadas do kata de melhoria: qual a condição-alvo e a atual? O que foi tentado, o que se esperava e o que ocorreu? Qual obstáculo está sendo tratado? Qual o próximo experimento e quando observar o resultado?
 
----
-
-## 7. Registro de Compromissos
-
-| Compromisso | Com quem | Ainda faz sentido? | Próximo passo concreto | Data | Ou encerrar: como comunicar |
-|---|---|---|---|---|---|
-
-Regra: compromisso sem próximo passo concreto e datado é encerrado ou reformulado.
-
----
-
-## 8. Perguntas do kata de coaching
-
-Adaptadas de Rother. Úteis em conversas de acompanhamento:
-1. Qual é a condição-alvo?
-2. Qual é a condição atual agora?
-3. O que você fez no último passo? O que esperava? O que aconteceu? O que aprendeu?
-4. Que obstáculos impedem chegar à condição-alvo? Em qual você está trabalhando agora?
-5. Qual é o próximo passo? O que espera que aconteça?
-6. Quando podemos ver o que você aprendeu com esse passo?
+Registre compromissos assumidos, próximos passos e revisão, quando fizer parte do atendimento. Não encerre compromissos do cliente unilateralmente.
