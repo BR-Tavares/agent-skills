@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: plano-que-nao-termina
+expected_outcome: |
+  A mentoria trata a falta de término como condição do sistema, propõe definir quem recebe o plano e quando, uma versão completa simples antes de aprofundar, limitar frentes em andamento e dar destino às ideias novas, com uma pergunta ou experimento curto ao final.

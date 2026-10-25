@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: interrupcoes-whatsapp
+expected_outcome: |
+  A mentoria trata a distração como condição do ambiente e propõe mudanças de condição (horário combinado para dúvidas, sinal para bloqueio real, notificações fora no foco, organização do espaço), começando pela interrupção mais cara, sem pedir só força de vontade.

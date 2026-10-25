@@ -11,7 +11,8 @@ Cada ferramenta do Sistema Toyota de Produção (STP) é a resposta lógica a um
 6. Puxar em vez de empurrar (origem do supermercado e do kanban)
 7. O padrão que se repete
 8. Leitura para a mentoria
-9. Fontes
+9. Origens complementares usadas na mentoria
+10. Fontes
 
 ---
 
@@ -102,7 +103,26 @@ Use esta seção para ligar a história ao caso concreto da pessoa, sem forçar 
 
 **Grau de evidência.** Os fatos principais (tear com parada automática, fábrica de Koromo em 1938, crise e greve de 1949 e 1950, renúncia de Kiichiro, primeiro supermercado interno em 1953) estão em fontes da própria Toyota e do Lean Enterprise Institute. São contestados ou aproximados: a origem exata do supermercado (Ohno versus relatório da Lockheed), a razão de nove vezes na produtividade, e a narrativa de que o STP foi um plano deliberado, que historiadores do lean contestam.
 
-## 9. Fontes
+## 9. Origens complementares usadas na mentoria
+
+Conceitos de fora da Toyota ou posteriores a ela que ajudam o líder a ler a própria situação. Mesma lógica: primeiro o problema, depois a ferramenta.
+
+| Quem e quando | Problema que enfrentou | Resposta | Leitura para o líder |
+|---|---|---|---|
+| W. Edwards Deming, Japão, 1950 | Indústria do pós-guerra com má qualidade, atribuída aos operários | Ciclo planejar, fazer, verificar, agir (PDCA); a maioria dos problemas é do sistema, não das pessoas | Rodar uma versão, verificar contra um padrão e ajustar. Sem um padrão escrito, o "verificar" vira opinião |
+| Taiichi Ohno, anos 1950 a 1970 | Alcançar a produtividade americana sem capital | Sete desperdícios, com a superprodução como o pior, porque esconde os demais; trabalho padronizado como o melhor jeito conhecido hoje | Estudar ou desenvolver o que nenhuma entrega puxou é superprodução de conhecimento: ocupa atenção e esconde o atraso do essencial |
+| Shigeo Shingo, anos 1960 | Inspeção no fim descobria defeitos tarde e culpava quem errou | Poka-yoke e inspeção na fonte: as pessoas erram, o desenho não deveria deixar o erro seguir | Antes de pedir mais cuidado a si ou à equipe, perguntar o que no processo permite o erro |
+| Hiroyuki Hirano, anos 1980 e 1990 | Tempo perdido procurando, esperando e retomando em ambientes desorganizados | 5S: separar, ordenar, limpar, padronizar e manter | Mensagens, acesso livre à sala e desordem digital são o chão de fábrica do líder. Padronizar e manter evitam que a arrumação seja um evento isolado |
+| Eliyahu Goldratt, 1984 | Fábricas otimizavam cada máquina e mesmo assim entregavam pouco | Teoria das Restrições: o sistema rende no ritmo do gargalo; identificar, explorar, subordinar, elevar, recomeçar | Em equipes pequenas o gargalo costuma ser a atenção do líder. Hora ganha fora do gargalo é ilusão; hora perdida nele é perda do sistema inteiro |
+| David Anderson, 2010 | Trabalho intelectual invisível, com frentes demais abertas ao mesmo tempo | Kanban para trabalho do conhecimento: quadro visível e limite de trabalho em andamento | "Pare de começar, comece a terminar." Nada novo entra enquanto a frente principal não for entregue a quem a recebe |
+| Toyota, engenheiro-chefe (shusa) | Produtos complexos perdiam coerência entre especialistas | Uma pessoa guarda a voz do cliente e a visão do todo, sem executar tudo | O líder técnico rende mais desenhando o padrão do serviço do que repetindo-o |
+
+**Dois mecanismos do líder técnico, observados na mentoria:**
+
+- **Entender parece terminar.** Delimitar um problema alivia a cobrança mental sobre ele (Masicampo e Baumeister, 2011, evidência contestada). Por isso o pronto precisa ser externo: só termina quando alguém recebe.
+- **Explorar contra aproveitar.** Quem é atraído pelo desafio técnico tende a explorar o novo à custa de executar o definido. A saída Toyota não é proibir a exploração, e sim fazê-la puxada por uma entrega, com caixa de tempo e destino definido.
+
+## 10. Fontes
 
 - Toyota. *75 Years of Toyota: The Birth of Jidoka*. <https://www.toyota-global.com/company/history_of_toyota/75years/text/taking_on_the_automotive_business/chapter1/section1/item4.html>
 - Toyota Times. *The History of Toyota's Honsha Plant* (2024). <https://toyotatimes.jp/en/series/inheritance_and_evolution/001.html>
@@ -114,3 +134,8 @@ Use esta seção para ligar a história ao caso concreto da pessoa, sem forçar 
 - Gemba Academy. Resumos dos capítulos de *Gemba Keiei*, de Taiichi Ohno. <https://blog.gembaacademy.com/?p=10936>
 - Emiliani, Bob. Sobre a origem contestada do supermercado. <https://bobemiliani.com/?p=8929>
 - Ohno, Taiichi. *O Sistema Toyota de Produção: além da produção em larga escala* (1978).
+- Deming, W. Edwards. *Out of the Crisis* (1982).
+- Shingo, Shigeo. *Zero Quality Control: Source Inspection and the Poka-yoke System* (1986).
+- Hirano, Hiroyuki. *5 Pillars of the Visual Workplace* (1995).
+- Goldratt, Eliyahu; Cox, Jeff. *A Meta* (1984).
+- Anderson, David J. *Kanban: Successful Evolutionary Change for Your Technology Business* (2010).

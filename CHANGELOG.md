@@ -25,6 +25,19 @@ As alterações relevantes seguem o padrão Keep a Changelog.
 - Script `sync.ps1` reconfigurado para atuar exclusivamente como utilitário de cofre/backup remoto para o repositório GitHub.
 - Documentação do `README.md` reestruturada com foco exclusivo nos 3 CLIs locais e backup seguro no GitHub.
 
+## [gestao-v0.3.0] - 2026-10-25
+
+### Added
+
+- `mentor_gestao`: modo **Capacitação**, para o líder interiorizar o método aprendendo cada conceito pelo problema que o originou e fazendo ele mesmo a ponte com um episódio real.
+- `mentor_gestao`: parágrafos de **Completude** (pronto é quando alguém recebe; versão inteira antes de aprofundar; limite de trabalho em andamento; destino explícito ao que parou) e **Ambiente** (5S de Hirano com os cinco passos, também no digital; mudar a condição em vez de pedir força de vontade).
+- `references/origens-toyota.md`: seção 9, Origens complementares (Deming, Ohno, Shingo, Hirano, Goldratt, Anderson, engenheiro-chefe) e os mecanismos "entender parece terminar" e "explorar contra aproveitar".
+- `mentor_gestao/evals/`: quatro casos de teste (plano que não termina, interrupções, delegação com retrabalho, capacitação pela origem).
+
+### Changed
+
+- Masicampo e Baumeister (2011) citado como evidência contestada, em linha com `references/fontes.md`.
+
 ## [gestao-v0.2.1] - 2026-09-30
 
 ### Fixed

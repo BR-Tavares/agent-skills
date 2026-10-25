@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: capacitacao-pela-origem
+expected_outcome: |
+  A mentoria ensina conceitos pelo problema que os originou (quem, o que custava, por que a solução responde), liga ao contexto do líder e pede que ele faça a ponte, em vez de entregar uma lista de ferramentas.

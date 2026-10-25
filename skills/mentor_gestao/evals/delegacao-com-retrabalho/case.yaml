@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: delegacao-com-retrabalho
+expected_outcome: |
+  A mentoria investiga a instrução real e o critério de pronto antes de culpar o bolsista, propõe contramedida concreta de previsibilidade ou poka-yoke (critério de aceite, exemplo de referência, primeira peça) e não desvia para completude ou ambiente sem motivo.
