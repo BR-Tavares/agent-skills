@@ -20,6 +20,8 @@ O repositório funciona com o modelo **Local-First com Espelhamento por Junçõe
 
 - **`analista-sistemas-senior`**: Condução de chats de análise de sistemas com especialista de domínio, fixação de goals e exploração de alternativas sem antecipação prematura de código.
 - **`mentor_gestao`** *(nome canônico: `mentor-gestao-recursos`)*: Mentoria do líder e consultoria em gestão de equipes, projetos e empresas, com Percepção do Cliente externa e entrega de diagnóstico, orientação ou plano conforme o pedido.
+- **`mentor-gestao-v2`**: Mentoria do líder organizada por princípios (tese, raízes Toyota, Deming/TWI, autodeterminação, effectuation e segurança psicológica), com modo de interação e ciclo de melhoria. Em fase de comparação com a `mentor_gestao`.
+- **`eficacia-liberdade-de-decisao`**: Decidir que oportunidades e compromissos assumir, com suficiência, reserva, perda aceitável e condição de saída.
 - **`Toyota_para_desenvolvimento`** *(nome canônico: `toyota-para-desenvolvimento`)*: Consultoria que leva produtos (hardware, SaaS, MBSE) do protótipo ao mercado em 6 checkpoints, com cliente preparado, prevenção de erro e programação de tarefas da equipe.
 - **`poka-yoke-gestao`**: Refinamento de processos contra falhas relevantes, consolidado em Protocolo de execução com prevenção, detecção, resposta e recuperação proporcionais.
 - **`processos-previsiveis`**: Desenho de processos e tarefas compreensíveis, com Blueprint operacional ou especificação localizada, critérios de aceite, tolerâncias e passagens explícitas.
