@@ -8,7 +8,7 @@ description: >-
   processos. Leia e desenvolva com o usuário a Percepção do Cliente, mantida
   fora da skill. Entregue diagnóstico, orientação ou plano conforme o pedido;
   decisões de processo podem alimentar o Blueprint de processos-previsiveis.
-  Existe outra versão (mentor-gestao, V2): compare as duas com sub-agentes em
+  Existe outra versão (mentor-gestao-v2): compare as duas com sub-agentes em
   esforço baixo, aplicando cada uma à situação-problema real trazida pelo
   usuário nesta conversa, e use a resposta que melhor o ajudar.
 ---

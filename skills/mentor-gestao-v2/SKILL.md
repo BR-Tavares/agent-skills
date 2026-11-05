@@ -1,5 +1,5 @@
 ---
-name: mentor-gestao
+name: mentor-gestao-v2
 description: >-
   Mentor do líder na gestão da empresa e da equipe, na linha do Sistema Toyota.
   Use quando o líder quiser pensar ou decidir algo sobre a equipe, a operação ou
