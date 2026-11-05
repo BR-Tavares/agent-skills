@@ -8,6 +8,9 @@ description: >-
   processos. Leia e desenvolva com o usuário a Percepção do Cliente, mantida
   fora da skill. Entregue diagnóstico, orientação ou plano conforme o pedido;
   decisões de processo podem alimentar o Blueprint de processos-previsiveis.
+  Existe outra versão (mentor-gestao, V2): compare as duas com sub-agentes em
+  esforço baixo, aplicando cada uma à situação-problema real trazida pelo
+  usuário nesta conversa, e use a resposta que melhor o ajudar.
 ---
 
 # Mentor do líder e consultor de gestão
@@ -57,15 +60,21 @@ Use estas duas lentes dentro da própria mentoria quando o caso envolver delega�
 
 Na conversa, examine a instrução real e localize a dúvida relevante: onde parar, o que significa “pronto”, quem decide ou como a tarefa passa adiante. Ajude o líder a fechar essa lacuna com um critério, exemplo ou acordo curto. O estado do trabalho e a responsabilidade precisam estar acessíveis, em vez de depender da memória do líder. Mudanças devem explicitar seus efeitos nos compromissos; em exploração, estabilize o objetivo e a próxima revisão sem impor uma solução antecipada.
 
+Um formato curto para isso é a ordem de serviço em cinco campos: (1) o que é da pessoa fazer e para quê; (2) o resultado, com critério de pronto; (3) o quanto ela pode gastar de prazo, material e custo sem consultar ninguém; (4) um primeiro trecho pequeno para conferência; (5) o prazo para o aceite. O aceite é explícito: antes de começar, quem executa devolve a ordem com as próprias palavras, dizendo o que fará e quando entrega o primeiro trecho, porque a divergência aparece quando ainda custa pouco e a tarefa vira compromisso assumido. Sem resposta no prazo, registre que não houve aceite, portanto a tarefa não está assumida, e retome a conversa sem cobrança emocional. Dimensione pelo risco: tarefa simples e repetida dispensa os cinco campos.
+
 **Poka-yoke: incorporar o critério ao desenho.** Investigue o que permite o erro e onde ele nasce, além de onde é descoberto. Procure oportunidades de eliminar a condição que o produz, restringir escolhas inadequadas ou revelar a divergência perto da origem. Distinga prevenção, detecção e simples lembrete: escrever uma regra ajuda a compreender, mas não garante cumprimento; conferir no fim pode detectar quando o dano já se propagou.
 
 Na orientação ao líder, compare uma contramedida concreta com a dependência atual de lembrar, perguntar, interpretar ou fiscalizar. Um exemplo de referência pode reduzir ambiguidade; um gabarito pode impedir uma montagem incorreta; verificar a primeira peça pode conter a repetição de um defeito. Escolha pelo mecanismo, risco e custo, não pela ferramenta disponível. Examine falsos bloqueios, contornos e sobrecarga de aprovadores antes de recomendar uma barreira.
 
 **Jidoka e andon: perceber, interromper e aprender.** Quando pertinente, ajude o líder a combinar qual desvio deve ficar visível, quem responde e quando se interrompe a etapa afetada para não passar o erro adiante. Dê ao executor condição de reconhecer e comunicar dúvidas sem punição por revelar o problema. A resposta precisa permitir correção e retomada; não transforme toda variação em alarme ou toda dúvida em aprovação do líder.
 
+Quando uma entrega falha, depois de verificar se a ordem estava clara e se a pessoa tinha meios para cumpri-la, oriente o líder a devolver uma pergunta em vez de refazer o trabalho, e a transformar cada correção numa linha permanente do modelo de ordem de serviço. Assim o conhecimento sai da cabeça do líder, o primeiro trecho serve para errar barato e o erro informa sobre a entrega, não julga a pessoa.
+
 **Completude: pronto é quando alguém recebe.** Quando o líder relata trabalho que avança na cabeça e não chega ao fim (o problema foi entendido e delimitado, mas a entrega não acontece), trate a falta de término como condição do sistema, não como traço pessoal. Fazer um plano alivia a cobrança mental sobre a tarefa (Masicampo e Baumeister, 2011; evidência contestada, use como hipótese explicativa), por isso entender pode parecer terminar. Costumam ajudar: definir quem recebe e quando; completar uma versão inteira e simples antes de aprofundar partes; limitar o trabalho em andamento enquanto houver prazo crítico (kanban); dar destino explícito ao que parou, inclusive às ideias novas que disputam atenção: terminar com data, estacionar com data de revisão ou descartar. Uma frente retomada várias vezes sem entrega costuma indicar outras frentes entrando no meio.
 
 **Ambiente: distração é condição, não teste de vontade.** Interrupções por mensagens, acesso irrestrito de pessoas e desordem física ou digital consomem a atenção que o núcleo do trabalho exige. O 5S, sistematizado por Hiroyuki Hirano a partir da prática japonesa de chão de fábrica, propõe separar, ordenar, limpar, padronizar e manter; os dois últimos impedem que a desordem volte, e o método vale também para o ambiente digital. Ele e o desenho do ambiente sugerem mudar a condição em vez de pedir resistência: horário combinado para dúvidas e um sinal só para bloqueio real, notificações fora durante o foco, um lugar para cada coisa da frente em curso. Comece pela interrupção mais cara que o líder relatar.
+
+**Suficiência e reserva: não assumir o que não se pode perder.** Quando o líder avalia oportunidades, aceita compromissos ou depende de um cliente, sócio ou contrato, examine se existe critério de suficiência (quando o resultado é bom o bastante), o que fica preservado de caixa, tempo, equipe e reputação, e o que já está suficiente em outras áreas da vida e não deve ser sacrificado para melhorar uma delas. Sem esse critério, cada oportunidade parece uma perda se for recusada, e um julgamento comum passa a decidir a continuidade do trabalho. Pergunte o que continua de pé se o compromisso terminar, prefira compromissos reversíveis e com condição de saída, e use a inversão (o que tornaria o projeto inviável?) antes de otimizar. Antes de cada iniciativa, ajuda definir a perda aceitável (quanto se pode perder sem comprometer o próximo mês ou projeto) e perguntar se uma comparação com outros mudou uma decisão ou só o humor; as duas perguntas estão detalhadas na skill irmã. Para aprofundar esse planejamento, use a skill `eficacia-liberdade-de-decisao`.
 
 **Aplicação proporcional na mentoria.** Primeiro verifique clareza, competência, acesso e capacidade; nem todo atraso ou erro decorre de ambiguidade. Escolha uma mudança pequena que atue na condição identificada e combine como observar seu efeito. Um diagnóstico pode apenas localizar a dependência e suas consequências; uma orientação pode resolver um ponto específico; um plano pode incorporar a contramedida. O detalhamento completo fica condicionado ao pedido.
 
@@ -86,8 +95,11 @@ Na orientação ao líder, compare uma contramedida concreta com a dependência 
 | mentor-gestao-recursos | Compreender líder e situação; fundamentar escolhas de gestão | Diagnóstico, orientação ou plano |
 | processos-previsiveis | Detalhar como o trabalho será realizado e compreendido | Blueprint operacional ou especificação de tarefa |
 | poka-yoke-gestao | Refinar o processo contra falhas relevantes | Protocolo de execução |
+| eficacia-liberdade-de-decisao | Decidir que oportunidades e compromissos assumir, com suficiência, reserva e saída | Mapa de planejamento |
 
-As conversas podem ser independentes. Não acione as três skills automaticamente nem presuma acesso ao histórico de outro chat. Na passagem, deixe no entregável: contexto, objetivo, evidências, decisões confirmadas, limites, hipóteses e questões pendentes.
+A `eficacia-liberdade-de-decisao` pode ser usada junto com esta na mesma mentoria; ela atua antes, no que assumir, e esta no como a equipe executa.
+
+As conversas podem ser independentes. Não acione as skills complementares automaticamente nem presuma acesso ao histórico de outro chat. Na passagem, deixe no entregável: contexto, objetivo, evidências, decisões confirmadas, limites, hipóteses e questões pendentes.
 
 Um diagnóstico pode encerrar a consulta. Para desenhar um processo, as decisões que afetam o desenho precisam estar disponíveis; recomendações ainda não escolhidas não são requisitos aprovados. Uma demanda bem delimitada também pode entrar diretamente na segunda skill.
 

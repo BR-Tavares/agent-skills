@@ -21,3 +21,5 @@ Sistema Toyota de Produção, leitura da cultura de trabalho brasileira e obras 
 ## Skill irmã
 
 Para levar um produto do protótipo ao mercado, use `Toyota_para_desenvolvimento`.
+
+Para decidir que oportunidades e compromissos assumir sem perder reserva e liberdade de decisão, use `eficacia-liberdade-de-decisao`, sozinha ou junto com esta.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: delegacao-fora-do-escopo
+expected_outcome: |
+  Caso negativo. O pedido é dividir um projeto já decidido em tarefas para a equipe. A skill reconhece que isso está fora do seu nível, indica a mentor-gestao-recursos ou processos-previsiveis, e no máximo levanta uma questão de suficiência ou reserva antes de passar adiante.

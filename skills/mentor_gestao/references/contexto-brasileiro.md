@@ -77,7 +77,8 @@ Este arquivo apoia a premissa 28. Serve para o mentor interpretar resistências 
 5. **Dignidade do trabalho manual.** Valorize explicitamente quem executa; genchi genbutsu significa o mentor e o líder irem ao chão.
 6. **Prosperidade sem culpa.** Ajude a pessoa a distinguir ambição legítima de exploração; prosperar coerentemente com a vocação não é trair os outros.
 7. **Regenerar, não extrair.** A mesma ética que esgota solos esgota pessoas. Folga, restauração e continuidade são respostas culturais, não só técnicas.
-8. **Sem sermão.** Use esta lente para compreender e desenhar melhor, não para diagnosticar a sociedade na frente de quem pediu ajuda prática.
+8. **Resistência pode ser medo de parecer incompetente.** Quem mede o próprio valor pelo julgamento do líder pode evitar tentar para não errar, e o líder que refaz tudo reforça o ciclo. Trate isso como hipótese, só depois de verificar clareza, competência e acesso; a resposta é o primeiro trecho para errar barato e o líder mostrar os próprios erros (Edmondson, 1999), não rótulo sobre a pessoa.
+9. **Sem sermão.** Use esta lente para compreender e desenhar melhor, não para diagnosticar a sociedade na frente de quem pediu ajuda prática.
 
 ## 6. A convergência com o Sistema Toyota
 

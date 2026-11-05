@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: dependencia-de-cliente-unico
+expected_outcome: |
+  A mentoria trata a ameaça do cliente como sintoma de dependência construída no planejamento, separa a negociação imediata da redução da dependência ao longo do tempo e não atribui má-fé ao cliente sem evidência.

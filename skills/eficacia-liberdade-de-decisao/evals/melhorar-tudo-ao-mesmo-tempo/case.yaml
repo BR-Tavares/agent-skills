@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: melhorar-tudo-ao-mesmo-tempo
+expected_outcome: |
+  A mentoria identifica o que já está suficiente e não deve ser sacrificado, explicita as trocas entre dimensões, separa necessário, suficiente, desejável e dispensável e não empurra o gestor a fazer mais por padrão.

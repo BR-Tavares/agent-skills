@@ -48,6 +48,11 @@ Ver `toyota.md`, seção 6.
 - Masicampo e Baumeister (2011): mesmo laboratório do esgotamento do ego; efeito Zeigarnik original com replicação fraca.
 - Bezos, carta aos acionistas (2015): prática, anedótico.
 - Caso Apple em 1997: anedótico bem documentado.
+- Sarasvathy (2001; 2008), effectuation e perda aceitável: Dew e colegas (2009) e Read, Song e Smit (2009) dão apoio; Arend, Sarooghi e Burkemper (2015) criticam a pouca testagem. Use como prática, não como prova.
+- Deci, Koestner e Ryan (1999), recompensas contingentes reduzem motivação intrínseca: meta-análise contestada por Cameron e Pierce.
+- Berglas e Jones (1978), autossabotagem; Berne (1964) e Karpman (1968), jogo vítima e salvador: lentes clínicas, use só como hipótese.
+- Edmondson (1999), segurança psicológica em equipes: consolidada.
+- Fonte de origem destes itens: documento externo "Método do gradiente de identificação empreendedora" (nov. 2026), síntese própria não validada.
 
 ## Descartadas ou corrigidas
 - Economia de ações atribuída ao Player's Handbook: conceito de comunidade; mantido só como metáfora.
